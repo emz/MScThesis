@@ -1,0 +1,9 @@
+*.log
+*.toc
+*.lof
+*.lot
+*.pdf
+*.png
+*.jpg
+*.blg
+!./Chapter1/Chapter1.log
