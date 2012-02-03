@@ -1,70 +1,3 @@
-%use oldfontcommands to enable arabtex and utf8
-\documentclass[a4paper,twoside,12pt,openright,final,oldfontcommands]{memoir} 
-
-
-%\usepackage[bindingoffset=5mm]{geometry} %try memoir's built in commands
-
-\usepackage[T1]{fontenc}
-
-\usepackage{caption}
-\captionsetup{font=small,labelfont=bf}
-
-\usepackage{arabtex} %Always load after caption package
-\usepackage{utf8}
-%to use arabic use the following
-%\begin{arabtext}
-%\setcode{utf8}
-%<insert arabic text here>
-%\end{arabtext}
-
-%\usepackage{fancyhdr}	%not quite useful when you use memoir
-
-\usepackage{graphicx}
-\usepackage{float} %enables \figure[H] or [h!]
-
-\setcounter{secnumdepth}{3} %enable numbering of subsubsections (level 3)
-
-\usepackage{fixltx2e} %adds \textsubscript functionality
-\usepackage{paralist} %adds inparaenum
-
-\usepackage{hyperref}
-\hypersetup{pdftex,linktocpage=true,bookmarks=true,colorlinks=true,citecolor=blue,filecolor=black,linkcolor=blue,
-urlcolor=black,pdfauthor={Ayman Elmasry}, pdftitle={Algorithmic Form Generation: A Thermal Building
-Envelope Design Approach}}
-\usepackage[all]{hypcap}
-
-%\renewcommand{\bibname}{References}
-
-\title{\textsc{Algorithmic Form Generation:\\
-\large A Thermal Building Envelope Design Approach}}
-\author{}
-\date{}
-
-\begin{document}
-
-\pagestyle{ruled}
-
-\pagenumbering{roman}
-\maketitle
-
-%\chapter*{Acknowledgements}
-%\addcontentsline{toc}{chapter}{Acknowledgements}
-
-%\begin{abstract}
-
-%\end{abstract}
-
-%\chapter*{Introduction}
-%\addcontentsline{toc}{chapter}{Introduction}
-
-\newpage
-\tableofcontents
-
-\newpage
-\listoffigures
-\listoftables
-
-
 \chapter{Thermal Design and Building Envelope}
 \pagenumbering{arabic}
 \section{Introduction}
@@ -102,7 +35,7 @@ for different activities.
 
 \subsection{The Building Envelope}
 \paragraph{What is a building envelope?}It is simply the building components which
-seperate the indoors from outdoors. These components include all `physical' barriers such as walls, roofs,
+separate the indoors from outdoors. These components include all `physical' barriers such as walls, roofs,
 windows, doors and foundations \cite{HPO}. The main functions of a building envelope -or
 `enclosure'- are \cite{straube05}:
 \begin{enumerate}
@@ -184,7 +117,7 @@ air humidity.
 
 \paragraph{The Psychrometric Chart.}As mentioned earlier; the psychrometric chart
 (figure \ref{PsychroChart}) is used to calculate different exchanges of heat and
-humidity, these exchanges are called \emph{Psychrometric processes}. The processes can be summarized to:
+humidity, these exchanges are called \emph{Psychrometric processes}. The processes can be summarised to:
 \begin{enumerate}
   \item \emph{Heating} and \emph{Cooling}, at which the our point of reference on the chart moves
   right and left, respectively, are the processes of raising and lowering of dry-bulb temperature,
@@ -239,7 +172,7 @@ Environmental	& Personal			& Contributing Factors\\ \hline
 Air Temperature	& Metabolic Rate	& Food and Drink\\
 Air Movement	& Clothing			& Body Shape\\
 Humidity		& State of Health	& Subcutaneous Fat\\
-Radiation		& Acclimatization	& Age and Gender\\
+Radiation		& Acclimatisation	& Age and Gender\\
 \hline
 \end{tabular}
 \caption[Factors of Thermal Comfort]{Factors of Thermal Comfort \cite{szokolay08}}
@@ -274,7 +207,7 @@ Model \cite{szokolay08} \label{PsychoPhysioModel}}
 Since thermal comfort is affected by multiple environmental aspects, a unified index was needed to
 define environmentally accepted conditions. Many indices have proposed and accepted over the years
 including the famous chart made by Victor Olgay. One index which has been introduced lately and is
-widely accepted is the ET* (ET star), or it's standardized version the \textbf{SET}. The SET index
+widely accepted is the ET* (ET star), or it's standardised version the \textbf{SET}. The SET index
 is superimposed upon the Psychrometric chart (Fig. \ref{PsychroChart}) coinciding with DBT at 50\%
 RH curve until it reaches $14^\circ C$, then slanting gradually, demonstrating that higher humidity
 lowers the tolerance for temperature of occupants.
@@ -289,7 +222,7 @@ algorithmic design of building envelope through our focus on one element of the 
 \subsection{The Sun}
 Szokolay \cite{szokolay08} argues that the aspects essential for a designer to understand are the
 movement of the Sun\footnote{This is a reference to it's apparent movement as a result of the actual
-movement of Earth in it's orbit.}, and how to utilize or diminish it's effect.\\
+movement of Earth in it's orbit.}, and how to utilise or diminish it's effect.\\
 The Earth's orbit around the sun has unique characteristics such as it's slanted rotational axis
 relative to it's orbital axis around the sun, creating difference in temperatures across the year;
 creating seasons. This phenomenon also results in the difference in day and night lengths depending
@@ -364,10 +297,10 @@ opening's orientation on which our shading instrument is designed creating a sha
 
 \subsubsection{Shading Design}
 \label{Shading}
-Shading is the proven most efficiant way of controling solar radiation externally. External shading
+Shading is the proven most efficient way of controlling solar radiation externally. External shading
 is divided into to categories:
 \begin{enumerate}
-  \item	\textbf{Vertical Shading}, this type is characterized by by horizontal shadow angles (HSA),
+  \item	\textbf{Vertical Shading}, this type is characterised by by horizontal shadow angles (HSA),
   examples of which are vertical louvres (fig. \ref{HSA}).
 \begin{figure}[htbp]
 \centering
@@ -375,7 +308,7 @@ is divided into to categories:
 \caption[Horizontal Shadow Angle]{Horizontal Shadow Angle \cite{szokolay08}}
 \label{HSA}
 \end{figure}
-  \item \textbf{Horizontal Shading}, are characterized by vertical shadow angles (VSA), examples of
+  \item \textbf{Horizontal Shading}, are characterised by vertical shadow angles (VSA), examples of
   which are horizontal louvres and canopies (fig. \ref{VSA}).
 \begin{figure}[htbp]
 \centering
@@ -410,7 +343,7 @@ factor ($\theta$). The incident rays are divided into transmitted rays($\tau$), 
 \begin{equation}
 \tau + \rho + \alpha = 1
 \end{equation}
-The absorbed portion of solar rays is then emitted to the outside and the inside through convections
+The absorbed portion of solar rays is then emitted to the outside and the inside through convection
 and radiation, adding to the amount of heat transmitted through the glass to the inner space, thus
 producing solar heat gain.
 \begin{equation}
@@ -441,14 +374,14 @@ flowing through an opaque element can be calculated as:
 Q_c=A\times U \times (T_s-T_i)
 \newline
 \end{equation}
-\center{ \footnotesize Where $U$ is the air to air thermal transmitance, \\and $T_i$ is the internal
+\center{ \footnotesize Where $U$ is the air to air thermal transmittance, \\and $T_i$ is the internal
 air temperature}
 \flushleft
 
 \subsection{Steady State Heat Flow}
 \paragraph{Conduction heat flow,}(see section \ref{HeatExchange}) is calculated as the product of
-$A\times U\times \Delta T$. In our case we will use the accumelated area and transmitance of the
-building enveleope; refered to as \emph{envelope conductance}.
+$A\times U\times \Delta T$. In our case we will use the accumulated area and transmittance of the
+building envelope; referred to as \emph{envelope conductance}.
 \begin{equation}
 Q_c=\sum(A\times U)\times \Delta T
 \label{EnvConduct}
@@ -473,7 +406,7 @@ variation or construction material differences in one building element (figure
 \end{figure}
 
 \section{Thermal Design Variables}
-An integral part, and arguebly the most important one of this chapter, is where we demonstrate the
+An integral part, and arguably the most important one of this chapter, is where we demonstrate the
 different design variables affecting the building thermal performance, or it's envelope. This
 importance comes from the fact that these variables will be the basis on which we will choose our
 form generation parameters later on.\\
@@ -488,7 +421,7 @@ ventilation.\\ \vspace{0.5cm}
     	surface area of a building in relation with it's volume, or to be practical; it's footprint.
    		For example; if we were to decrease the surface area, the optimum shape would be a
     	spherical/hemispherical one. 
-    	\item \emph{Orientation}\\ In order to utilize heat gain and heat dissipation properly, one
+    	\item \emph{Orientation}\\ In order to utilise heat gain and heat dissipation properly, one
     	must consider building shape ration and orientation. Usually elongated northern and southern
     	fa\c{c}ades with a ratio of 2 to 1.3 are suitable for most cases \cite{szokolay08}.
   	\end{enumerate}
@@ -502,20 +435,11 @@ ventilation.\\ \vspace{0.5cm}
   \end{enumerate}
   \item \textbf{Fenestration}
   	\begin{enumerate}
-  	  \item \emph{Size, position and orientation}\\ A fundemental aspect of fenestration and
+  	  \item \emph{Size, position and orientation}\\ A fundamental aspect of fenestration and
   	  radiation input control\footnote{Also an essential variable of ventilation control}.
   	  \item \emph{Glazing material}\\ Single glazing, double glazing\ldots in addition to glass
   	  quality and different unique traits the control heat input.
   	  \item \emph{Closing mechanism}\\ Solutions include fixed glass, louvres and opening sashes.
-  	  \item \emph{External Shading}\\ In realtion with windows or envelope voids.
+  	  \item \emph{External Shading}\\ In relation with windows or envelope voids.
   	\end{enumerate}
 \end{enumerate}
-
-\begin{arabtext}
-\setcode{utf8}
-{\footnotesize اللّهم صَلّي عَلَى مُحَمَدٍ وَ عَلَى آلِهِ وَ صَحْبِهِ وَ سَلِّم}  
-\end{arabtext}
-
-\bibliographystyle{unsrt}
-\bibliography{./Bibliography}
-\end{document}
