@@ -1,12 +1,13 @@
 \documentclass[a4paper,twoside,12pt,openright,final,oldfontcommands]{memoir} %use oldfontcommands
-%to enable arabtex and utf8
+%to enable arabtex and utf8 in memoir
 
 
 %\usepackage[bindingoffset=5mm]{geometry} %try memoir's built in commands
 
 \usepackage[T1]{fontenc}
-
+\usepackage{import}
 \usepackage{color}
+
 \usepackage{algorithm}
 
 \usepackage{caption}
@@ -14,29 +15,37 @@
 
 \usepackage{arabtex} %Always load after caption package
 \usepackage{utf8}
-%to use arabic use the following
-%\begin{arabtext}
-%\setcode{utf8}
-%<insert arabic text here>
-%\end{arabtext}
-
+	%to use arabic use the following
+	%\begin{arabtext}
+	%\setcode{utf8}
+	%<insert arabic text here>
+	%\end{arabtext}
+	
 %\usepackage{fancyhdr}	%not quite useful when you use memoir
 
 \usepackage{graphicx}
 \usepackage{float} %enables \figure[H] or [h!]
-
 \setcounter{secnumdepth}{3} %enable numbering of subsubsections (level 3)
-
 \usepackage{fixltx2e} %adds \textsubscript functionality
 \usepackage{paralist} %adds inparaenum
-
 \usepackage{hyperref}
-\hypersetup{pdftex,linktocpage=true,bookmarks=true,colorlinks=true,citecolor=blue,filecolor=black,linkcolor=blue,
-urlcolor=black,pdfauthor={Ayman Elmasry}, pdftitle={Algorithmic Form Generation: A Thermal Building
-Envelope Design Approach}}
+\hypersetup{pdftex,
+			linktocpage=true,
+			bookmarks=true,
+			colorlinks=true,
+			citecolor=blue,
+			filecolor=black,
+			linkcolor=blue,
+			urlcolor=black,
+			pdfauthor={Ayman Elmasry},
+			pdftitle={Algorithmic Form Generation: A Thermal Building Envelope Design Approach}}
 \usepackage[all]{hypcap}
 
 %\renewcommand{\bibname}{References}
+
+\copypagestyle{ruledsmallhd}{ruled}
+\makeevenhead{ruledsmallhd}{\small\scshape\leftmark}{}{}
+\makeoddhead{ruledsmallhd}{}{}{\small\scshape\rightmark}
 
 \title{\textsc{Algorithmic Form Generation:\\
 \large A Thermal Building Envelope Design Approach}}

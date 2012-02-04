@@ -1,12 +1,7 @@
 \input{Preamble.tex}
 
-\includeonly{./Chapter1/Chapter1.tex,./Chapter2/Chapter2.tex}
-
 \begin{document}
 
-\copypagestyle{ruledsmallhd}{ruled}
-\makeevenhead{ruledsmallhd}{\small\scshape\leftmark}{}{}
-\makeoddhead{ruledsmallhd}{}{}{\small\scshape\rightmark}
 \pagestyle{ruledsmallhd}
 
 \pagenumbering{roman}
@@ -30,8 +25,8 @@
 \listoffigures
 \listoftables
 
-\include{./Chapter1/Chapter1.tex}
-
+\subimport{./Chapter1/}{Chapter1.tex}
+\subimport{./Chapter2/}{Chapter2.tex}
 
 \bibliographystyle{unsrt}
 \bibliography{./Bibliography}
