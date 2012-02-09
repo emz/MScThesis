@@ -1,4 +1,5 @@
 *.log
+
 *.toc
 *.lof
 *.lot
@@ -6,4 +7,4 @@
 *.png
 *.jpg
 *.blg
-!./Chapter1/Chapter1.log
+!Thesis.log
