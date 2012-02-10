@@ -41,11 +41,14 @@
 			pdftitle={Algorithmic Form Generation: A Thermal Building Envelope Design Approach}}
 \usepackage[all]{hypcap}
 
+\usepackage{calc}
+
 %\renewcommand{\bibname}{References}
 
 \copypagestyle{ruledsmallhd}{ruled}
-\makeevenhead{ruledsmallhd}{\small\scshape\leftmark}{}{}
-\makeoddhead{ruledsmallhd}{}{}{\small\scshape\rightmark}
+\makeevenhead{ruledsmallhd}{\footnotesize\scshape\leftmark}{}{}
+\makeoddhead{ruledsmallhd}{}{}{\footnotesize\scshape\rightmark}
+\makeheadrule{ruledsmallhd}{0px}{0px}
 
 \title{\textsc{Algorithmic Form Generation:\\
 \large A Thermal Building Envelope Design Approach}}
