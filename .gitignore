@@ -3,8 +3,5 @@
 *.toc
 *.lof
 *.lot
-*.pdf
-*.png
-*.jpg
 *.blg
 !Thesis.log
