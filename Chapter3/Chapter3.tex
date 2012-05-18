@@ -4,7 +4,7 @@
 
 Today, two main paradigms of algorithmic design are clearly dominant; generative design and performative design \cite{fasoulaki08}. Generative design is the essential \emph{rule-based\footnote{Consisting of a solid set of consecutive instructions that govern an action to produce a desired outcome}} algorithmic form of algorithmic architecture. It is governed by repetitive patterns, equations and shape transformations.  Performative design on the other hand, is optimisational; modifying and reshaping to adapt to a certain simulated environment.
 
-\section{Generative Design}
+\section{Generative Algorithm}
 
 Generative architecture can be defined as a design process involving generative systems in the form of a computer program that can be fully automated or step-by-step controlled. It would have an algorithm (rule) governing the transformations of initial shapes through variables or parameters; `generating' results, and selecting the best variant according to the given criteria. \cite{arida04}
 
@@ -110,3 +110,35 @@ Fractals are a naturaly occurring phenomenon, such formations of snow flakes, cl
 	\caption[Fractal Forms]{Fractal Forms \cite{falconer03}}
 	\label{Fractal}
 \end{figure}
+
+\subsection{Shape Grammars}
+
+A project by George Stiny and James Gips in 1977; shape grammars were intended to be a scientific approach to the language and composition of design. The main goal of shape grammars was to make the design process detached from inidviduals' minds and externalised to something that can be transmitted and modified. A distinctive feature of shape grammars is the visual method of form generation rather than the symbolic or numerical.
+
+As with cellular automata and fractals; the process of generation with shape grammars starts with an initial shape, and is transformed through a given rule. Rules in shape grammars take the form of $A \rightarrow B$. Whenever a shape matching the left side of the rule ($A$) occurs, the rule is applied (Fig. \ref{ShapeGrammarsRule}). As described in a previous section (\ref{AlgoGeoModel}), the type of transformation applied to the shape can addition, subtraction, rotation\ldots etc. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/12-ShapeGrammarsRule}
+\caption[Shape Grammars Rule]{A Shape Grammars Rule: \emph{(a) rule, (b) transformation} \cite{arida04}}
+\label{ShapeGrammarsRule}
+\end{figure}
+
+Shape grammars also have the ability to apply the rules to emergent shapes; not predefined in the grammar. Shape grammars can be used as a synthezier of shapes be generation, or as an analysis tool of complex shapes; decomposing them into simple ones. Among the many real world applications of shape grammars, a relatively new one was described by D. Shelden \cite{shelden02}; which was during the preparation of contract documents of the \emph{Experience Music} project. The case was the subdivision of a cladded surface for fabrication of the cladding sheets. The surface was divided using a shape grammar rule, but upon receiving the requirements of the fabricator which were smaller sheets; a different rule was used to subdivide the surface (Fig. \ref{SubdivisionSG} -- \ref{SubdFab}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{./Images/13-SubdivisionRule}
+\caption[Shape Grammar Subdivision]{The subdivision of a surface by shape grammars for fabrication of the sheets \cite{shelden02}}
+\label{SubdivisionSG}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/14-SurfaceFabrication}
+\caption[Fabrication Surface Subdivision]{The subdivision of building envelope for fabricaiton \cite{shelden02}}
+\label{SubdFab}
+\end{figure}
+
+\subsection{L-Systems}
+
