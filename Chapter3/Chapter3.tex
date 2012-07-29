@@ -58,6 +58,7 @@ Multiple interpretations of the manipulated generations (Fig \ref{CA ArchForm}) 
 \label{CA ArchForm}
 \end{figure}
 
+\clearpage
 \subsection{Voronoi Diagrams}
 
 ``Considered as early as 1644 by Ren\'{e} Descartes but are named after the Russian Mathematician Georgy Fedoseevich Voronoi who studied and defined the general n-dimensional\footnote{\emph{Euclidean Space}: The definition of all points in space by three coordinates; namely $x,y \text{ and } z$} case in 1907''\cite{fasoulaki08}. A Voronoi Diagram is a way of decomposing a space into regions\footnote{Voronoi Diagrams are a class of patterns called Dirichlet tessellations}, this process initiate with a set of points in space; called generating points, the partitioning lines are then drawn from an equal distance from the aforementioned points creating polygons or cells (Fig. \ref{VDiag}).
@@ -87,20 +88,12 @@ Although the common form of utilisation of Voronoi Diagram might denote a 2-dime
 \label{VDInternal}
 \end{figure}
 
+\clearpage
 \subsection{Fractals}
 
-"Fractal Geometry is the study of mathematical shapes that display a cascade of never-ending, self-similar, meandering\footnote{\emph{Meander}: to follow a winding or intricate course \cite{merriam03}} detail as one observes them more closely\ldots Fractal geometry is a rare example of technology that can reach into the core of design composition" \cite{bovill96}.
+``Fractal Geometry is the study of mathematical shapes that display a cascade of never-ending, self-similar, meandering\footnote{\emph{Meander}: to follow a winding or intricate course \cite{merriam03}} detail as one observes them more closely\ldots Fractal geometry is a rare example of technology that can reach into the core of design composition'' \cite{bovill96}.
 
 Originated by Benoit B. Mandelbrot in 1975 \cite{fasoulaki08}, the term \emph{fractals} defines a mathematical rule to produce geometrical shapes that are self-similar\footnote{Reduced copy of the whole}. A fractal is produced by defining an initiator shape and a rule that replaces this shape with a smaller set of copies of the original shape, such as a symmetrical combination of two copies of the original shape. The process goes on in recursion and repetition with virtually no limit to the number of iterations. Examples of this process are: the Koch curve (Fig. \ref{KochCurve}), Sierpinski Gasket, Contor Sets and Julia Sets (Fig. \ref{Fractal} \subref{JuliaSets}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{./Images/9-FractalGeom}
-\caption[The Koch Curve]{An example of fractal geometry: The Koch Curve \cite{falconer03}}
-\label{KochCurve}
-\end{figure}
-
-Fractals are a naturally occurring phenomenon, such formations of snow flakes, clouds, fern leaves (Fig \ref{Fractal}\subref{Fern}) and coastlines. As mentioned before (\emph{see page} \pageref{NaturalOpt}); the derivation of generative systems from natural formations can be beneficial in optimisational terms of building performance.
 
 \begin{figure}[htbp]
 \centering
@@ -111,12 +104,22 @@ Fractals are a naturally occurring phenomenon, such formations of snow flakes, c
 	\label{Fractal}
 \end{figure}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{./Images/9-FractalGeom}
+\caption[The Koch Curve]{An example of fractal geometry: The Koch Curve \cite{falconer03}}
+\label{KochCurve}
+\end{figure}
+
+Fractals are a naturally occurring phenomenon, such formations of snow flakes, clouds, fern leaves (Fig \ref{Fractal}\subref{Fern}) and coastlines. As mentioned before ; the derivation of generative systems from natural formations can be beneficial in optimisational terms of building performance (\emph{see page} \pageref{NaturalOpt}).
+
+\clearpage
 \subsection{Shape Grammars}
 
 A project by George Stiny and James Gips in 1977; shape grammars were intended to be a scientific approach to the language and composition of design. The main goal of shape grammars was to make the design process detached from individuals' minds and externalised to something that can be transmitted and modified. A distinctive feature of shape grammars is the visual method of form generation rather than the symbolic or numerical.
 
 As with cellular automata and fractals; the process of generation with shape grammars starts with an initial shape, and is transformed through a given rule. Rules in shape grammars take the form of: \begin{equation} A \rightarrow B \end{equation}
-Whenever a shape matching the left side of the rule $A$ occurs, the rule is applied (Fig. \ref{ShapeGrammarsRule}). As described in a previous section (\ref{AlgoGeoModel}), the type of transformation applied to the shape can addition, subtraction, rotation\ldots etc. 
+Whenever a shape matching the left side of the rule $A$ occurs, the rule is applied (Fig. \ref{ShapeGrammarsRule}). As described in a previous section, the type of transformation applied to the shape can addition, subtraction, rotation\ldots etc. 
 
 \begin{figure}[htbp]
 \centering
@@ -141,35 +144,93 @@ Shape grammars also have the ability to apply the rules to emergent shapes; not 
 \label{SubdFab}
 \end{figure}
 
-\newpage
+\clearpage
 \subsection{L-Systems}
 
 L-System; an abbreviation of Lindenmayer-systems after Aristid Lindenmayer, was created in 1968 as a mathematical simulation of plant growth \cite{fasoulaki08}, consisting of four elements: \begin{inparaenum} \item a starting configuration string, \item a set of rules, \item constraints and \item variables.\end{inparaenum}
 
 L-Systems are very similar to Shape Grammars, with the exception of being represented textually not spatially \cite{arida04}, but operate in a recursive manner such as that of Shape Grammars. The form by which rules of context-sensitive L-Systems is expressed is: \begin{equation} B<A>C\rightarrow X \end{equation}\ldots where $A$ would produce $X$ if and only if $A$ is surrounded by $B$ on the left and $C$ on the right. The rule form of context-independent L-Systems is: \begin{equation} A \rightarrow B \end{equation}
 
-\begin{figure}[htbp]
+\begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{./Images/15-L-SystemLeaf}
 \caption[L-System Compound Leaf]{Development of a compound leaf shape \cite{csiro96}}
 \label{LSysLeaf}
 \end{figure}
 
-\newpage
+\clearpage
 \section{Performative Algorithms}
 
-Having observed some the prominent methods of generative design, one could define performative design by saying that unlike generative methods performative design deals with how the building performs; not how the building looks. In order to measure a specific aspect of any given building's performance; one has to define the variables, constraints and performance criteria. But although the aim of such practice would be to measure how the building performs, the feedback would certainly change how the building looks.
+Having observed some of the prominent methods of generative design, one could define performative design by saying that unlike generative methods, performative design deals with how the building performs; not how the building looks. In order to measure a specific aspect of any given building's performance; one has to define the variables, constraints and performance criteria. But although the aim of such practice would be to measure how the building performs, the feedback would certainly change how the building looks.
 
-When speaking of green and sustainable design, performative design always comes to mind. However; it does not deal with the environmental impact of buildings, which rules out the capability of producing green design. Nevertheless; in recent years it has become the quintessential method of production of sustainable design. This owes to the fact that performative design, through simulation and selection can produce designs that are highly efficient in terms of energy consumption and waste production.
+When speaking of green and sustainable design, performative design always comes to mind. However; it does not deal with the environmental impact of buildings, which rules out the capability of producing green design. Nevertheless; in recent years it has become the quintessential method of production of sustainable design. This owes to the fact that performative design, through simulation and selection can produce designs that are highly efficient at lowering energy consumption and waste production, in some cases to the point of reaching \emph{zero footprint}\footnote{Theoretical absolute self-sufficiency and zero impact (waste production, energy consumption\ldots etc.}.
 
-Performative design differs from generative design in that it does not rely solely on an algorithm for generation, but uses optimisation and simulation as tools. These tools are the main subject of discussion in this section.
+Performative design differs from generative design in that it does not rely solely on an algorithm for generation, but uses optimisation and simulation as tools. These tools are the main subjects of discussion in this section.
 
-\paragraph{Optimisation}is the selection of the \emph{optimum} solution. Optimisation is a widely used system in engineering, considered as a problem-solver; optimisational algorithms are called search methods. As mentioned in a previous section (\ref{ParallelLogic}), computers have the power to delve into what humans cannot. In this case; it is the power to solve problems with high complexity requiring enormous amounts of computation.
+\paragraph{Optimisation}is the selection of the \emph{optimum} solution. Optimisation is a widely used system in engineering, considered as a problem-solver; optimisational algorithms are called search methods. As mentioned in a previous section (\ref{ParallelLogic}), computers have the power to delve into what humans cannot; the power to solve problems with high complexity requiring enormous amounts of computation. These complex problems --- as far as this thesis is concerned --- will be mainly dealt with using \emph{Mathematical Optimisation}.
+
+\newpage
+\paragraph{Mathematical Optimisation} is the process of:
+\vspace{-0.5cm}
+\begin{enumerate}
+\item the formulation and,
+\item solution of a constrained optimisation problem of the general mathematical form:
+\end{enumerate}
+\vspace{-0.9cm}
+
+\begin{equation}
+\text{minimize }f(x),x=[x_1,x_2,\cdots,x_n]^T \in \mathbb{R}^n
+\label{OptMathForm}
+\end{equation}
+
+\ldots subject to the constraints:
+\begin{equation}
+\begin{split}
+g_j(x)\leq 0, j=1,2,\cdots,m \\
+h_j(x)=0, j=1,2,\cdots,r
+\label{OptConstr}
+\end{split}
+\end{equation}
+
+\ldots where $f(x)$, $g_j(x)$ and $h_j(x)$ are scalar functions of the real \emph{column vector} \textbf{x}. \cite{snyman05}
+
+``The continuous components of $x_i$ of \textbf{x} $=[x_1,x_2,\cdots,x_n]^T$ are called \emph{design} variables, $f(x)$ is the objective function, $g_j(x)$ denotes the respective \emph{inequality constraint functions} and $h_j(x)$ the \emph{equality constraint functions}.'' \cite{snyman05}
+
+``The optimum vector \textbf{x} that solves the eqution (\ref{OptMathForm}) is donted by \textbf{x*} with corresponding optimum function value $f(\text{\textbf{x*}})$. If no constraints are specified, the problem is called an \emph{unconstrained} minimization problem.'' \cite{snyman05}
+
+Mathematical optimisation is also called \emph{Nonlinear Programming, Mathematical Programming} or \emph{Numerical Optimisation}. As stated earilier; optimisation is a science that determines the best solutions, which in this case is to a mathematically defined problem that can be models of physical reality or otherwise. Mathematical optimisation tends to find the solution corresponding to minimum energy configurations of general structures, from molecules to suspension bridges, making it of great value to scientists and engineers.
+
+The values of the functions $f(x)$, $g_j(x)$ and $h_j(x)$ (equations \ref{OptMathForm} and \ref{OptConstr}) may be obtained at any point $x$ using:
+\vspace{-0.5cm}
+\begin{enumerate}
+\item analytical formulae (e.g. $f(x)=x_1 ^2+2x_2 ^2+\sin x_3$),
+\item the outcome of a complicated computational problem (finite element analysis of stress) or
+\item measurements taken from a physical process
+\end{enumerate}
+\vspace{-0.5cm}
+
+These methods fall under different classes of solving the general problem, which might be analytically or numerically, while numerical methods being more common through different computational algorithms. The method of choosing the more suitable algorithm (also known as mathematical modelling) is depicted in figure (\ref{fig:MathModProc}).
+
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=\textwidth]{./Images/18-MathModProc}
+\caption[Mathematical Modelling]{The Mathematical Modelling Process (refer to fig. \ref{fig:FunctionOpt}) \cite{snyman05}}
+\label{fig:MathModProc}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{./Images/19-FunctionOpt}
+\caption[Function of Single Variable]{Function of single variable with optimum at $x^*$ \cite{snyman05}}
+\label{fig:FunctionOpt}
+\end{figure}
+
+The following section will discuss popular optimisation algorithms in architecural design, which are --- on an abstract level --- mathematical optimisation methods. Several subsets of optimisation exist, including \emph{Combinatoral, Linear, Nonlinear, Convex} and \emph{Metaheuristic}. The methods discussed herein will be of the \emph{Heuristic/Metaheuristic} subset.
 
 \newpage
 \subsection{Genetic Algorithm}
 
-Genetic algorithm is a heuristic\footnote{Of or relating to exploratory problem-solving techniques that utilise self-educating techniques to improve performance\cite{merriam03}} search method for solving optimisation problems simulating biological evolution \cite{fasoulaki08}. Genetic Algorithm has unique terminology due to it's origins in biological evolution science.
+Genetic algorithm is an evolutianary algorithm, a subset of heuristic\footnote{Of or relating to exploratory problem-solving techniques that utilise self-educating techniques to improve performance\cite{merriam03}} search methods for solving optimisation problems, simulating biological evolution \cite{fasoulaki08}. Genetic Algorithm has unique terminology due to it's origins in biological evolutionary science.
 
 ``Under GA terminology, a solution to a problem is an \emph{individual}, and the group solutions existent at each stage is a \emph{population}. Each time a new population of individuals is created is called a \emph{generation}. In binary GAs\ldots each individual is represented by a binary string called a \emph{chromosome}, which encodes all parameters of interest corresponding to that individual. A chromosome is formed of \emph{alleles}; the binary coding bits. The fitness of any particular individual corresponds to the value of the objective function at that point''. \cite{caldas01}
 
@@ -204,8 +265,79 @@ Genetic algorithm is a heuristic\footnote{Of or relating to exploratory problem-
 
 The process of problem solving in GA is fairly simple (Fig \ref{GAFlw}), despite it's ability to solve highly complex problems. Initially; a population is randomly generated with a sufficient amount of chromosomes allowing for a wealth of genetic information to be processed and therefore statistically provides a better solution, although the bigger the population; the more computing power is needed. 
 
-Individuals are then selected on a basis of fitness defined by the user prior to the process. At this stage, a number of genetic operators become in effect, such as \emph{crossovers}. Crossovers are swapping of parts of two chromosomes selected for their fitness, producing a new offspring of individuals containing some genetic material from each \emph{parent} individual. This process is repeated and reiterated to produce more refined generations gradually through selection.
+Individuals are then selected on a basis of fitness defined by the user prior to the process. At this stage, a number of genetic operators (stochastic operators) become in effect, such as \emph{crossovers} (fig. \ref{CRSOVR}). Crossovers are swapping of parts of two chromosomes selected for their fitness, producing a new offspring of individuals containing some genetic material from each \emph{parent} individual. This process is repeated and reiterated to produce more refined generations gradually through selection.
 
 Another function of GA is \emph{mutation}, which occurs randomly at a predefined to affect some chromosomes in the intermediate phase between any two crossovers. The idea of mutation is to introduce alterations to the selection of chromosomes, and therefore allowing for genetic diversity at later stages of the selection process, assisting the search by escaping the local optima. Nevertheless, it's frequency is adjusted as to allow for genetic diversity without producing a generation of crossovers that is completely different from it's predecessor.
 
-At the final stage of the search process, an elitist model is created and presented as the `best' set of solutions, which meet the termination criteria; ending the search. The difference between GA and other search is method, is that GA is a probabilistic search method, not a deterministic one, which searches through a population in different points in parallel not a single point. GA is considered a last resort when it comes to search methods, when all mathematical methods have failed due to the complexity and size of the search population, producing the best solution of the generated population, but not the optimum solution.
+At the final stage of the search process, an elitist model is created and presented as the `best' set of solutions, which meet the termination criteria; ending the search. The difference between GA and traditional  search methods, is that GA is a probabilistic search method, not a deterministic one, which searches through a population in different points in parallel not a single point. However, genetic algorithm is very robust due to the fact that it needs little information about the design problem, and is efficient when the population space is large and complex, which no traditional mathematical search method can process. This is however at the cost of knowing that the given solution is the best within the population, but not the optimum solution.
+
+\paragraph{Crossover.} The following table illustrates the swapping technique of crossover between two individual chromosomes.
+
+\begin{table}[h]
+\begin{tabular}{l|| ccccc|ccccccccccc}
+\textbf{Parent 1}&1&1&0&1&0&0&1&1&0&0&1&0&1&1&0&1\\
+\textbf{Parent 2}&y&x&x&y&y&x&y&x&x&y&y&y&x&y&x&x\\\hline
+\textbf{Offspring 1}&y&x&x&y&y&0&1&1&0&0&1&0&1&1&0&1\\
+\textbf{Offspring 2}&1&1&0&1&0&x&y&x&x&y&y&y&x&y&x&x\\
+\end{tabular}
+\caption[Crossover Operative]{Crossover Operative \cite{whitley94}}
+\label{CRSOVR}
+\end{table}
+
+The range of application of GA in architecture are wide, with a prominent success in the fields of energy consumption and structural analysis. A common practice in problem solving with GA is coupling it with a problem dependant simulation (to be discussed further in this chapter), providing feedback to refine the initial population.
+
+An example of GA implementation in passive solar design is the model presented by Go Kawakita \cite{kawakita08}. The optimisational problem addressed the fenestration of a building envelope under a specific set of environmental conditions (fig \ref{kawakitaGA}). The variables --- or parameters --- studied in the process were the size, shape, shape iteration and location of openings, which was evaluated prior to and after GA optimisation using ECOTECT simulation, which feedback the results for re-optimisation in case of the optimised model not meeting the process termination criteria.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{./Chapter3/Images/16-kawakitaGA}
+\caption[GA Fenestration Optimisation Model]{An optimisational building envelope fenestration Model using GA \cite{kawakita08}}
+\label{kawakitaGA}
+\end{figure}
+
+\begin{sidewaysfigure}[hbtp]
+\centering
+\includegraphics[width=20cm]{./Chapter3/Images/17-kawakitaChromo}
+\caption[Optimisation Model Chromosome Coding]{Coding of fenestration variables in GA chromosomes \cite{kawakita08}}
+\label{kawakitaChromo}
+\end{sidewaysfigure}
+
+\clearpage
+\subsection{Simulated Annealing}
+
+Simulated annealing is a mathematical optimastion method. It draws it's terminology from the metallurgical process of annealing which is the heating and controlled cooling of metals to reach it's ground state with the lowest internal energy without being trapped in the local minimum \cite{lam88}. It was originally introduced by S. Kirkpatrick in 1982. The method is metaheuristic\footnote{A method that guides another heuristic (self learning) optimisational method}, used for maximisational and minimisational optimisation problems, which tend to find the global optimum (minimum or maximum).
+
+Local and global minima and maxima are mathematical terms describing the highest (maxima) and lowest (minima) values of a given function, within either a defined range (local) or the entire function domain. The idea behind simulated annealing --- as with the physical process --- is to find the global rather than the local minimum; i.e. to find a better state than the initial one, through a technique called \emph{descent method} (the heuristic method which SA drives as mentioned)  which incrementally replaces the initial state with a set of predefined ones.
+
+As with genetic algorithm, the original source of inspiration heavily influences the terminology and the process of simulated annealing, which mimics metal annealing to the extent of the algorithm pseudocode (Algorithm \ref{SimAnn}) being an identical description of the physical process.
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+\State Get an initial state with energy $x$
+\State Make the initial state the current state
+\State Select an initial high temperature ``$T$''
+\State While the system is ``not yet frozen''
+	\State begin
+	\While {the system is ``not yet in thermal equilibrium'' do}
+		\State begin
+		\State pick a random ``nearby'' state with energy $x_p$
+		\State let $\Delta x = x_p - x$
+		\If {$\Delta x \leq 0$}
+			\State the new state becomes the current state
+		\Else
+			\State reject state
+		\EndIf
+		\State end
+	\EndWhile
+	\State ``Reduce the temperature $T$ by $\Delta T$
+	\State end
+\State Output the current state
+\end{algorithmic}
+\caption{Simulated Annealing Method \cite{lam88}}
+\label{SimAnn}
+\end{algorithm}
+
+\clearpage
+\subsection{Tabu Search}
+
+
