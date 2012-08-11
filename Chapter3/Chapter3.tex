@@ -340,4 +340,59 @@ As with genetic algorithm, the original source of inspiration heavily influences
 \clearpage
 \subsection{Tabu Search}
 
+While Genetic Algorithms (GAs) imitate the phenomenon of biological reproduction, and Simulated Annealing (SA) is based on physical process in metallurgy; the philosophy of Tabu search (TS) is to derive and exploit a collection of principles of intellegant problem solving; it is based on selected concepts that unite the fields of artificial intellegance and optimisation. \cite{glover97}
 
+``Tabu search is a meta-heuristic that guides a local heuristic search procedure to explore the solution space beyond the local optimality. \ldots The local procedure is a search that uses an operation called \emph{move} to define the neighbourhood of any given solution. One of the main components of TS is its use adaptive memory, which creates a more flexible search behaviour. Memory-based strategies are therefore the hallmark of tabu search approaches.'' \cite{glover97}
+
+``Tabu search is based on the premise that problem solving, in order to qualify as intelligent, must incorporate \emph{adaptive memory} and \emph{responsive exploration}. A good analogy is moutain climbing, where the climber must selectively remember key elements of the path traveled (using adaptive memory) and must be able to make strategic choices along the way (using responsive exploration). The adaptive memory features of TS allows the implementation of procedures that are capable of searching the solution space economically and effictively. Since local choices are guided by information collected during the search, TS contrasts with memoryless designs that heavily rely on semi-random processes that implement a form of sampling. Examples of memoryless include \ldots traditional annealing and evolutionary approaches.'' \cite{glover97}
+
+\paragraph{Use of Memory.} The memory structures in tabu search operate by reference to four main elements: \emph{recency, frequency, quality} and \emph{influence}.
+
+\begin{enumerate}
+\item \emph{Recency-based} memory is a type of short memory that keeps track of the attributes of recently visited solutions. These attributes are then labeled \emph{tabu-active}. This prevents visited solutions or the paths leading to them to be revisited.
+\item \emph{Frequency-based} memory provides a type of information that complements the information provided by recency-based memory, broadening the foundation for selected preferred moves.
+\item The \emph{quality} dimension refers to differentiate the merit of solutions vistied during search. Memory can then be used to identify elements that are common to good solutions or to paths that lead to them. This in turn reinforces the search to obtain the best results within the solution space.  
+\item \emph{Influence} considers the impact of the choices made during the search, not only on quality, but also on structure. Recording information about the influence of choices on particular solution elements incorporates and additional level of learning.
+\end{enumerate}
+
+The memory used in tabu search is both \emph{explicit} and \emph{attributive}. Explicit memory records complete solutions, typically consisting of elite solutions visited during the search. An extension of this memory records highly attractive but unexplored neighbours of elite solutions. Attributive memory on the other hand, is used for guiding purposes. This type of memory records information about solution attributes that change in moving from one solution to another.
+
+\paragraph{Intensification and Diversification.} Intensification is linked with short term memory and explicit memory; it evaluates recently visited solutions and chooses to intensify search in a particular zone of the solution space when it detects that a large number of elite solutions, this zone could be called a neighbourhood, but with a different definition than usual; this neighbourhood consists of all solutions within this area regardless of their attributes. Diversification --- on the other hand --- encourages the search process to investigate unvisited regions, and generate solutions that are significantly different from previous solutions.
+
+\subsection{Optimisation Search Method Comparison}
+
+The following study (Table \ref{table:OptMethCmprsn}) by L. Caldas \cite{caldas01} illustrates the characteristics of Genetic Algorith, Simulated Annealing and Tabu Search; comparing them in terms of memory usage, intensification, diversification and neighbourhoods:
+
+\begin{table}
+\centering
+\resizebox{!}{10cm}{%
+\begin{tabular}[h]{|p{1cm}| p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}|}
+\hline \\ \vspace{0.3cm}
+ &\textbf{Memory}&\textbf{Intensification}&\textbf{Diversification}&\textbf{Neigbourhood} \vspace{0.3cm}\\ \hline
+\textbf{GA}&Some use of memory&Non-systematic&Crossover: New points in the solution space are created by combining existing solutions&No definition of neighbourhood\\
+ &Explicit --- Elitism&Mutations: Introduces a small change to an existing solution, meaning it is searching in its vicinity&MicroGA's have high diversification by often starting new random populations&New solutions are found by the process of crossover between two existing solutions\\
+ &Implicit --- Keeps track of high performance building blocks; sequence of generations propagates useful genetic information& & & \\\hline
+\textbf{SA}&Almost no use of memory&Search moves less freely as it progresses, with lower probability of accepting very different solutions from the current one&At early stages of the search, probability of accepting solutions that significantly decrease performance is higher, meaning that new regions of the search space are explored.&Requires a definition of a neighbourhood\\
+ &Only if the best soution found so far is used to restart search after each temperature reduction&Neighbourhood radius can also decrease& &Size of neighbourhood is not too important, as not all of the neighbourhood is explored (at each step, a single solution is picked for evaluation)\\\hline
+\textbf{TS}&Extensive use of memory&Systematic&Systematic&Requires a definition of neighbourhoods\\
+ &Recency-based: keeps track of recent moves to prevent reverse ones&Stores good configurations and then explores their neighbourhoods more thoroughly&Temporary change of rules can penalise solutions similar to the current one&Neighbourhood size is more critical, since it is a greedy algorithm that explores all of a single neighbourhood for best path\\
+ &Frequency-based: keeps track of frequency of certian features in solutions already visited. Used for diversification&Path relinking: building blocks from elite solutions stored in memory can by used to produce new attractive solutions&Can be implemented by removing some features of the current solution that temporarily become tabu-active, thus forcing the search to visit previously unexplored regions&May include some method to explore only more attractive areas of the neighbourhood, like first randomly sampling neighbourhood and then exploring only the best solution areas\\
+ &Quality memory: stores which building blocks to high quality solutions. Used for path relinking& & & \\
+ &Influence memory: records impact of certain moves and makes bad moves tabu-active for some period of time& & & \\\hline
+\end{tabular}}
+\caption[Optimisation Search Method Characteristics]{A comparison of optimisation search methods \cite{caldas01}}
+\label{table:OptMethCmprsn}
+\end{table}
+
+\clearpage
+\subsection{Additional Search Methods}
+
+In the previous sections three heuristic optimisation search methods have been discussed. However, it should be noted that other search methods that belong or do not belong to the heuristic/metaheuristic subset of search methods exist, which have not been discussed herein.
+
+Other heuristic search methods indlude: \emph{Ant colony algorithms, Bee algorithms, Particle Swarm optimisation, Harmony search} and \emph{Firefly algorithm}.
+
+In addition, other optimisation methods which do not fall under the category of heuristic methods include: \emph{Convex optimisation, Monte Carlo methods, Random Walk / Markov Chain} \ldots among others.
+
+Although the three discussed were deemed sufficient for illustrative purposes within this thesis, it would be highly beneficial to examine the abovementioned search methods, as different methods will be more compatible with different applications.
+
+The next chapter will recap on this chapter's content in a form of taxonomy or categorisation, then illustrate the different applications of the discussed algorithms in the field of architectural design.
