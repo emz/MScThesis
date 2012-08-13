@@ -247,7 +247,7 @@ This shows that heat flow calculations are an approximation. Here the concept of
 \end{figure}
 
 \section{Thermal Design Variables}
-An integral part, and arguably the most important one of this chapter, is where we demonstrate the different design variables affecting the building thermal performance, or it's envelope. This importance comes from the fact that these variables will be the basis on which we will choose our form generation parameters later on.\\ The most influential traits of any given building as argued by Szokolay \cite{szokolay08} are shape, fabric, fenestration and ventilation. We will demonstrate different attributes with the exception of ventilation.\\ \vspace{0.5cm}
+An integral part, and arguably the most important one of this chapter, is where we demonstrate the different design variables affecting the building thermal performance, or it's envelope. This importance comes from the fact that these variables will be the basis on which we will choose our form generation parameters later on.\\ The most influential traits of any given building as argued by Szokolay \cite{szokolay08} are shape, fabric, fenestration and ventilation. We will demonstrate different attributes with the exception of ventilation.\\ \vspace{0.5cm} \label{ThermDesVar}
 \begin{enumerate}
   \item \textbf{Shape}
   	\begin{enumerate}
@@ -271,6 +271,94 @@ An integral part, and arguably the most important one of this chapter, is where 
 \end{enumerate}
 
 \clearpage
-\section{Simulation Environments}
+\section{Simulation}
 
+Simulation is a modelling process which can predict the physical reactions or behaviour of a system. This modelling process would typically use abstract definitions of the system, regardless of many architectural features. The behaviour of the system is described using mathematical formulas, as those provided in this chapter. \cite{fasoulaki08}
 
+\paragraph{Simulation variables and constants.} Throughout the thesis, the notion of variables has been a recurring theme; it has been a key aspect of parametric models, a control element of algorithms and finally a control element of thermal design (\autoref{ThermDesVar}). In simulated environments; the mathematical formulas introduce constants and variables necessary for governing the system. The power of simulation techniques and software come from the fact that by modifying the system variables; the designer can \emph{measure the impact of variable value modification on the system's performance}. However, a disadvantage of simulation is that in order to reach an optimum, or even acceptable results, the designer must work under a process of trial and error. The designer would then examine the feedback given by the simulation process, modify the vavariable values accordingly and reiterate the process in a very inefficient manner. \cite{fasoulaki08}
+
+\paragraph{Simulation, Algorithm and Thermal Design.} When the designer finds himself at a disadvantage due to the impractical process of trial and error; \emph{the importance of automation of the design process through algorithmic design becomes evident}. This statement is the essential link between thermal design, algorithmic design and simulation.
+
+\paragraph{Simulation Environments.} Several applications have been developed in the last two decades that simulate and evaluate different building performances. Such performances include: structural, lighting, thermal flows\ldots etc. The following section lists a number of building simulation programs, and compares their features and capabilities.
+
+\newpage
+\subsection{Simulation Programs}
+
+This section provides an overview and comparison of 20 major simulation programs, based on a resarch by Drury B. Crawley et al. \cite{crawley05}. The research paper illustrates the comparative survey which was done on the basis of information provided by the program developers in the following categories: general modeling features; zone loads; building envelope and daylighting and solar; infiltration; ventilation and multizone airflow; renewable energy systems; electrical systems and equipment; HVAC systems; HVAC equipment; environmental emissions; economic evaluation; climate data availability, results reporting; validation; and user interface, links to other programs, and availability.
+
+\paragraph{BLAST version 3.0} The Building Loads Analysis and System Thermodynamics (BLAST) contains three main subprograms: Space Loads Prediction, Air System Simulation, and Central Plant.
+
+\paragraph{BSim version 4.4.12.11} BSim provides a user-friendly simulation of detailed, combined hygrothermal\footnote{Of, or pertaining to both temperature and humidity.} simulation of buildings and construcitons. The program is used mainly for energy design of buildings and moisture analysis.
+
+\paragraph{DeST version 2.0} DeST (Designer's Simulation Toolkits) performs detailed building thermal processes and HVAC analysis. Five versions of the program are offered for different applications (commercial, resedential, building evaluation, building ratings, and solar buildings). The program is widely used in China for large and prestigious structures.
+
+\paragraph{DOE-2.1E version 121} DOE-2.1E predicts the hourly enrgy use and energy cost of a building given hourly weather information, a building geometric and HVAC description, and utility rate structure. DOE-2.1E has been used extinsively for more than 25 years for building desing studies, analysis of retrofit\footnote{Retrofitting: the addition of a new technology or features to older systems. In this thesis's context retrofitting usually refers to \emph{Green Retrofitting}; improving existing buildings with energy efficient equipment} oppurtunities, and for developing and testing building energy standards in the U.S. and around the world. Twenty interfaces have been created by the private sector to utilise easier usage of DOE-2.1E.
+
+\paragraph{ECOTECT version 5.50} ECOTECT is a highly visual architectural design and analysis tool that links a comprehensive 3D modeller with a wide range of performance analysis functions convering thermal energy, lighting, shading, acoustics and cost. It's main advantage is the focus on feedback at conceptual design stages. The program also has the capability of overlaying analysis results on the building, in addition real-time animation of acoustic and lighting raytracing.
+
+\paragraph{Ener-Win Version EC} Ener-Win was originally developed at Texas A\&M University, simulates hourly energy consumption in buildings, including annual and monthly energy consumption, peak demand charges, peak heating and cooling loads, solar heating fraction through glazing, daylighting contribuition, and a life-cycle cost analysis. Design data, tabulated by zones, also show duct sizes and electrical power requirements. Ener-Win requires only three inputs: building type, building location, and building geometrical data.
+
+\paragraph{Energy Express version 1.0} Energy express is a design tool, created by CSIRO\footnote{Commonwealth Scientific and Industrial Reasearch Organization}, for estimating energy consumption and cost at the design stage. Energy Express for Architects provides graphics geometry input and editing, multiple report viewing, comparison of alternative designs and results, simplified HVAC model, and detailed online help. Energy Express for Engineers provides those capabilities along with peak load estimation, and detailed HVAC model, graphic editing of air handling system and thermal plant layouts.
+
+\paragraph{Energy-10 version 1.8} Energy-10 was designed to facilitate the analysis of buildings early in the design process with a focus on providing comprehensive tool suited to the design team environment for smaller buildings. Rapid presentation of reference and low-energy cases is the hallmark of Energy-10. It is suitable for smaller, simpler resedential or commercial buildings (1000 m$^2$). Energy-10 takes a baseline simulation and automatically applies a number of predefined strategies ranging from building envelope, and system efficiency options. Full life-cycle costing is an integral part of the software.
+
+\paragraph{EnergyPlus version 1.2.2} EnergyPlus is a modular, structured code based on the most popular features and capabilities of BLAST and DOE2.1E. It is a simulation engine with input and output of text files. Loads calculated (by a heat balance engine) at a user-specified time step (15-minute default) are passed to the building systems simualtion module at the same time step. The EnergyPlus building systems simulation module, with a variable time step, calculates heating and cooling system and plant and electrical system response. This integrated solution provides more accurate space temperature prediction --- crucial for system and plant sizing, occupant comfort and occupant health calculations. Integrated simulation also allows users to evaluate realistic system controls, moisture absorption and desorption in building elements, radiant heating and cooling systems, and interzone airflow.
+
+\paragraph{eQUEST version 3.55} eQUEST is an easy to use energy use analysis tool which provides high quality results by combining a building creation wizard, an energy efficiency measure (EEM) wizard and a graphical results display module with an enhanced DOE-2.2-derived building energy use simulation program.
+
+\paragraph{ESP-r version 10.1} ESP is a general purpose, multi-domain---building thermal, interzone airflow, inrazone air movement, HVAC systems and electrical power flow---simulation environment which has been under development for more than 25 years. It follows the pattern of `simulation follows description' where additional technical domain solvers are invoked as the building and system description evolves. Users control the complexity of the geometric, environmental control and operations to match the requirements of particular projects. It supports an explicit energy balance in each zone and at each sufrace.
+
+\paragraph{HAP version 4.20a} Hourly Analysis Program (HAP) provided two tools in one package: sizing commercial HVAC systems and simulating hourly building hourly energy performance to derive annual energy use and energy costs. Input data and results form system design calculations can be used directly in energy studies. HAP is designed for the practical engineer, to facilitate efficient day-to-day work of estimating loads, designing systems and evaluating energy performance. Tabular and graphical output reports provide both summaries of and detailed information about building, system and equipment performance.
+
+\paragraph{HEED verdsion 1.2} The objective of HEED is to combine a single-zone simulation engine with a user-friendly interface. It is intended for use at the very begining of the design process, when most of the decisions are made that ultimately impact the energy performance of envelope-dominated buildings.
+
+\paragraph{IDE ICE version 3.0} IDA indoor climate and energy (ICE) is based on a general simulation platform for modular systems, IDA Simulation Environment. Physical systems from several domains are in IDA using symbolic equaitons, stated in either or both of the simulation languages Neutral Model Format (NMF), or Modelica.
+
+\paragraph{IES <VE> version 5.2} The IES <Virtual Environment> is an integrated suite of applications linked by a common user interface and a single integrated data model. Modules include:
+\begin{inparaenum}
+\item ModelIT: geometry creation and editing
+\item ApacheCalc: loads analysis
+\item MacroFlo: natural ventilation
+\item Apache HVAC: component based HVAC
+\item SunCast: shading visualisation and analysis
+\item MicroFlo: 3D computational fluid dynamics 
+\item FlucsPro/Radiance: lighting design
+\item DEFT: model optimisation 
+\item LifeCycle: life-cycle energy and cost analysis
+\item Simulex: building evacuation. 
+\end{inparaenum}
+
+\paragraph{PowerDomus version 1.5} PowerDomus is a whole-building simulation tool for analysis of both thermal comfort and energy use. It has been developed to model coupled heat and moisture transfer in building when subjected to any kind of climate conditions; i.e.; considering both vapour diffusion and capillary migration. Its models predict temperature and moisture content profiles within multi-layer walls for any time step and temperature and relative humidity for each zone.
+
+\paragraph{SUNREL version 1.14} SUNREL is an hourly building energy simulation program that aids in the design of small energy-efficient buildings where the loads are dominated by the dynamic interactions between the building's envelope, it's environment, and it's occupants. SUNREL has a simplified multi-zone nodal airflow algorithm that can be used to calculate infiltration and natural ventilation. Windows can be modeled by one of two methods. Users can enter exact optical interactions of windows with identical layers of clear or tinted glass and no coatings on the layers. Thermal properties are modeled with a fixed U-value and fixed surface coefficients. For the second method, a user imports data from Window 4 or 5. SUNREL only modeles idealised HVAC equipment. The equipment and loads calculations are solved simultaneously, and the equipment capacities can to be set to unlimited. Fans move a schedulable fixed amount of air between zones or from outside.
+
+\paragraph{Tas version 9.0.7} Tas is a suite of software products, which simulate the dynamic thermal performance of buildings and their systems. The main module is Tas Building Designer, which performs dynamic building simulation with integrated natural and forced airflow. It has a 3D based geometry input that includes a CAD link. Tas Systems is a HVAC systems/control simulator, which may be directly coupled with the building simulator. It performs automatic airflow and plant sizing and total energy demand. The third module, Tas Ambiens, is a robust and simple to use 2D CFD\footnote{Computational Fluid Dynamics} package which produces a cross-section of micro-climate variations in a space. Tas has 20 years of commercial use in the UK and around the world.
+
+\paragraph{TRACE 700 version 4.1.10} TRACE is divided into four distinct calculation phases: Design, System, Equipment and Economics. During the Design phase the program first calculates building heat gains for condution through building surfaces as well as heat gains from people, lights, and appliances and impact of ventilation and infiltration. Finally the program sizes all coils and air handlers based on these maximum loads. During the System phase, the dynamic response of the building is simulated for an 8760-hour year by combining room loads profiles with the characteristics of the selected airside system to predict the load imposed on the equipment. The Equipment phase uses the hourly coild loads from the System phase to determine how the cooling, heating and air moving equipment will consume energy. The Economic phase combines economic input supplied by the user with the energy usage from the Equipment phase to calculate each alternative's utility cose, installed cost, maintenance cost and life-cycle cost.
+
+\paragraph{TRANSYS version 16.0.37} TRANSYS is a transient system simulation program with a modular sturcture that was designed to solve complex energy system problems by breaking the problem into a series of smaller components. TRANSYS components (referred to as ``Types'') may be as simple as a pump or a pipe, or as complicated as a multi-zone building model. The components are configured and assembled using a fully integrated visual interface known as the TRANSYS Simulation Studio, and building input data is entered through a dedicated visual interface (TRNBuild). The simulation engine that solves the system of algebraic and differential equations that represent the whole system. In building simulations, all HVAC-system components are solved simultaneously with the building envelope thermal balance and the air network at each time step. In addition to a detailed multizone building model, the TRANSYS library includes components for solar thermal and photovoltaic systems, low energy buildings and HVAC systems, renewable energy systems, cogeneration, fuel cells\ldots etc. The modular nature of TRANSYS facilitates the addition of new mathematical models to the program. In addition to the ability to develop new components in any programming language, the programs allows direct embedding compnents using other software; e.g.: Matlab/Simuling, Excel/VBA, and EES). TRANSYS can also generate executables that allow non-experts to run parametric studies.
+
+\subsubsection{Simulation Programs Comparative Analysis}
+
+The following tables (Figures \ref{fig:SimProg1} and \ref{fig:SimProg2}) were exerpted from the study by Drury B. Crawley et. al \cite{crawley05}. A set of abbreviations were used and donte the following:
+
+\begin{enumerate}
+\item \textbf{X} feature or capability availabe and in common use
+\item \textbf{P} feature or capabitily partially implemented
+\item \textbf{O} optional feature or capability
+\item \textbf{R} optional feature or capability for research use
+\item \textbf{E} feature or capability requires domain expertise
+\item \textbf{I} feature or capability with difficult to obtain input
+\end{enumerate}
+
+\begin{sidewaysfigure}[htbp]
+\includegraphics[width=\textwidth]{./Images/9-SimProg1}
+\caption[Simulation Programs Comparative Analysis A]{A comparative analysis of programming schedules (Schedules 1, 2 and 3) \cite{crawley05}}
+\label{fig:SimProg1}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[htbp]
+\includegraphics[width=\textwidth]{./Images/10-SimProg2}
+\caption[Simulation Programs Comparative Analysis B]{A comparative analysis of programming schedules (Schedules 4, 5 and 6) \cite{crawley05}}
+\label{fig:SimProg2}
+\end{sidewaysfigure}
