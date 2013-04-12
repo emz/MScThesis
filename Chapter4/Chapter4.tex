@@ -178,12 +178,12 @@ As the building will be corresponding to different stimulus, the cause and effec
 \label{fig:MapProcs}
 \end{figure}
 
-The author then continued to map the interrelationships of the architectural elements. This was due to the fact that each of the architectural elements would continue to affect each other in a continous loop indirectly (fig. \ref{fig:ArchElmLoop}).
+The author then continued to map the interrelationships of the architectural elements. This was due to the fact that each of the architectural elements would continue to affect each other in a continuous loop indirectly (fig. \ref{fig:ArchElmLoop}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./Images/11-ArchElmLoop}
-\caption[Architectural Elements Interrelationships]{Architecural Elements Interrelationships \cite{zulas04}}
+\caption[Architectural Elements Interrelationships]{Architectural Elements Interrelationships \cite{zulas04}}
 \label{fig:ArchElmLoop}
 \end{figure}
 
@@ -191,7 +191,7 @@ The author then continued to map the interrelationships of the architectural ele
 
 Having defined the variables and mapping their interrelationships; the next step was to model the data and program the control algorithms. This process was inline with all the design intents mentioned earlier, namely: 
 \begin{inparaenum}
-\item ``embedding ``sensorial intellegence'' in order to achieve object recognition. To be achieved through contextual based conditional,
+\item ``embedding ``sensorial intelligence'' in order to achieve object recognition. To be achieved through contextual based conditional,
 \item embedding ``smart flexibility'' allowing the user to intervene directly and freely with virtual objects throughout the design process. Implementing the concept of stretchable surfaces (to be further explained),
 \item embedding ``structural intelligence in order to achieve specific self-fixing capabilities. Introducing the concept of emergence, to be implemented locally through a rule based approach (to be further explained).''
 \end{inparaenum} \cite{zulas04}
@@ -204,7 +204,7 @@ The computational approaches that were used to tackle the three concepts stated 
 \item Generative emergence rules
 \end{enumerate}
 
-\subparagraph{Parametric representation of the context.} In order for the system to be ``adaptive'' and ``responsive'', the context should be variable, and therefore parameterized. In the earlier work by the autor (refer to section \ref{sec:AdptPav}) the stimulus to which the building had responded was the sun and its movement. Here however, the whole context of buildins, roads and the rest of the stiumuli mentioned earlier will affect the buildings response (see fig. \ref{fig:ParametricKendallSq}).
+\subparagraph{Parametric representation of the context.} In order for the system to be ``adaptive'' and ``responsive'', the context should be variable, and therefore parameterized. In the earlier work by the author (refer to section \ref{sec:AdptPav}) the stimulus to which the building had responded was the sun and its movement. Here however, the whole context of buildings, roads and the rest of the stimuli mentioned earlier will affect the buildings response (see fig. \ref{fig:ParametricKendallSq}).
 
 \begin{figure}[htbp]
 \centering
@@ -225,7 +225,7 @@ The parametrization of the context was achieved by applying a stretchable two-di
 \subparagraph{Delimited Action: Semi-automated Human Intervention.}
 The ``stretchable surfaces'' concept was further incorporated into the system by making adaption of the pavilion respond to any changes in the grid, which would act as a guide to the programmed adaption algorithm, while allowing direct adjustments to the grid by the designer; hence, a ``semi-automated'' human intervention.
 
-\subparagraph{Generative Emergence Rules.} As mentioned earlier in this chapter; draughting and modelling programs usually provide generative modelling through scripting (end-user programming languages). In this case the author \cite{zuals04} utilized the scripting capabilities of CATIA (parametric modelling application). The emergence rule acts as a form of ``structural intelligence'' (a concept described earlier) where the rule identifies the length of two sides of the basic composition of the pavilion's main structure; which if they are exceeded the system will automatically add an emergent structural element to preserve structural integrity. The script used is shown in fig. \ref{fig:EmergRuleScr}.
+\subparagraph{Generative Emergence Rules.} As mentioned earlier in this chapter; draughting and modelling programs usually provide generative modelling through scripting (end-user programming languages). In this case the author \cite{zulas04} utilised the scripting capabilities of CATIA (parametric modelling application). The emergence rule acts as a form of ``structural intelligence'' (a concept described earlier) where the rule identifies the length of two sides of the basic composition of the pavilion's main structure; which if they are exceeded the system will automatically add an emergent structural element to preserve structural integrity. The script used is shown in fig. \ref{fig:EmergRuleScr}.
 
 \begin{figure}[htbp]
 \centering
@@ -233,5 +233,29 @@ The ``stretchable surfaces'' concept was further incorporated into the system by
 \caption[Emergence Rule Script]{A screen capture of the script used in CATIA to apply the emergence rule \cite{zulas04}}
 \label{fig:EmergRuleScr}
 \end{figure}
+
+\clearpage
+\subsection{The ``Generative System'' Search, Optimisation and Simulation System}
+
+The following experiment is part of the research done by Luisa Gama Caldas \cite{caldas01}, in the efforts to create what was called a ``Generative System'', consisting of two main components: \begin{inparaenum} \item a search and optimisation module, and \item a simulation module \end{inparaenum}.
+
+The author chose Genetic Algorithm --- or GA --- (see sec. \ref{subsec:GA}) for the search and optimisation module, which feeds the initial input along with building parameters into the simulation program DOE (see sec. \ref{par:DOE}) which evaluates the results and returns its fitness function value (in this case the annual energy consumption of a building) into GA, which in turn searches the solution space until it reaches the last population\footnote{For explanation of GA terminology; refer to section \ref{subsec:GA}}, the results are then inspected using a visulaization program (see fig \ref{fig:GSfitFun}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/15-FitnessFunction}
+\caption[GS Information Flow]{The flow of information across the Generative System components \cite{caldas01}}
+\label{fig:GSfitFun}
+\end{figure}
+
+\paragraph{The Simulation Module: DOE2.1E -- Capabilities and Limitations.} DOE2.1E was chosen as the simulation module for its capability to perform thermal and lighting calculations, thermal loads, HVAC loads, extensive material modelling capabilities, library of HVAC systems, and also for its accuracy and resonable compuation times. However, DOE2.1E is incapable of other related calculations such as Computational Fluid Dynamics [CFD] which would simulate air movement.
+
+In this thesis the aspects of air movement and ventilation have been diregarded for the sake of simplicity of illustration of generative systems and environmental design --- thermal design in particular --- integration, and therefore, the simulation of thermal properties of buildings will suffice in this example. Another missing feature in DOE is the performing thermal comfort predicitons. 
+
+The author performing the experiment had recommended Energy Plus (see sec. \ref{par:EnergyPlus}) as a replacement of DOE for this and many other reasons, as it was not available at the time when the experiment was performed.
+
+\paragraph{The Search Module: Genetic Algorithm -- description, advantages and shortfalls} Genetic Algorithm had been chosen by the author as the search and optimisation module for the fact that GA provides a final `populaiton' of solutions, not a single solution. As stated by the author: ``\emph{A system that would provide a sinlge `optimized' solution might have poor acceptance among architects, who might prefer to have a range of choices between differenct solutions, all having a high standard of performance according the objective functions included in the search, and from where the architect could exert further choice, according to other criteria like personal preference, initial design intention \ldots etc}.'' (refer to sec. \ref{subsec:OptimComp} for comparison between GA and other search and optimization methods by Caldas \cite{caldas01}).
+
+Another advantage of GA is the coding of variables in the search process, which applies to binary GA's using binary code --- 1's and 0's --- in its chromosomes. The chromosomes can be decoded into any kind of variable, numerical or non-numerical; for example, part of the chromosome can be decoded into a material name, or into any other kind of non-numerical variable.
 
 

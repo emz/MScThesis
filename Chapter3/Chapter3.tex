@@ -256,6 +256,7 @@ The following section will discuss popular optimisation algorithms in architecur
 
 \newpage
 \subsection{Genetic Algorithm}
+\label{subsec:GA}
 
 Genetic algorithm is an evolutianary algorithm, a subset of heuristic\footnote{Of or relating to exploratory problem-solving techniques that utilise self-educating techniques to improve performance\cite{merriam03}} search methods for solving optimisation problems, simulating biological evolution \cite{fasoulaki08}. Genetic Algorithm has unique terminology due to it's origins in biological evolutionary science.
 
@@ -387,8 +388,9 @@ The memory used in tabu search is both \emph{explicit} and \emph{attributive}. E
 \paragraph{Intensification and Diversification.} Intensification is linked with short term memory and explicit memory; it evaluates recently visited solutions and chooses to intensify search in a particular zone of the solution space when it detects that a large number of elite solutions, this zone could be called a neighbourhood, but with a different definition than usual; this neighbourhood consists of all solutions within this area regardless of their attributes. Diversification --- on the other hand --- encourages the search process to investigate unvisited regions, and generate solutions that are significantly different from previous solutions.
 
 \subsection{Optimisation Search Method Comparison}
+\label{subsec:OptimComp}
 
-The following study (Table \ref{table:OptMethCmprsn}) by L. Caldas \cite{caldas01} illustrates the characteristics of Genetic Algorith, Simulated Annealing and Tabu Search; comparing them in terms of memory usage, intensification, diversification and neighbourhoods:
+The following study (Table \ref{tab:OptCmp}) by L. Caldas \cite{caldas01} illustrates the characteristics of Genetic Algorith, Simulated Annealing and Tabu Search; comparing them in terms of memory usage, intensification, diversification and neighbourhoods:
 
 \begin{table}
 \centering
@@ -408,7 +410,7 @@ The following study (Table \ref{table:OptMethCmprsn}) by L. Caldas \cite{caldas0
  &Influence memory: records impact of certain moves and makes bad moves tabu-active for some period of time& & & \\\hline
 \end{tabular}}
 \caption[Optimisation Search Method Characteristics]{A comparison of optimisation search methods \cite{caldas01}}
-\label{table:OptMethCmprsn}
+\label{tab:OptCmp}
 \end{table}
 
 \clearpage
