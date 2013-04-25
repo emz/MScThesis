@@ -322,7 +322,7 @@ For the experiment, a simple schematic building consisting of a core area with s
 \paragraph{Simulation Method}\mbox{}\\
 
 A framework is designed for the genetic algorithm to allow for enoding and manipulation of variables which suits the problem. To be able to utilise GA; it was necessary to provide the following:
-\begin{enumerate}
+\begin{enumerate}[nolistsep]
 \item A binary string of bits
 \item An objective function definition, which would pass the data to DOE
 \item Mechanisms for selection, crossover and mutation
@@ -330,4 +330,50 @@ A framework is designed for the genetic algorithm to allow for enoding and manip
 \item Maximum number of generations.
 \end{enumerate}
 
-\subparagraph{Representation of feasible solutions.} The building has
+\subparagraph{Representation of feasible solutions.}\mbox{}\\
+
+The building has four different types of windows, one for each orientation. The windows were defined by two dimensions: width and height. Each dimension would vary from 0.3 to 2.4 metres in discrete steps of 0.3 metres; thus resulting in a total of 8 possible values. In order to code 8 values in binary code, only 3 bits are needed [$2^3=8$]. A single dimension therefore can be coded as follows:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|rrrrrrrr}
+\textbf{Decoded Numerical Value(m)}&0.3&0.6&0.9&1.2&1.5&1.8&2.1&2.4\\ \hline
+\textbf{Binary Code}&000&001&010&011&100&101&110&111\\
+\end{tabular}
+\caption{Window Dimension Binary Coding}
+\label{table:WinDimCode}
+\end{table}
+
+Having encoded the 8 steps for each dimension, the 8 dimension [2 dimensions $\times$ 8 orientations] would need 24 bit strings [3 bits per variable $\times$ 8 variables]. A valid chromosome in this case would be:\\
+\vspace{0.3cm}
+\begin{center}
+\textbf{010111001011100110001110}
+\end{center}
+
+\subparagraph{Objective Function}\mbox{}\\
+
+The objective function value is the result of running thermal and lighting simulation with the window parameters chosen, and expresses the total annual energy consuption in the building in MWh\footnote{Mega-Watt-hour}, taken from the \emph{Building Energy Performance Summary} (BEPS) report of DOE-2.1E.
+
+\subparagraph{Selection Mechanism}\mbox{}\\
+
+Biased Roulette Wheel selection was used (refer to page \pageref{eqn:BiasedRoulette}).
+
+\subparagraph{Crossover Mecahnism}\mbox{}\\
+
+Uniform crossover was used (refer to page \pageref{eqn:UniformCross}). The probability of crossover was set to 1, to ensure a high recombination rate.
+
+\subparagraph{Mutation Mechanism}\mbox{}\\
+
+Mutation was set to 0, due to the small initial population, large number of generations and high crossover rate, which renders it unnecessary.
+
+\subparagraph{Population Size and Number of Maximum Generations}
+
+A small initial population size was chosen [$n=5$], and number of generations was set to 100 (extending the number to 200 and 300 had been tested, but did not cause no improvement to the final solution).
+
+\paragraph{Problem Description, Simulation Method and Testing}\mbox{}\\
+
+The problem in this case is sizing the windows to optimise lighting, heating and cooling performance. Daylighting levels are simulated and measured at two referenced points inside each space, for each hour of the year. The results are compared to the required illuminance levels, and the amount of additional artificial lighting (assumed as continualy dimmable) is calculated, and quantified for energy consumption. The heat load of artificial lighting is also added.
+
+Internal temperatures are then calculated, taking into account the external climate, characteristics of building fabric (see sec. \ref{ThermDesVar}), solar gains through windows, internal gains from occupants, equipment and artificial lighting \ldots\hspace{0cm}etc. The results are compared to required levels, resultant HVAC loads are calculated and quantified as energy consumption. 
+
+
