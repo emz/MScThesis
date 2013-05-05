@@ -28,13 +28,11 @@ Another form of parametric modelling is generative parametric graphical modules,
 Parametric models are of great value to performative oriented design processes, which is sometimes fused with scripting, benefiting from both in speeding the process and achieving better results.
 
 \clearpage
-\section{Case Studies}
-
-\subsection{Adaptable Responsive Architecture}
+\section{Adaptable Responsive Architecture}
 
 The following will showcase a number of experiments by Alejandro Zulas \cite{zulas04}, utilising scripting to create adaptable responsive enclosure systems with emphasis on sunlight incidence.
 
-\subsubsection{The Mutable Curtain}
+\subsection{The Mutable Curtain}
 
 The author attempted the design of a box capable of modulating light going through it (fig. \ref{fig:AZulasEncl}), which was done using Rhinoceros modelling program and its scripting language; \emph{Rhinoscript}. The experiment was an attempt to create an adaptive, responsive enclosure system which responded to solar incidence angles. 
 
@@ -55,13 +53,13 @@ The main variable in the experiment was the ratio of enclosure wall solid and vo
 \label{fig:TransSeq}
 \end{figure}
 
-\subsubsection{Responsive Louvres System}
+\subsection{Responsive Louvres System}
 
 Another experiment by the same author \cite{zulas04} was done using a parametric design driven program called CATIA (Computer Aided Three-Dimensional Interactive Application). The objective of this exercise was also to modulate light at the enclosure level, but through shading. The researcher used a number of vertical and horizontal louvres which responded to two factors; the location of the sun throughout days of different seasons which would affect the arrangement of the louvres, in addition to the angle of incidence which affected the orientation of each louvre as to reflect the light in a direction away from the building. 
 
 The parametric CAD program, CATIA; had some advantages over Rhinoscript as it displayed the effect of any amendments to the script interactively in the form of graphical feedback, which was beneficial to the process. 
 
-\subsubsection{Adaptable Pavilion}
+\subsection{Adaptable Pavilion}
 \label{sec:AdptPav}
 
 Another experiment using CATIA; an attempt to design a temporary exhibition pavilion \cite{zulas04}. The exercise focuses on the conception of a contextual responsive building addressing different variations on the overall building form and envelope in relation to sunlight. 
@@ -73,7 +71,7 @@ Another experiment using CATIA; an attempt to design a temporary exhibition pavi
 \label{fig:PvlLoc}
 \end{figure}
 
-\paragraph{Design Intentions:} 
+\subsubsection{Design Intentions:} 
 
 \begin{enumerate}
 \item Generate an appropriate enclosed environment for the sculptures to be exhibited.
@@ -118,7 +116,7 @@ The end result was quite similar to the initial design intentions (fig. \ref{fig
 \end{figure}
 
 \newpage
-\subsubsection{The Kendall Pavilion}
+\subsection{The Kendall Pavilion}
 
 The following is a comprehensive exercise to create an adaptable responsive system, with an approach combining the following concepts and control mechanisms:
 
@@ -130,7 +128,7 @@ The following is a comprehensive exercise to create an adaptable responsive syst
 
 The task is to design an architectural envelope capable of performing responsive geometrical reconfiguration based on the idea of adaption in relation to a geographical location, urban context, and to specific design intentions, responding to the designer's direct manipulation.
 
-\paragraph{The Urban Context Description}
+\subsubsection{The Urban Context Description}
 
 The space designated to locate the pavilion is surrounded by and high and medium sized structures.
 
@@ -141,7 +139,7 @@ The space designated to locate the pavilion is surrounded by and high and medium
 \label{fig:KedLoc}
 \end{figure}
 
-\paragraph{The Design Intentions} 
+\subsubsection{The Design Intentions} 
 \vspace{-0.3cm}
 \begin{enumerate}
 \item Generate an architectural skin.
@@ -158,7 +156,7 @@ The space designated to locate the pavilion is surrounded by and high and medium
 \label{fig:KenPavDesInt}
 \end{figure}
 
-\paragraph{The Mapping Process}
+\subsubsection{The Mapping Process}
 
 As the building will be corresponding to different stimulus, the cause and effect sequence had to be programmed, and four elements were selected as inputs:
 \vspace{-0.3cm}
@@ -187,7 +185,7 @@ The author then continued to map the interrelationships of the architectural ele
 \label{fig:ArchElmLoop}
 \end{figure}
 
-\paragraph{Control Mechanisms.}
+\subsubsection{Control Mechanisms.}
 
 Having defined the variables and mapping their interrelationships; the next step was to model the data and program the control algorithms. This process was inline with all the design intents mentioned earlier, namely: 
 \begin{inparaenum}
@@ -204,7 +202,8 @@ The computational approaches that were used to tackle the three concepts stated 
 \item Generative emergence rules
 \end{enumerate}
 
-\subparagraph{Parametric representation of the context.} In order for the system to be ``adaptive'' and ``responsive'', the context should be variable, and therefore parameterised. In the earlier work by the author (refer to section \ref{sec:AdptPav}) the stimulus to which the building had responded was the sun and its movement. Here however, the whole context of buildings, roads and the rest of the stimuli mentioned earlier will affect the buildings response (see fig. \ref{fig:ParametricKendallSq}).
+\paragraph{Parametric representation of the context.}\mbox{}\\
+In order for the system to be ``adaptive'' and ``responsive'', the context should be variable, and therefore parameterised. In the earlier work by the author (refer to section \ref{sec:AdptPav}) the stimulus to which the building had responded was the sun and its movement. Here however, the whole context of buildings, roads and the rest of the stimuli mentioned earlier will affect the buildings response (see fig. \ref{fig:ParametricKendallSq}).
 
 \begin{figure}[htbp]
 \centering
@@ -222,7 +221,7 @@ The computational approaches that were used to tackle the three concepts stated 
 
 The parameterisation of the context was achieved by applying a stretchable two-dimensional grid, or net, of lines on the surrounding buildings and pedestrian paths. The method is referred to by the author as manipulation through ``stretchable surfaces''.
 
-\subparagraph{Delimited Action: Semi-automated Human Intervention.}
+\paragraph{Delimited Action: Semi-automated Human Intervention.}\mbox{}\\
 The ``stretchable surfaces'' concept was further incorporated into the system by making adaption of the pavilion respond to any changes in the grid, which would act as a guide to the programmed adaption algorithm, while allowing direct adjustments to the grid by the designer; hence, a ``semi-automated'' human intervention.
 
 \subparagraph{Generative Emergence Rules.} As mentioned earlier in this chapter; draughting and modelling programs usually provide generative modelling through scripting (end-user programming languages). In this case the author \cite{zulas04} utilised the scripting capabilities of CATIA (parametric modelling application). The emergence rule acts as a form of ``structural intelligence'' (a concept described earlier) where the rule identifies the length of two sides of the basic composition of the pavilion's main structure; which if they are exceeded the system will automatically add an emergent structural element to preserve structural integrity. The script used is shown in fig. \ref{fig:EmergRuleScr}.
@@ -235,7 +234,7 @@ The ``stretchable surfaces'' concept was further incorporated into the system by
 \end{figure}
 
 \clearpage
-\subsection{The ``Generative System'' Search, Optimisation and Simulation System}
+\section{The Generative System Method}
 
 The following experiment is part of the research done by Luisa Gama Caldas \cite{caldas01}, in the efforts to create what was called a ``Generative System'', consisting of two main components: \begin{inparaenum} \item a search and optimisation module, and \item a simulation module \end{inparaenum}.
 
@@ -248,13 +247,16 @@ The author chose Genetic Algorithm---abbreviated: GA---(see sec. \ref{subsec:GA}
 \label{fig:GSfitFun}
 \end{figure}
 
-\paragraph{The Simulation Module: DOE2.1E -- Capabilities and Limitations.} DOE2.1E was chosen as the simulation module for its capability to perform thermal calculations, namely: thermal loads, HVAC loads, extensive material modelling capabilities, library of HVAC systems, and also for its accuracy and reasonable computation times. However, DOE2.1E is incapable of other thermal design related calculations such as Computational Fluid Dynamics [CFD] which simulates air movement and its thermal effects. Another missing feature in DOE is the capability to calculate and predict thermal comfort. 
+\subsection{The Simulation Module: DOE2.1E -- Capabilities and Limitations.}
+DOE2.1E was chosen as the simulation module for its capability to perform thermal calculations, namely: thermal loads, HVAC loads, extensive material modelling capabilities, library of HVAC systems, and also for its accuracy and reasonable computation times. However, DOE2.1E is incapable of other thermal design related calculations such as Computational Fluid Dynamics [CFD] which simulates air movement and its thermal effects. Another missing feature in DOE is the capability to calculate and predict thermal comfort. 
 
 The author performing the experiment had recommended Energy Plus (see sec. \ref{par:EnergyPlus}) as a replacement of DOE for the above mentioned reasons---in addition to others--- which was not used as it was not available at the time when the experiment was performed.
 
 In the context of this thesis however, the aspects of air movement and ventilation have been disregarded for the sake of simplicity of illustration of generative systems and thermal design integration, and therefore, the simulation of static thermal properties of buildings will suffice in this example.
 
-\paragraph{The Search Module: Genetic Algorithm -- description, advantages and shortfalls} Genetic Algorithm had been chosen by the author as the search and optimisation module due to that GA provides a final `population' of solutions, not a single solution. As stated by the author: ``\emph{A system that would provide a single `optimised' solution might have poor acceptance among architects, who might prefer to have a range of choices between different solutions, all having a high standard of performance according the objective functions included in the search, and from where the architect could exert further choice, according to other criteria like personal preference, initial design intention \ldots etc}.'' (refer to sec. \ref{subsec:OptimComp} for comparison between GA and other search and optimisation methods by Caldas \cite{caldas01}).
+\subsection{The Search Module: Genetic Algorithm -- description, advantages and shortfalls}
+
+Genetic Algorithm had been chosen by the author as the search and optimisation module due to that GA provides a final `population' of solutions, not a single solution. As stated by the author: ``\emph{A system that would provide a single `optimised' solution might have poor acceptance among architects, who might prefer to have a range of choices between different solutions, all having a high standard of performance according the objective functions included in the search, and from where the architect could exert further choice, according to other criteria like personal preference, initial design intention \ldots etc}.'' (refer to sec. \ref{subsec:OptimComp} for comparison between GA and other search and optimisation methods by Caldas \cite{caldas01}).
 
 Another advantage of GA is the coding of variables in the search process, which applies to binary GA's using binary code---1's and 0's---in its chromosomes. The chromosomes can be encoded into any kind of variable, numerical or non-numerical; for example, part of the chromosome can be encoded as a material name, or a dimension, or into any other kind of numerical or non-numerical variable.
 
@@ -284,11 +286,11 @@ Z=(z_1,\cdots,z_n), z_i=x_i \text{or} z_i=y_i
 
 Mutation involves changing an \emph{allele}\footnote{One digit of the chromosome string} with a given probability to look for new points in the solution space. Mutation is responsible for introducing information that did not exist in the initial population. Caldas \cite{caldas01} mentions a rule of thumb based on parametric studies, which states that a mutation rate of $m=1/n$, where $n$ is the size of the chromosome; is almost optimal.
 
-\subsubsection{Previous Attempts of Optimisation through Building Energy Simulation Programs}
+\subsection{Previous Attempts of Optimisation through Building Energy Simulation Programs}
 
 The researcher continues to illustrate previous work done prior to her research, with the attempt to apply energy simulation programs to create optimum solutions. One of the attempts include the use of DOE-2.1E to optimise design parameters of a window, which relies on indices and weight factors creating a single figure by which the design is evaluated. The indices were: \begin{inparaenum} \item fuel usage, \item electricity usage, \item peak electricity demand, \item thermal comfort, and \item visual comfort \end{inparaenum}. The idea of combining the five indices into one figure however was deemed dubious by the researcher. Thermal comfort was calculated as a correlation between magnitude of solar radiation and the percentage of dissatisfied people. Visual comfort was done through calculation of the glare index.
 
-\subsubsection{Building the Generative System}
+\subsection{Building the Generative System}
 
 The method used by the researcher was to link Genetic Algorithm and DOE-2.1E, where GA would call DOE-2.1E whenever calculation of the fitness of an individual is needed; the fitness function being the \textbf{annual energy consumption}. DOE-2.1E would then run a thermal and lighting simulation of the building under study with the parameters determined by the individual chromosome of that solution. 
 
@@ -296,19 +298,19 @@ A method of data exchange between GA and DOE was developed; different procedures
 
 Non-numerical variables such as material names encoding design was handled with special attention to the relation between the material properties and the binary code. For example; if the number of material selections was 16, 4 alleles would be used ($2^4=16$), so that a material designation would be something like 0101. Each of the 4 alleles would have a specific designation; for example, the first digit would designate if it's an insulation material, the second would designate high or low conductivity \ldots\hspace{0cm}etc.
 
-Another problem was how to incorporate architectural language into the algorithm. Although DOE uses what is called \emph{The Building Description Language} (BDL) as an input format to describe building geometry, it does not allow incorporation of information describing the relations between the different variables under study. Therefore, the constraints of architecural design had to be encoded inside GA code.
+Another problem was how to incorporate architectural language into the algorithm. Although DOE uses what is called \emph{The Building Description Language} (BDL) as an input format to describe building geometry, it does not allow incorporation of information describing the relations between the different variables under study. Therefore, the constraints of architectural design had to be encoded inside GA code.
 
-\subsubsection{Input and Output Formats}
+\subsection{Input and Output Formats}
 
-Since GA had no designed user interface, the input process was text-based. Input consisted of two main steps; namely, creating a DOE-2.1E input file describing the building---including geometry, orientation, space layout, construction material \ldots\hspace{0cm}etc.---and also providing informatino on electrical and mechanical systems to be used in schedules. This was created with nill values assigned to the different variables under study, which would be created by the algorithm. Each of the variables is represented by a numerical value.
+Since GA had no designed user interface, the input process was text-based. Input consisted of two main steps; namely, creating a DOE-2.1E input file describing the building---including geometry, orientation, space layout, construction material \ldots\hspace{0cm}etc.---and also providing information on electrical and mechanical systems to be used in schedules. This was created with nil values assigned to the different variables under study, which would be created by the algorithm. Each of the variables is represented by a numerical value.
 
-The second step would be to adapt the GA to the problem under study, as well as the input files it reads during execution. A function in the source code would call DOE, and pass the right number of arguements to it in correct order. Some relations between different variables are specified. 
+The second step would be to adapt the GA to the problem under study, as well as the input files it reads during execution. A function in the source code would call DOE, and pass the right number of arguments to it in correct order. Some relations between different variables are specified. 
 
 Finally, the input files GA reads are modified to identify the variables to be considered in the search, the upper and lower boundaries of each variable, the number of intermediate steps between those limits and the number of binary bits required to code each variable. Also, a file would be included that defines the population size in GA, and the number of generations, in addition to other control mechanisms of the search process.
 
 The output is then passed on to either an AutoLisp routine which draws an AutoCAD file from the results, or through a program called DrawBDL which generates a 3D model from DOE output files.
 
-\subsubsection{Testing the Generative System}
+\subsection{Testing the Generative System}
 
 For the experiment, a simple schematic building consisting of a core area with surrounding rooms facing each of the four main cardinal orientations\footnote{North, South, East and West}; each room had a single window looking on the opposite side of the core (see fig. \ref{fig:SchmBuild}).
 
@@ -321,7 +323,7 @@ For the experiment, a simple schematic building consisting of a core area with s
 
 \paragraph{Simulation Method}\mbox{}\\
 
-A framework is designed for the genetic algorithm to allow for enoding and manipulation of variables which suits the problem. To be able to utilise GA; it was necessary to provide the following:
+A framework is designed for the genetic algorithm to allow for encoding and manipulation of variables which suits the problem. To be able to utilise GA; it was necessary to provide the following:
 \begin{enumerate}[nolistsep]
 \item A binary string of bits
 \item An objective function definition, which would pass the data to DOE
@@ -352,13 +354,13 @@ Having encoded the 8 steps for each dimension, the 8 dimension [2 dimensions $\t
 
 \subparagraph{Objective Function}\mbox{}\\
 
-The objective function value is the result of running thermal and lighting simulation with the window parameters chosen, and expresses the total annual energy consuption in the building in MWh\footnote{Mega-Watt-hour}, taken from the \emph{Building Energy Performance Summary} (BEPS) report of DOE-2.1E.
+The objective function value is the result of running thermal and lighting simulation with the window parameters chosen, and expresses the total annual energy consumption in the building in MWh\footnote{Mega-Watt-hour}, taken from the \emph{Building Energy Performance Summary} (BEPS) report of DOE-2.1E.
 
 \subparagraph{Selection Mechanism}\mbox{}\\
 
 Biased Roulette Wheel selection was used (refer to page \pageref{eqn:BiasedRoulette}).
 
-\subparagraph{Crossover Mecahnism}\mbox{}\\
+\subparagraph{Crossover Mechanism}\mbox{}\\
 
 Uniform crossover was used (refer to page \pageref{eqn:UniformCross}). The probability of crossover was set to 1, to ensure a high recombination rate.
 
@@ -372,8 +374,72 @@ A small initial population size was chosen [$n=5$], and number of generations wa
 
 \paragraph{Problem Description, Simulation Method and Testing}\mbox{}\\
 
-The problem in this case is sizing the windows to optimise lighting, heating and cooling performance. Daylighting levels are simulated and measured at two referenced points inside each space, for each hour of the year. The results are compared to the required illuminance levels, and the amount of additional artificial lighting (assumed as continualy dimmable) is calculated, and quantified for energy consumption. The heat load of artificial lighting is also added.
+The problem in this case is sizing the windows to optimise lighting, heating and cooling performance. Daylight levels are simulated and measured at two referenced points inside each space, for each hour of the year. The results are compared to the required illuminance levels, and the amount of additional artificial lighting (assumed as continually dimmable) is calculated, and quantified for energy consumption. The heat load of artificial lighting is also added.
 
 Internal temperatures are then calculated, taking into account the external climate, characteristics of building fabric (see sec. \ref{ThermDesVar}), solar gains through windows, internal gains from occupants, equipment and artificial lighting \ldots\hspace{0cm}etc. The results are compared to required levels, resultant HVAC loads are calculated and quantified as energy consumption. 
+
+\paragraph{Determining Solution Spaces for a Selected Climate}\mbox{}\\
+
+Before considering any solutions given by the Generative System, the algorithm must first be tested against an example of limited size of which the optimal solution is predeterminately known, to determine whether it would find optimal solutions for this problem. This was done by creating a solution space of 64 points for one orientation fixing the window size variables to only one value for the other orientations. The GA was run for 100 generations for each orientation.
+
+The solution space for a selected climate (Phoenix, Arizona) was then plotted graphically and the Generative System results were compared against the visible local minima and global minimum of each orientation (see figures \ref{fig:GSTestRun:W}, \ref{fig:GSTestRun:N}, \ref{fig:GSTestRun:E}, \ref{fig:GSTestRun:S})
+
+\begin{figure}[htbp]
+\centering
+	\subfloat[Western Facade]{\includegraphics[width=0.4\textwidth]{./Images/17-WestWindow}\label{fig:GSTestRun:W}}
+	\hspace{2cm}
+	\subfloat[Northern Facade]{\includegraphics[width=0.4\textwidth]{./Images/18-NorthWindow}\label{fig:GSTestRun:N}}
+	\vspace{2cm}
+	\subfloat[Eastern Facade]{\includegraphics[width=0.4\textwidth]{./Images/19-EastWindow}\label{fig:GSTestRun:E}}
+	\hspace{2cm}
+	\subfloat[Southern Facade]{\includegraphics[width=0.4\textwidth]{./Images/20-SouthWindow}\label{fig:GSTestRun:S}}
+\caption[Generative System Solution Space Test]{Generative System Solution Space Test for each facade \cite{caldas01}}
+\end{figure}
+
+The author then observed the local minima selected by the GS, and at which generation the search found the global minmum. Generally speaking; the faster the algorithm finds the global minimum the better. In cases where the global minimum was not found, the test proved that points very close to the global minimum were selected.
+
+\paragraph{Assessing GS Performance in a Larger Solution Space}
+
+Since the first test proved successful, providing enough confidence in the results to extend the method to larger problems for which the solution space cannot be calculated manually. The GS was used to search the solution space of window sizes for all orientations simultaneously, which would result in a solution space of more than 16 million points.
+
+The experiment was done five times, each running for 100 generations. The initial results showed high variance in the design patterns, progressively converging in the optimized solutions in the final generations (see figures \ref{fig:GSPhoenix:Initial} and \ref{fig:GSPhoenix:Final}).
+
+\begin{figure}[htbp]
+\centering
+	\subfloat[Initial Results]{\includegraphics[width=0.7\textwidth]{./Images/21-InitialResults}\label{fig:GSPhoenix:Initial}}
+	\vspace{0cm}
+	\subfloat[Final Results]{\includegraphics[width=0.7\textwidth]{./Images/22-FinalResults}\label{fig:GSPhoenix:Final}}
+\caption[Generative System Initial and Final Results]{Initial and final results of each experiment for all orientations with the corresponding annual energy consumption value on the right \cite{caldas01}}
+\end{figure} 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/23-Gen10-80}
+\caption[Generations Evolution]{Evolution of generations from 10 to 80 of one experiment \cite{caldas01}}
+\label{fig:GenEvol}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{1.5cm}|p{6cm}|p{2cm}|p{2.2cm}|}
+\hline
+\textbf{Exper-\newline iment}&\textbf{Best Solution Found}&\textbf{Objective Function Value (MWh)}&\textbf{Percentage Above Minimum (\%)}\\ \hline
+1&2.1/2.1/1.2/1.5/1.2/1.5/1.2/0.9&114.74&0.018\\ \hline
+2&2.4/2.1/2.1/0.9/2.1/0.9/0.9/1.5&114.65&0.01\\ \hline
+3&2.1/2.1/1.2/1.5/2.1/0.9/1.5/0.9&114.60&0.006\\ \hline
+4&1.8/2.1/1.2/1.8/0.9/1.5/1.2/0.9&114.89&0.03\\ \hline
+5&2.4/2.1/2.1/0.9/1.2/1.5/1.5/0.9&114.65&0.01\\ \hline
+\end{tabular}
+\label{tab:PhoenixSolutions}
+\caption[Solutions for the Phoenix Climate]{Solutions for the Phoenix Climate \cite{caldas01}}
+\end{table}
+
+\clearpage
+
+\section{Responsive Fa\c{c}ade Design System}
+
+This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. The optimum solutions are found and selected using Genetic Algorithm, while the simulation of the solutions is done in ECOTECT.
+
+\subsection{Description of RFDS}
 
 
