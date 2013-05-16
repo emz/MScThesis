@@ -256,6 +256,7 @@ In the context of this thesis however, the aspects of air movement and ventilati
 
 \subsection{The Search Module: Genetic Algorithm -- description, advantages and shortfalls}
 
+\label{subsec:GA2}
 Genetic Algorithm had been chosen by the author as the search and optimisation module due to that GA provides a final `population' of solutions, not a single solution. As stated by the author: ``\emph{A system that would provide a single `optimised' solution might have poor acceptance among architects, who might prefer to have a range of choices between different solutions, all having a high standard of performance according the objective functions included in the search, and from where the architect could exert further choice, according to other criteria like personal preference, initial design intention \ldots etc}.'' (refer to sec. \ref{subsec:OptimComp} for comparison between GA and other search and optimisation methods by Caldas \cite{caldas01}).
 
 Another advantage of GA is the coding of variables in the search process, which applies to binary GA's using binary code---1's and 0's---in its chromosomes. The chromosomes can be encoded into any kind of variable, numerical or non-numerical; for example, part of the chromosome can be encoded as a material name, or a dimension, or into any other kind of numerical or non-numerical variable.
@@ -386,23 +387,24 @@ The solution space for a selected climate (Phoenix, Arizona) was then plotted gr
 
 \begin{figure}[htbp]
 \centering
-	\subfloat[Western Facade]{\includegraphics[width=0.4\textwidth]{./Images/17-WestWindow}\label{fig:GSTestRun:W}}
-	\hspace{2cm}
-	\subfloat[Northern Facade]{\includegraphics[width=0.4\textwidth]{./Images/18-NorthWindow}\label{fig:GSTestRun:N}}
-	\vspace{2cm}
-	\subfloat[Eastern Facade]{\includegraphics[width=0.4\textwidth]{./Images/19-EastWindow}\label{fig:GSTestRun:E}}
-	\hspace{2cm}
-	\subfloat[Southern Facade]{\includegraphics[width=0.4\textwidth]{./Images/20-SouthWindow}\label{fig:GSTestRun:S}}
+	\subfloat[Western Facade]{\includegraphics[width=0.45\textwidth]{./Images/17-WestWindow}\label{fig:GSTestRun:W}}
+	\hspace{1cm}
+	\subfloat[Northern Facade]{\includegraphics[width=0.45\textwidth]{./Images/18-NorthWindow}\label{fig:GSTestRun:N}}
+	\vspace{1cm}
+	\subfloat[Eastern Facade]{\includegraphics[width=0.45\textwidth]{./Images/19-EastWindow}\label{fig:GSTestRun:E}}
+	\hspace{0.5cm}
+	\subfloat[Southern Facade]{\includegraphics[width=0.5\textwidth]{./Images/20-SouthWindow}\label{fig:GSTestRun:S}}
 \caption[Generative System Solution Space Test]{Generative System Solution Space Test for each facade \cite{caldas01}}
 \end{figure}
 
-The author then observed the local minima selected by the GS, and at which generation the search found the global minmum. Generally speaking; the faster the algorithm finds the global minimum the better. In cases where the global minimum was not found, the test proved that points very close to the global minimum were selected.
+The author then observed the local minima selected by the GS, and at which generation the search found the global minimum. Generally speaking; the faster the algorithm finds the global minimum the better. In cases where the global minimum was not found, the test proved that points very close to the global minimum were selected.
 
 \paragraph{Assessing GS Performance in a Larger Solution Space}
 
 Since the first test proved successful, providing enough confidence in the results to extend the method to larger problems for which the solution space cannot be calculated manually. The GS was used to search the solution space of window sizes for all orientations simultaneously, which would result in a solution space of more than 16 million points.
 
-The experiment was done five times, each running for 100 generations. The initial results showed high variance in the design patterns, progressively converging in the optimized solutions in the final generations (see figures \ref{fig:GSPhoenix:Initial} and \ref{fig:GSPhoenix:Final}).
+The experiment was done five times, each running for 100 generations. The initial results showed high variance in the design patterns, progressively converging in the optimised solutions in the final generations (see figures \ref{fig:GSPhoenix:Initial} and \ref{fig:GSPhoenix:Final}).
+\label{sec:GAConvergence}
 
 \begin{figure}[htbp]
 \centering
@@ -438,8 +440,111 @@ The experiment was done five times, each running for 100 generations. The initia
 
 \section{Responsive Fa\c{c}ade Design System}
 
-This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. The optimum solutions are found and selected using Genetic Algorithm, while the simulation of the solutions is done in ECOTECT.
+This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. The optimum solutions are found and selected using Genetic Algorithm, while the simulation of the solutions is done in \textsc{ecotect}.
 
 \subsection{Description of RFDS}
+
+Responsive Fa\c{c}ade Design System is an automated window generation tool, which considers natural daylight levels at user defined reference points within a given space. As mentioned earlier; the system uses Genetic Algorithm (refer to sections \ref{subsec:GA} and \ref{subsec:GA2} on GA)for optimum solution search, and \textsc{ecotect} for environmental simulation (refer to page \pageref{par:ECOTECT} for more information on \textsc{ecotect}). The system (RFDS) utilises \emph{Lua}, a simple programming language; as the scripting language within \textsc{ecotect}, which is the means by which the Genetic Algorithm is inputed.
+
+\subsection{Genetic Algorithm Implementation}
+
+The author explains the sequence within Genetic Algorithm as implemented in his research (refer to fig. \ref{fig:GoGAFC}) as follows:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[height=13.5cm]{./Images/24-GoGALoop}
+\caption[GA Flow Chart]{GA Flow Chart \cite{kawakita08}}
+\label{fig:GoGAFC}
+\end{figure}
+
+\paragraph{Initialisation}\mbox{} \\
+
+In this step; parameters such as population size, number of generations and chromosome length are inputted. The author explaings that longer chromosomes need larger initial populations, and that smaller populations tend to converge prematurely.
+
+\paragraph{Evaluation}\mbox{}\\
+
+The chromosomes are evaluated according to the fitness function.
+
+\paragraph{Selection}\mbox{}\\
+
+Fitter chromosomes are selected for reproduction, the better the evaluation of each chromosome; the higher the probability of selection. RFDS uses a combination of elite selection\footnote{Elite Selection: the fittest chromosomes are selected in order; no probability is used} and roulette selection.
+
+\paragraph{Crossover}\mbox{}\\
+
+Crossover is implemented to introduce variation in the population.
+
+\paragraph{Mutation}\mbox{}\\
+
+Mutation is implemented to introduce diversification and decrease the possibility of premature convergance\footnote{Convergence: The narrowing down of results to those nearest to the optimum solution (refer to page \pageref{sec:GAConvergence})}. The mutation rate used is 1/L, where L is the length of the chromosome.
+
+\paragraph{Terminal Criterion}\mbox{}\\
+
+Conditions are given and evaluated to determine when the GA is to be terminated. The output of the generation is then selected as possible optimum solutions. Possible conditions include:
+
+\begin{enumerate}
+\item If the fittest score in the population satisfies the certain target: \emph{Star Gene}
+\item If the average fittness score in the population satisfies the certain target: \emph{Population Improvement}
+\item If the increase or decrease of fitness score in the population becomes below a certain value: \emph{Convergence}
+\item If the number of generations becomes over the defined value: \emph{Finite Iteration} 
+\end{enumerate}
+
+\subsection{RFDS Implementation and Testing}
+
+A space is created, which is represented by a cuboidal geometry, and a number of windows are arranged on the envelope, with reference points at which natural daylight levels are measured. The user inputs two parameters at the beginning of the optimisation process; target daylight levels at each reference point, and the priority of each target. The terminal critrion in RFDS is the number of generations. A detailed illustration of the process is shown in figure \ref{kawakitaGA}. The explanation of each element of the system is as follows:
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{../Chapter3/Images/16-kawakitaGA}
+\caption[RFDS GA Process Flow Chart]{RFDS GA Process Flow Chart \cite{kawakita08}}
+\label{kawakitaGA}
+\end{figure}
+
+
+\paragraph{Reference Points}\mbox{}\\
+
+Reference points are placed by the user anywhere within the space. For example, the reference points could be placed at the points where light levels are the most important such as desks or reading areas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{./Images/25-RefPoints}
+\caption[RFDS Reference Points]{RFDS Reference Points \cite{kawakita08}}
+\label{fig:RFDSRefPoints}
+\end{figure}
+
+\paragraph{Target Daylight Level [lux]}\mbox{}\\
+
+The fitness scores are calculated in terms of target daylight levels determined by users.
+
+\paragraph{Priority Level of Targets}\mbox{}\\
+
+Priority levels influence fitness measurements as well as target daylight levels. Priorities are categorized into three levels: high, normal and low. This is considered a weighing system which affects the selection of possible optimum solutions.
+
+\paragraph{Window Size and Interval}\mbox{}\\
+
+Windows are arranged in lines as shown in figure \ref{fig:RFDSWin}. The windows are pixel-like, with their size and interval adjustable by the user.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{./Images/26-RFDSWindows}
+\caption[RFDS Window Arrangement]{RFDS Window Arrangement \cite{kawakita08}}
+\label{fig:RFDSWin}
+\end{figure}
+
+\paragraph{GA Operators and Initial Inputs}\mbox{}\\
+
+In the GA of RFDS the operators are set as follows:
+
+\begin{enumerate}[nolistsep]
+\item Selection: Elite and Roulette selection are combined
+\item Crossover: Uniform Crossover is utilised (refer to eqn. \ref{eqn:UniformCross})
+\item Mutation: A mutation rate of 1/L was used (L= Chromosome Length)
+\end{enumerate}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{../Chapter3/Images/17-kawakitaChromo}
+\caption[Chromosome Coding]{Coding of fenestration variables in GA chromosomes \cite{kawakita08}}
+\label{kawakitaChromo}
+\end{figure}
 
 

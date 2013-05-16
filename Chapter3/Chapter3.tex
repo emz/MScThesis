@@ -245,16 +245,16 @@ These methods fall under different classes of solving the general problem, which
 \label{fig:MathModProc}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{sidewaysfigure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{./Images/19-FunctionOpt}
+\includegraphics[width=17cm]{./Images/19-FunctionOpt}
 \caption[Function of Single Variable]{Function of single variable with optimum at $x^*$ \cite{snyman05}}
 \label{fig:FunctionOpt}
-\end{figure}
+\end{sidewaysfigure}
 
 The following section will discuss popular optimisation algorithms in architecural design, which are --- on an abstract level --- mathematical optimisation methods. Several subsets of optimisation exist, including \emph{Combinatoral, Linear, Nonlinear, Convex} and \emph{Metaheuristic}. The methods discussed herein will be of the \emph{Heuristic/Metaheuristic} subset.
 
-\newpage
+\clearpage
 \subsection{Genetic Algorithm}
 \label{subsec:GA}
 
@@ -315,20 +315,6 @@ At the final stage of the search process, an elitist model is created and presen
 The range of application of GA in architecture are wide, with a prominent success in the fields of energy consumption and structural analysis. A common practice in problem solving with GA is coupling it with a problem dependant simulation (to be discussed further in this chapter), providing feedback to refine the initial population.
 
 An example of GA implementation in passive solar design is the model presented by Go Kawakita \cite{kawakita08}. The optimisational problem addressed the fenestration of a building envelope under a specific set of environmental conditions (fig \ref{kawakitaGA}). The variables --- or parameters --- studied in the process were the size, shape, shape iteration and location of openings, which was evaluated prior to and after GA optimisation using ECOTECT simulation, which feedback the results for re-optimisation in case of the optimised model not meeting the process termination criteria.
-
-\begin{figure}[hbtp]
-\centering
-\includegraphics[width=\textwidth]{./Chapter3/Images/16-kawakitaGA}
-\caption[GA Fenestration Optimisation Model]{An optimisational building envelope fenestration Model using GA \cite{kawakita08}}
-\label{kawakitaGA}
-\end{figure}
-
-\begin{sidewaysfigure}[hbtp]
-\centering
-\includegraphics[width=20cm]{./Chapter3/Images/17-kawakitaChromo}
-\caption[Optimisation Model Chromosome Coding]{Coding of fenestration variables in GA chromosomes \cite{kawakita08}}
-\label{kawakitaChromo}
-\end{sidewaysfigure}
 
 \clearpage
 \subsection{Simulated Annealing}
