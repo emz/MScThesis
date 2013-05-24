@@ -547,4 +547,54 @@ In the GA of RFDS the operators are set as follows:
 \label{kawakitaChromo}
 \end{figure}
 
+\subsubsection{Fitness Function}
+
+The system is an optimisation tool considering daylight levels; therefore, in the case of RFDS, the chromosome of minimum differences from target levels is the fittest. A weighing factor is also utilised in this model, which represent the priorities of each reference point. The fitness function is the sum of all weighted differences (differences multiplied by their weight factor). The aim of the experiment is therefore for the fitness score to reach zero.
+
+\subsubsection{Optimisation with User-defined Priority Levels}
+
+The GA parameters are:
+\begin{enumerate}[nolistsep]
+\item Population size = 20 
+\item Number of generations = 400
+\item Number of individuals for elite selection = 2
+\item Mutation rate = 0.03
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/27-RFDSimplement}
+\caption[RFDS Space Dimensions and Window Size]{Space dimensions and windows size \cite{kawakita01}}
+\label{fig:RFDSimplement}
+\end{figure}
+
+The dimensions of the tested space and windows size are illustrated in figure \ref{fig:RFDSimplement}. Target lighting levels and weighting factors are illustrated in figure \ref{fig:RFDSpriorities}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/28-RFDSpriorities}
+\caption[RFDS Target Light Levels]{Target light levels and weight factors \cite{kawakita01}}
+\label{fig:RFDSpriorities}
+\end{figure}
+
+\subsubsection{Optimisation Results}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{./Images/29-RFDSfitnessscores}
+\caption[RFDS Fitness Scores]{Fitness scores across generations \cite{kawakita01}}
+\label{fig:RFDSfitness}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{./Images/30-RFDSdiff}
+\caption[RFDS Target Level Differences]{Differences from target levels from generation 0 to 150 \cite{kawakita01}}
+\label{fig:RFDSdiff}
+\end{figure}
+
+
+\clearpage
+\section{Responsive Louver System}
+
 
