@@ -203,7 +203,7 @@ The computational approaches that were used to tackle the three concepts stated 
 \item Generative emergence rules
 \end{enumerate}
 
-\paragraph{Parametric representation of the context.}\mbox{}\\
+\paragraph{Parametric representation of the context.}\mbox{}
 In order for the system to be ``adaptive'' and ``responsive'', the context should be variable, and therefore parameterised. In the earlier work by the author (refer to section \ref{sec:AdptPav}) the stimulus to which the building had responded was the sun and its movement. Here however, the whole context of buildings, roads and the rest of the stimuli mentioned earlier will affect the buildings response (see fig. \ref{fig:ParametricKendallSq}).
 
 \begin{figure}[htbp]
@@ -222,7 +222,7 @@ In order for the system to be ``adaptive'' and ``responsive'', the context shoul
 
 The parameterisation of the context was achieved by applying a stretchable two-dimensional grid, or net, of lines on the surrounding buildings and pedestrian paths. The method is referred to by the author as manipulation through ``stretchable surfaces''.
 
-\paragraph{Delimited Action: Semi-automated Human Intervention.}\mbox{}\\
+\paragraph{Delimited Action: Semi-automated Human Intervention.}\mbox{}
 The ``stretchable surfaces'' concept was further incorporated into the system by making adaption of the pavilion respond to any changes in the grid, which would act as a guide to the programmed adaption algorithm, while allowing direct adjustments to the grid by the designer; hence, a ``semi-automated'' human intervention.
 
 \subparagraph{Generative Emergence Rules.} As mentioned earlier in this chapter; draughting and modelling programs usually provide generative modelling through scripting (end-user programming languages). In this case the author \cite{zulas04} utilised the scripting capabilities of CATIA (parametric modelling application). The emergence rule acts as a form of ``structural intelligence'' (a concept described earlier) where the rule identifies the length of two sides of the basic composition of the pavilion's main structure; which if they are exceeded the system will automatically add an emergent structural element to preserve structural integrity. The script used is shown in fig. \ref{fig:EmergRuleScr}.
@@ -236,6 +236,7 @@ The ``stretchable surfaces'' concept was further incorporated into the system by
 
 \clearpage
 \section{The Generative System Method}
+\label{sec:GSM}
 
 The following experiment is part of the research done by Luisa Gama Caldas \cite{caldas01}, in the efforts to create what was called a ``Generative System'', consisting of two main components: \begin{inparaenum} \item a search and optimisation module, and \item a simulation module \end{inparaenum}.
 
@@ -323,7 +324,7 @@ For the experiment, a simple schematic building consisting of a core area with s
 \label{fig:SchmBuild}
 \end{figure}
 
-\paragraph{Simulation Method}\mbox{}\\
+\paragraph{Simulation Method}\mbox{}
 
 A framework is designed for the genetic algorithm to allow for encoding and manipulation of variables which suits the problem. To be able to utilise GA; it was necessary to provide the following:
 \begin{enumerate}[nolistsep]
@@ -334,7 +335,7 @@ A framework is designed for the genetic algorithm to allow for encoding and mani
 \item Maximum number of generations.
 \end{enumerate}
 
-\subparagraph{Representation of feasible solutions.}\mbox{}\\
+\subparagraph{Representation of feasible solutions.}\mbox{}
 
 The building has four different types of windows, one for each orientation. The windows were defined by two dimensions: width and height. Each dimension would vary from 0.3 to 2.4 metres in discrete steps of 0.3 metres; thus resulting in a total of 8 possible values. In order to code 8 values in binary code, only 3 bits are needed [$2^3=8$]. A single dimension therefore can be coded as follows:
 
@@ -354,33 +355,33 @@ Having encoded the 8 steps for each dimension, the 8 dimension [2 dimensions $\t
 \textbf{010111001011100110001110}
 \end{center}
 
-\subparagraph{Objective Function}\mbox{}\\
+\subparagraph{Objective Function}\mbox{}
 
 The objective function value is the result of running thermal and lighting simulation with the window parameters chosen, and expresses the total annual energy consumption in the building in MWh\footnote{Mega-Watt-hour}, taken from the \emph{Building Energy Performance Summary} (BEPS) report of DOE-2.1E.
 
-\subparagraph{Selection Mechanism}\mbox{}\\
+\subparagraph{Selection Mechanism}\mbox{}
 
 Biased Roulette Wheel selection was used (refer to page \pageref{eqn:BiasedRoulette}).
 
-\subparagraph{Crossover Mechanism}\mbox{}\\
+\subparagraph{Crossover Mechanism}\mbox{}
 
 Uniform crossover was used (refer to page \pageref{eqn:UniformCross}). The probability of crossover was set to 1, to ensure a high recombination rate.
 
-\subparagraph{Mutation Mechanism}\mbox{}\\
+\subparagraph{Mutation Mechanism}\mbox{}
 
 Mutation was set to 0, due to the small initial population, large number of generations and high crossover rate, which renders it unnecessary.
 
-\subparagraph{Population Size and Number of Maximum Generations}
+\subparagraph{Population Size and Number of Maximum Generations}\mbox{}
 
 A small initial population size was chosen [$n=5$], and number of generations was set to 100 (extending the number to 200 and 300 had been tested, but did not cause no improvement to the final solution).
 
-\paragraph{Problem Description, Simulation Method and Testing}\mbox{}\\
+\paragraph{Problem Description, Simulation Method and Testing}\mbox{}
 
 The problem in this case is sizing the windows to optimise lighting, heating and cooling performance. Daylight levels are simulated and measured at two referenced points inside each space, for each hour of the year. The results are compared to the required illuminance levels, and the amount of additional artificial lighting (assumed as continually dimmable) is calculated, and quantified for energy consumption. The heat load of artificial lighting is also added.
 
 Internal temperatures are then calculated, taking into account the external climate, characteristics of building fabric (see sec. \ref{ThermDesVar}), solar gains through windows, internal gains from occupants, equipment and artificial lighting \ldots\hspace{0cm}etc. The results are compared to required levels, resultant HVAC loads are calculated and quantified as energy consumption. 
 
-\paragraph{Determining Solution Spaces for a Selected Climate}\mbox{}\\
+\paragraph{Determining Solution Spaces for a Selected Climate}\mbox{}
 
 Before considering any solutions given by the Generative System, the algorithm must first be tested against an example of limited size of which the optimal solution is predeterminately known, to determine whether it would find optimal solutions for this problem. This was done by creating a solution space of 64 points for one orientation fixing the window size variables to only one value for the other orientations. The GA was run for 100 generations for each orientation.
 
@@ -400,7 +401,7 @@ The solution space for a selected climate (Phoenix, Arizona) was then plotted gr
 
 The author then observed the local minima selected by the GS, and at which generation the search found the global minimum. Generally speaking; the faster the algorithm finds the global minimum the better. In cases where the global minimum was not found, the test proved that points very close to the global minimum were selected.
 
-\paragraph{Assessing GS Performance in a Larger Solution Space}
+\paragraph{Assessing GS Performance in a Larger Solution Space}\mbox{}
 
 Since the first test proved successful, providing enough confidence in the results to extend the method to larger problems for which the solution space cannot be calculated manually. The GS was used to search the solution space of window sizes for all orientations simultaneously, which would result in a solution space of more than 16 million points.
 
@@ -440,6 +441,7 @@ The experiment was done five times, each running for 100 generations. The initia
 \clearpage
 
 \section{Responsive Fa\c{c}ade Design System}
+\label{sec:RFDS}
 
 This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. The optimum solutions are found and selected using Genetic Algorithm, while the simulation of the solutions is done in \textsc{ecotect}.
 
@@ -458,27 +460,27 @@ The author explains the sequence within Genetic Algorithm as implemented in his 
 \label{fig:GoGAFC}
 \end{figure}
 
-\paragraph{Initialisation}\mbox{} \\
+\paragraph{Initialisation}\mbox{}
 
 In this step; parameters such as population size, number of generations and chromosome length are inputted. The author explaings that longer chromosomes need larger initial populations, and that smaller populations tend to converge prematurely.
 
-\paragraph{Evaluation}\mbox{}\\
+\paragraph{Evaluation}\mbox{}
 
 The chromosomes are evaluated according to the fitness function.
 
-\paragraph{Selection}\mbox{}\\
+\paragraph{Selection}\mbox{}
 
 Fitter chromosomes are selected for reproduction, the better the evaluation of each chromosome; the higher the probability of selection. RFDS uses a combination of elite selection\footnote{Elite Selection: the fittest chromosomes are selected in order; no probability is used} and roulette selection.
 
-\paragraph{Crossover}\mbox{}\\
+\paragraph{Crossover}\mbox{}
 
 Crossover is implemented to introduce variation in the population.
 
-\paragraph{Mutation}\mbox{}\\
+\paragraph{Mutation}\mbox{}
 
 Mutation is implemented to introduce diversification and decrease the possibility of premature convergance\footnote{Convergence: The narrowing down of results to those nearest to the optimum solution (refer to page \pageref{sec:GAConvergence})}. The mutation rate used is 1/L, where L is the length of the chromosome.
 
-\paragraph{Terminal Criterion}\mbox{}\\
+\paragraph{Terminal Criterion}\mbox{}
 
 Conditions are given and evaluated to determine when the GA is to be terminated. The output of the generation is then selected as possible optimum solutions. Possible conditions include:
 
@@ -501,7 +503,7 @@ A space is created, which is represented by a cuboidal geometry, and a number of
 \end{figure}
 
 
-\paragraph{Reference Points}\mbox{}\\
+\paragraph{Reference Points}\mbox{}
 
 Reference points are placed by the user anywhere within the space. For example, the reference points could be placed at the points where light levels are the most important such as desks or reading areas.
 
@@ -512,15 +514,15 @@ Reference points are placed by the user anywhere within the space. For example, 
 \label{fig:RFDSRefPoints}
 \end{figure}
 
-\paragraph{Target Daylight Level [lux]}\mbox{}\\
+\paragraph{Target Daylight Level [lux]}\mbox{}
 
 The fitness scores are calculated in terms of target daylight levels determined by users.
 
-\paragraph{Priority Level of Targets}\mbox{}\\
+\paragraph{Priority Level of Targets}\mbox{}
 
 Priority levels influence fitness measurements as well as target daylight levels. Priorities are categorized into three levels: high, normal and low. This is considered a weighing system which affects the selection of possible optimum solutions.
 
-\paragraph{Window Size and Interval}\mbox{}\\
+\paragraph{Window Size and Interval}\mbox{}
 
 Windows are arranged in lines as shown in figure \ref{fig:RFDSWin}. The windows are pixel-like, with their size and interval adjustable by the user.
 
@@ -531,7 +533,7 @@ Windows are arranged in lines as shown in figure \ref{fig:RFDSWin}. The windows 
 \label{fig:RFDSWin}
 \end{figure}
 
-\paragraph{GA Operators and Initial Inputs}\mbox{}\\
+\paragraph{GA Operators and Initial Inputs}\mbox{}
 
 In the GA of RFDS the operators are set as follows:
 
@@ -600,7 +602,7 @@ The dimensions of the tested space and windows size are illustrated in figure \r
 
 The following experiments were done as part of the research by Huei Shenh Yi \cite{yi09}. The research utilised a prominent and new program called Grasshopper.
 
-\paragraph{Grasshoper}\mbox{}\\
+\paragraph{Grasshoper}\mbox{}
 
 A program developed in 2009 as a parametric modelling plug-in for Rhino (3D modelling software): ``It is based on explicit history concept that recorded the modelling process, allowing users to manipulate graphic node\footnote{A node based editor passes data from component to component through links. The data is defined either in the plugin itself, or inputted externally} to generate parametric models. An advantage of Grasshopper is that users with little programming experience can manipulate graphic nodes to define relationships for each element to generate a parametric model''\cite{yi09}. Grasshopper also allows users to input scripts in VB.net, C\# and Python programming languages.
 

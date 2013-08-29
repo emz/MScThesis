@@ -15,13 +15,13 @@ The proposed procedure to guide such and endeavour, is based on the elements of 
 	\item Selection of suitable form generation and/or optimisation algorithms
 \end{enumerate}
 
-\paragraph{Introduction of Algorithmic Input to Design Process} \mbox{}\\
+\paragraph{Introduction of Algorithmic Input to Design Process} \mbox{}
 
 An important issue to be considered is the point at which algorithm is introduced to the design process. The introduction of algorithm (and simulation for that matter) at a very early stage as opposed to at a point when the schematic design has been almost finished would greatly influence the final product; as the former is considered pure form generation governed by optimisation algorithms, while the latter is considered optimisation of a geometry which has already been defined by the architect, and in turn defining the major optimisable variables.
 
 Although the above would suggest that algorithmic form generation is best introduced at the earliest stage possible, this is not practical as it would mean that endless possibilities can be explored with no regard to user requirements. Therefore, for the sake of simplicity and practicality, it has been assumed that a conceptual form has been designed and used as a basis for further algorithmic optimisation. Form generation in this case is mostly \emph{regeneration} of the modelled geometry representing the building envelope.
 
-\paragraph{Multi-criterion Optimisation} \mbox{}\\
+\paragraph{Multi-criterion Optimisation} \mbox{}
 
 Many of the cases presented in chapter 4 have showcased optimisation of envelopes with regard to only one variable; i.e. single-criterion optimisation (albeit with the exceptions of sections such as \ref{sec:KendallPavilion}), which was for the sake of making a clear and simple illustration of one concept or another. However, thermal optimisation in real world will almost always demand optimisation with more than one variable taken into consideration.
 
@@ -31,22 +31,22 @@ Another solution which in some cases might be practical, is to create reference 
 
 \subsection{Analysis and Categorisation of Envelope Form}
 
-As described earlier (see page \pageref{BuildEnvDef}), any building envelope is composed of the architectural physical elements that separate the inside from the outside, creating an \emph{envelope} or emph{enclosure} for the building.
+As described earlier (see page \pageref{BuildEnvDef}), any building envelope is composed of the architectural physical elements that separate the inside from the outside, creating an \emph{envelope} or \emph{enclosure} for the building.
 
-Although this definition applies to almost all building envelopes, they would vary greatly from one building to another, making the task at hand; which is the utilisation of algorithmic design and thermal simulation to achieve thermally eficient buildings, inefficient or even practically meaningless, unless proper categorisation of building envelope design is made.
+Although this definition applies to almost all building envelopes, they would vary greatly from one building to another, making the task at hand; which is the utilisation of algorithmic design and thermal simulation to achieve thermally efficient buildings, inefficient or even practically meaningless, unless proper categorisation of building envelope design is made.
 
 This is due to the fact that with differences between building enclosure designs, the variables that affect the thermal performance of the envelope will have varying degrees of impact, sometimes even reaching almost zero impact in some cases; having mentioned above the importance of weighting in multi-criterion optimisation, this would especially important to determine which variable should be given the priority over others.
 
 \paragraph{\emph{Phylogenesis} and the Categorisation of Building Envelopes}\mbox{}
 
-One interesting way of categorising building enclosures, is the endevour undertaken by the \emph{Foreign Office Architects} to categorise their own work in a book named \emph{Phylogenesis: FOA's Ark} \cite{foa04}. The categorisation system resembles a biological evolutionary tree, that starts from one point and branches into different species through several evolutionary stages (figures \ref{fig:Phylogenesis} and \ref{fig:FOAEnvelopes}).
+One interesting way of categorising building enclosures, is the endeavour undertaken by the \emph{Foreign Office Architects} to categorise their own work in a book named \emph{Phylogenesis: FOA's Ark} \cite{foa04}. The categorisation system resembles a biological evolutionary tree, that starts from one point and branches into different species through several evolutionary stages (figures \ref{fig:Phylogenesis} and \ref{fig:FOAEnvelopes}).
 
 Regardless of the concept, the categorisation of building envelopes used by the Foreign Office Architects (FOA), makes an excellent working ground for analysis of different envelope forms, and defining the the thermal variables and their level of importance.
 
 \begin{sidewaysfigure}[htbp]
 	\centering
 	\includegraphics[width=20cm]{./Images/1-Phylogenesis}
-	\caption[FOA Phylogenesis]{Sturcutres Categorisation of FOA Work, Including Envelope Categorisation According to \emph{Phylogenesis} \cite{foa04}}
+	\caption[FOA Phylogenesis]{Structures Categorisation of FOA Work, Including Envelope Categorisation According to \emph{Phylogenesis} \cite{foa04}}
 	\label{fig:Phylogenesis}
 \end{sidewaysfigure}
 
@@ -62,9 +62,9 @@ Regardless of the concept, the categorisation of building envelopes used by the 
 
 Having created a system of categorisation in which any envelope form can mostly fit under a category; the thermal design through algorithm and simulation should be guided by the variables that affect the particular envelope form the most.
 
-Here we refer to the design variables listed earlier in Chapter 3 (see page \pageref{sec:ThermalDesignVariables}), which are concerned with thermal design through passive solar control. This holds true even in chapter 4, and has been done with the intention to simplify the process and narrow the scope for easier understading throughout the thesis.
+Here we refer to the design variables listed earlier in Chapter 3 (see page \pageref{sec:ThermalDesignVariables}), which are concerned with thermal design through passive solar control. This holds true in Chapter 4 as well, and has been done as such with the intention of simplifying the process and narrowing the scope for easier but effective illustration of the concepts throughout the thesis.
 
-For the sake of convinience, the variables are relisted here in table form.
+For the sake of convenience, the variables are re-listed here in table form.
 
 \begin{table}[H]
 	\centering
@@ -93,21 +93,132 @@ Before proceeding with assigning variables as driving parameters in the algorith
 The surface-to-volume ratio of any building is mainly affected by three factors:
 
 \begin{enumerate}
-	\item Envelope Geometry; such as square, dome, sphere, pyramid\ldots{}etc (figure .
-	\item 
+	\item Envelope Geometry; such as cubic, dome-shaped, spherical, pyramid-shaped\ldots{}etc (figure \ref{fig:SVR}).
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\textwidth]{./Images/3-SVR}
+			\caption{Surface-to-Volume Ratios}
+			\label{fig:SVR}
+		\end{figure}
+	\item Compaction of Building Shape; with the same basic building shape, the SVR can be decreased using compaction, or greatly increased with		  lack of it (figure \ref{fig:Compaction}).
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\textwidth]{./Images/4-Compaction}
+			\caption{Building Envelope Compaction}
+			\label{fig:Compaction}
+		\end{figure}
+	\item Porosity; inner courts can create what may be called porosity of building envelope, which increases surface to volume ratio (figure 		\ref{fig:Porosity}).
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\textwidth]{./Images/5-Porosity}
+			\caption{Building Envelope Porosity}
+			\label{fig:Porosity}
+		\end{figure}
 \end{enumerate}
+
+\paragraph{Orientation}\mbox{}
+
+Building orientation affects thermal performance mainly in two ways:
+\begin{enumerate}
+	\item The way the building perceives incident solar rays, which is dependant on the latitude of the location, and building envelope form. It should be noted that in some cases the effect of orientation is limited only to internal functions being performed in internal spaces facing a specific orientation. Buildings that are affected the most by their orientation are the ones that have big length to width ratio ---or elongated forms--- or highly non-uniform forms. (figure \ref{fig:orientation}).
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=13cm]{./Images/6-Orientation}
+			\caption[Effect of Building Orientation]{In this example, the two buildings on the right would be greatly affected by their orientation in relation to the sun's position, while the two on the left are not affected except in terms of choosing internal space functions \cite{foa04}}
+			\label{fig:orientation}
+		\end{figure}
+	\item Wind direction, which is not within the scope of this thesis.
+\end{enumerate}
+
+\paragraph{Shading}\mbox{}
+
+What is referred to here as shading is the casting of shadow from the building onto itself; i.e. the obstruction of direct solar rays incidence on one part of the building using another.
+
+Shading is closely related to orientation of the building, or even a direct result of it, however, it is not the only factor affecting it. The geometry of the building can greatly affect shading; an example would be part of the fa\c{c}ade which is a large cantilever hanging over lower floors (see the example in figure \ref{fig:ShadingCntlvr}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./Images/7-Cantilever}
+	\caption[Envelope Shading]{A large part of the envelope can be facing the sun's direction but still be shaded under the cantilever parts of the building envelope \cite{foa04}}
+	\label{fig:ShadingCntlvr}
+\end{figure}
+
+\paragraph{Surface Material Properties}\mbox{}
+
+This is discussed at length in Chapter 3. Reference should be made to section \ref{sec:SolarHeatGain}, and the equation provided thereof as a basis for assigning parameters to materials such as reflectance, and to be iteratively modified through different generations of running the optimisation algorithm.
+
+\paragraph{Fenestration Size, Shape and Position}\mbox{}
+
+There have been several examples of the effect of opening size, shape and position on the thermal performance of a building envelope in the previous chapter, such as the Responsive Fa\c{c}ade Design System (see section \ref{sec:RFDS}) and the Generative System Method (see section \ref{sec:GSM}).
+
+The size of fenestration is often constrained by the required amount of natural daylight for internal spaces, since both are inversely proportional. Position and shape are also important factors to be considered in the simulation.
+
+Fenestration is almost always present in any building, however, with the exception of envelopes such as tent structures (figure \ref{fig:tent}). The absence of fenestration will render in most cases the following variables obsolete: \begin{inparaenum} \item Glazing Material, \item Closing Mechanism, and \item External Shading.\end{inparaenum}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{./Images/8-Tent}
+	\caption[Tent Structure]{A tent structure as an example would not be affected by fenestration variables}
+	\label{fig:tent}
+\end{figure}
+\paragraph{Glazing Material}\mbox{}
+
+The same concept of surface material properties applies to glazing material; the necessity of inputting glazing material properties is that it greatly affects algorithms that specifically target openings for optimisation; in other words, if the openings are double or triple glazed, the opening size can be much larger with the same performance of a smaller opening with single clear glazing.
+
+\paragraph{Closing Mechanisms}\mbox{}
+
+This allows for options such as louvers to be introduced into the design to increase the thermal performance of the envelope while considerably widening the range of opening sizes above the target performance.
+
+\paragraph{External Shading}\mbox{}
+
+This form of shading is designed to protect internal spaces from unwanted solar rays entering through openings (i.e. fenestration). The different forms of external shading have been explained in Chapter 3 (refer to page \pageref{Shading}).
 
 \subsection{Selection of Simulation and Modelling Environment}
 
-\textbf{``Here I will refer to the different simulation application shown in chapter 3, explaining that each program has strong and weak points, and that this is very important if the algorithm will be inputted directly into the simulation program using its scripting language}
+Different simulation programs have been discussed relatively at length in Chapter 3 (section \ref{sec:SimulationPrograms}). The points to be considered when choosing a simulation program are as follows:
+
+\begin{enumerate}
+	\item The features and capabilities of each simulation program; the suitability of the provided list of features will depend on the kind of work being done. In case of an experiment with narrow scope and an interest in producing many results as a basis for statistical analysis (a good example being this thesis, which focuses on thermal performance of building envelopes through passive solar design), a program which is highly efficient in this particular task is preferable. This where comparative analysis studies such as the one shown earlier (see figure \ref{fig:SimProg1}, Table 2: \emph{Building Envelope, Daylight and Solar}) are very beneficial in determining which simulation programs have specific features to suite the work.
+
+		Where the work being carried out is related to real-life projects, with interest in all aspects affecting the environmental performance of the building, it is usually the simulation program which covers most of the features shown in figures \ref{fig:SimProg1} and \ref{fig:SimProg2} is chosen.
+	
+	\item The ability to directly input programming code or script into the simulation programme. This was evident in Chapter 4, where the ability to use scripts and programming languages such as Lua or to input optimisation algorithms into the simulation programme is essential.
+\end{enumerate}
 
 \subsection{Selection of Form Generation and Optimisation Algorithms}
 
-\textbf{``Here i will refer to the comparisons made in chapter 2 regarding the differences between different generative and performative algorithms, and which are more suitable for the kind of optimisation / form generation as per the selected envelope type''}
+The main focus of this thesis is the utilisation of algorithm in architectural design, particularly in thermal design of building envelopes; and the subject has been discussed in several parts of the thesis from different points of view.
 
+Another aspect of most importance at this point is knowing which algorithms are most suited to the needs of the architect. As seen in the previous chapters, algorithms have different concepts; many are derived from or simulate natural evolution and growth in one way or another, others are very visual in that they detect specific shapes and transform them according to some given rule, and so on. The algorithms shown in this thesis have all been proved useful in architectural design, and specifically in thermal design.
+
+However, having reached this point, where different building envelopes have different priorities in terms of thermal design criteria, and preferences with regards to simulation and environmental modelling programmes, it is necessary to choose the most efficient algorithm for the job. Below are some of the main points to be considered.
+
+\subsubsection{Generative or Performative Algorithms}
+
+Although as mentioned earlier in this chapter, that starting a model from scratch would be troublesome and inefficient; it is also possible to define some basic parameters as a start, which would guide the form generating algorithm. One example would be Cellular Automata, which can create a building from scratch and therefore a building envelope form with the simple cell adjacency rules of Cellular Automata. In this case most generative algorithms would be useful.
+
+Another case would be that a simple form exists, as designed by the architect, and requires optimisation and therefore requires adjustments to the existing envelope. This puts more control in the hand of the architect of the building envelope shape, but at the cost of less effectiveness of the optimisation algorithms, unless the algorithm has no or very few constraints which would allow it to perform extreme adjustments to the envelope form, to achieve the target performance. In this case optimisation or performative algorithms are useful.
+
+\paragraph{Generative Algorithms}\mbox{}
+
+\subparagraph{Control Constraints}
+
+Each envelope form --- which is presumed to be at least conceptually defined to the point where it can be categorised under one of FOA envelope categories --- can be generated with different control techniques of the form evolution; this control comes in the form of constraints which are predefined by the algorithm use.
+
+An example would be Shape Grammars; its constraints are colours, labaels and axis; while the constraints of Cellular Automata are state, neighbour and location\ldots and so on. So in order to control the evolution of the generated form, one must choose the most fitting method of control over the generating of envelope form.
+
+The different constraints of each algorithm can be seen in table \ref{tab:GenerativeRecap}.
+
+\subparagraph{Building Blocks and Unit Types}
+
+The building blocks of different algorithms are the smallest units used by the algorithm; which is important since some algorithms might not be compatible with the desired forms. For example, Cellular Automata's building blocks are cells, while Shape Grammar's are basic shapes such as triangles\ldots{}etc.
+
+It should be noted, that combinations of generative algorithms are possible, an example is shown as in figure \ref{3dCAArch}, where an algorithm similar to shape grammars is responsible for modifying the final result of cellular automata generations.
+
+\paragraph{Performative Algorithms}\mbox{}
+
+\subparagraph{}
 
 \section{Examples by Envelope Type}
-
-\textbf{``This will be the section where i put each type of envelope and make a list of the applicable variables, simulation environments, and algorithms. This will be in the form of sketches of the envelope type and a schedule on the the other page with the suitable options''}
 
 \section{Conclusions}
