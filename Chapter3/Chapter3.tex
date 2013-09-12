@@ -378,12 +378,11 @@ The memory used in tabu search is both \emph{explicit} and \emph{attributive}. E
 
 The following study (Table \ref{tab:OptCmp}) by L. Caldas \cite{caldas01} illustrates the characteristics of Genetic Algorith, Simulated Annealing and Tabu Search; comparing them in terms of memory usage, intensification, diversification and neighbourhoods:
 
-\begin{table}
+\begin{landscape}
 \centering
-\resizebox{!}{10cm}{%
-\begin{tabular}[h]{|p{1cm}| p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}|}
-\hline \\ \vspace{0.3cm}
- &\textbf{Memory}&\textbf{Intensification}&\textbf{Diversification}&\textbf{Neigbourhood} \vspace{0.3cm}\\ \hline
+\begin{longtable}[h]{|p{1cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
+\hline \\ 
+ &\textbf{Memory}&\textbf{Intensification}&\textbf{Diversification}&\textbf{Neigbourhood}\\ \hline
 \textbf{GA}&Some use of memory&Non-systematic&Crossover: New points in the solution space are created by combining existing solutions&No definition of neighbourhood\\
  &Explicit --- Elitism&Mutations: Introduces a small change to an existing solution, meaning it is searching in its vicinity&MicroGA's have high diversification by often starting new random populations&New solutions are found by the process of crossover between two existing solutions\\
  &Implicit --- Keeps track of high performance building blocks; sequence of generations propagates useful genetic information& & & \\\hline
@@ -394,10 +393,10 @@ The following study (Table \ref{tab:OptCmp}) by L. Caldas \cite{caldas01} illust
  &Frequency-based: keeps track of frequency of certian features in solutions already visited. Used for diversification&Path relinking: building blocks from elite solutions stored in memory can by used to produce new attractive solutions&Can be implemented by removing some features of the current solution that temporarily become tabu-active, thus forcing the search to visit previously unexplored regions&May include some method to explore only more attractive areas of the neighbourhood, like first randomly sampling neighbourhood and then exploring only the best solution areas\\
  &Quality memory: stores which building blocks to high quality solutions. Used for path relinking& & & \\
  &Influence memory: records impact of certain moves and makes bad moves tabu-active for some period of time& & & \\\hline
-\end{tabular}}
 \caption[Optimisation Search Method Characteristics]{A comparison of optimisation search methods \cite{caldas01}}
 \label{tab:OptCmp}
-\end{table}
+\end{longtable}
+\end{landscape}
 
 \clearpage
 \subsection{Additional Search Methods}

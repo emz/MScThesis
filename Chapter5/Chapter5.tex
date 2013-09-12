@@ -217,7 +217,28 @@ It should be noted, that combinations of generative algorithms are possible, an 
 
 \paragraph{Performative Algorithms}\mbox{}
 
-\subparagraph{}
+Many optimisation algorithms exist other than those discussed so far, but the heuristic optimisation algorithms are usually the fastest and are fairly efficient, at least as far architectural design is concerned, and in most cases of thermal design these are the primary concerns.
+
+Upon studying the comparative analysis of performative algorithms (refer to table \ref{table:OptCmp}), the main elements affecting the choice of algorithm would be as follows.
+
+\subparagraph{Speed}
+
+As mentioned earlier in the thesis, search methods such as \emph{Brute Force} would theoratically have a 100\% chance of locating the global optimum; however, this comes at the price of speed. Complex problems could take days or weeks to find the global optimum since it would need to try out all possible solutions within a solution space, which could be millions or virtually infinite.
+
+Therefore, an algorithm that can find highly elite solutions within the solution space within a short time are always preferred. Generally speaking, of the three algorithms, \emph{Simulated Annaeling} is the fastest, followed by \emph{Genetic Algorithm} and then \emph{Tabu Search}.
+
+\subparagraph{Architectural Alternatives}
+
+When a purely engineering problem is being solved using a search method, the global optimum is usually the only concern. However, when the aesthetic aspect of the solution is of concern, such as in architectural solutions, the possibility of providing alternatives in the form of elite solutions is of very high importance.
+
+Of the three algorithms, \emph{Genetic Algorithms} is the one that satisfies this need to the greatest extent.
+
+\subparagraph{Search Efficiency}
+
+Finding the optimum solutions is a prime concern, and therefore, the ability to locate as many of them and as close to the global optimum as possible is a major element to be considered in the choice of algorithm.
+
+While \emph{Tabu Search} could be considered more efficient at locating optimum solutions, \emph{Genetic Algorithm} is almost equally as capable.
+
 
 \section{Examples by Envelope Type}
 
