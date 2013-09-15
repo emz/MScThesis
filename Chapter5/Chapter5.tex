@@ -219,7 +219,7 @@ It should be noted, that combinations of generative algorithms are possible, an 
 
 Many optimisation algorithms exist other than those discussed so far, but the heuristic optimisation algorithms are usually the fastest and are fairly efficient, at least as far architectural design is concerned, and in most cases of thermal design these are the primary concerns.
 
-Upon studying the comparative analysis of performative algorithms (refer to table \ref{table:OptCmp}), the main elements affecting the choice of algorithm would be as follows.
+Upon studying the comparative analysis of performative algorithms (refer to table \ref{tab:OptCmp}), the main elements affecting the choice of algorithm would be as follows.
 
 \subparagraph{Speed}
 
@@ -240,6 +240,62 @@ Finding the optimum solutions is a prime concern, and therefore, the ability to 
 While \emph{Tabu Search} could be considered more efficient at locating optimum solutions, \emph{Genetic Algorithm} is almost equally as capable.
 
 
+\clearpage
 \section{Examples by Envelope Type}
 
-\section{Conclusions}
+At this point, the information provided so far in this chapter should be sufficient as a guide on how to design a thermally efficient building envelope using algorithm. The procedure has also been summarised for convinience in the following flowchart (figure \ref{fig:Ch5Flowchart}).
+
+\begin{sidewaysfigure}[h]
+	\centering
+	\includegraphics[width=21cm]{./Images/9-Flowchart}
+	\caption[Thermal Algorithmic Design Flowchart]{Flowchart of procedure for thermal design using simulation programs and algorithms}
+	\label{fig:Ch5Flowchart}
+\end{sidewaysfigure}
+
+Using the flowchart, a number of examples will be presented to show the different outcomes depending on the different envelope forms.
+
+For each buidling envelope form ---this is considered at the conceptual design phase of the chart--- the following have been listed:
+
+\begin{enumerate}
+	\item The most dominant thermal variables over building thermal performance for this particular envelope form
+	\item The most suitable simulation programme based on the criteria given earlier in this chapter
+	\item The most suitable generative algorithm capable of generating the form, if applicable or needed
+	\item The most efficient or effective performative (optimisation) algorithm for the envelope form
+	\item The buidling envelope species as categorised by FOA \cite{foa04}.
+\end{enumerate}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}1} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/10-Envelope1}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio \hspace{1cm} Fenestration \hspace{1cm} Shading\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 &  \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Planorstripat} &  \vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}2} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/11-Envelope2}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio \hspace{1cm} Fenestration \hspace{1cm} Shading\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 &  \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Planorstricon Oculus} &  \vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
