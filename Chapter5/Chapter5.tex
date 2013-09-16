@@ -254,7 +254,7 @@ At this point, the information provided so far in this chapter should be suffici
 
 Using the flowchart, a number of examples will be presented to show the different outcomes depending on the different envelope forms.
 
-For each buidling envelope form ---this is considered at the conceptual design phase of the chart--- the following have been listed:
+For each buidling envelope form ---which should be developed at the conceptual design phase of the chart--- the following have been listed:
 
 \begin{enumerate}
 	\item The most dominant thermal variables over building thermal performance for this particular envelope form
@@ -264,6 +264,13 @@ For each buidling envelope form ---this is considered at the conceptual design p
 	\item The buidling envelope species as categorised by FOA \cite{foa04}.
 \end{enumerate}
 
+\paragraph{Important Notes}\mbox{}
+
+\begin{enumerate}
+	\item In some cases where the selection of generative algorithm is stated as ``\emph{Not Applicable}'', this does not necessarily mean that no generative algorithm is capable of generating the particular envelope, only that the algorithms discussed are probably not suitable.
+	\item The examples presented and the selected variables, programmes and algorithms are not undisputable. Experimentation is necessary for the succes of unique case of building envelope.
+\end{enumerate}
+
 \clearpage
 
 \begin{sidewaystable}[h]
@@ -271,13 +278,13 @@ For each buidling envelope form ---this is considered at the conceptual design p
 	\toprule
 	\multicolumn{2}{c}{Envelope \#{}1} \\[1cm] \hline
 	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/10-Envelope1}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio \hspace{1cm} Fenestration \hspace{1cm} Shading\vspace{0.5cm}\\ \cline{2-2}
+	& Surface Material Properties | Fenestration SPO\footnote{Size, Position and Orientation} | Glazing Material | Closing Mechanism\vspace{0.5cm}\\ \cline{2-2}
 		 & \textbf{Simulation Programme} \\[1cm]
-		 &  \vspace{0.5cm}\\ \cline{2-2}
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
 		 & \textbf{Generative Algorithm} \\[1cm]
-		 & \vspace{0.5cm}\\ \cline{2-2}
+		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
 		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Planorstripat} &  \vspace{0.5cm}\\
+		 \emph{Ensifacopa Planorstripat} &  Tabu Search | Simulated Annaeling\vspace{0.5cm}\\
 	\bottomrule
 	\end{tabular}
 \end{sidewaystable}
@@ -288,14 +295,214 @@ For each buidling envelope form ---this is considered at the conceptual design p
 	\begin{tabular}{ | m{6cm} | m{14cm} |}
 	\toprule
 	\multicolumn{2}{c}{Envelope \#{}2} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/11-Envelope2}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio \hspace{1cm} Fenestration \hspace{1cm} Shading\vspace{0.5cm}\\ \cline{2-2}
+	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/11-Envelope2}} & \textbf{Thermal Variables} \\[1cm]
+	& Orientation | Shading | Glazing Material | Closing Mechanism\vspace{0.5cm}\\ \cline{2-2}
 		 & \textbf{Simulation Programme} \\[1cm]
-		 &  \vspace{0.5cm}\\ \cline{2-2}
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
 		 & \textbf{Generative Algorithm} \\[1cm]
-		 & \vspace{0.5cm}\\ \cline{2-2}
+		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
 		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Planorstricon Oculus} &  \vspace{0.5cm}\\
+		 \emph{Ensifacopa Planorstricon Oculus} &  Tabu Search\vspace{0.5cm}\\
 	\bottomrule
 	\end{tabular}
 \end{sidewaystable}
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}3} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/12-Envelope3}} & \textbf{Thermal Variables} \\[1cm]
+		& Surface-to-Volume Ratio | Orientation | Shading\vspace{0.5cm}\\ \cline{2-2}
+	 	& \textbf{Simulation Programme} \\[1cm]
+	 	& \emph{solar gain:} energyplus | \emph{economic evaluation}: doe-2.1e | \emph{zone loads:} ecotect | \emph{hvac:} transys \vspace{0.5cm}\\ \cline{2-2}
+	 	& \textbf{Generative Algorithm} \\[1cm]
+	 	& L-System\vspace{0.5cm}\\ \cline{2-2}
+	 	& \textbf{Performative Algorithm} \\[1cm]
+	 	\emph{Ensifacopa Planorstricon Socio} &  Genetic Algorithm\vspace{0.5cm}\\
+\bottomrule
+\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}4} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/13-Envelope4}} & \textbf{Thermal Variables} \\[1cm]
+	& Orientation | Surface Material Properties | External Shading\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} Energyplus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifashi Perfo} &  Genetic Algorithm\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}5} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.4cm]{./Images/14-Envelope5}} & \textbf{Thermal Variables} \\[1cm]
+	& Shading | Surface Material Properties | Glazing Material\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & L-System | Shape Grammars\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Enmulfa Plana} &  Genetic Algorithm\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}6} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/15-Envelope6}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio | Surface Material Properties \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & Fractals | Shape Grammars\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacoper Pernonor} &  Simulated Annaeling\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}7} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.3cm]{./Images/16-Envelope7}} & \textbf{Thermal Variables} \\[1cm]
+	& Orientation | Shading | Surface Material Properties\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Enmulfa Bifur} &  Genetic Algorithm\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}8} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.2cm]{./Images/17-Envelope8}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio | Orientation | Shading\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & Cellular Automata\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Pernonor Zonafranca} & Genetic Algorithm | Tabu Search \vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}9} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[height=5.5cm]{./Images/18-Envelope9}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface Material Properties | Glazing Material \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & Veronoi Diagram\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Perordis} &  Tabu Search\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}10} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[height=5.5cm]{./Images/19-Envelope10}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface Material Properties | Shading | Glazing Material\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & L-System\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Peroricon} &  Genetic Algorithm\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}11} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/20-Envelope11}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio | Surface Material Properties | Glazing Material\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & Veronoi Diagram\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Planorpol} &  Genetic Algorithm | Simulated Annaeling\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}12} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/21-Envelope12}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio | Shading | Glazing Material | Closing Mechanism\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & Shape Grammars | Fractals\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacopa Planonor} &  Tabu Search\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+\begin{sidewaystable}[h]
+	\begin{tabular}{ | m{6cm} | m{14cm} |}
+	\toprule
+	\multicolumn{2}{c}{Envelope \#{}13} \\[1cm] \hline
+	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/22-Envelope13}} & \textbf{Thermal Variables} \\[1cm]
+	& Surface-to-Volume Ratio | Surface Material Properties | Shading\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Simulation Programme} \\[1cm]
+		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Generative Algorithm} \\[1cm]
+		 & Shape Grammars\vspace{0.5cm}\\ \cline{2-2}
+		 & \textbf{Performative Algorithm} \\[1cm]
+		 \emph{Ensifacoper Placon} &  Simulated Annaeling | Genetic Algorithm\vspace{0.5cm}\\
+	\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+
+
