@@ -1,5 +1,21 @@
 \chapter{Building Envelope Form Generation and Thermal Optimisation}
 
+\paragraph{Introduction on Algorithmic Input to Design Process} \mbox{}
+
+An important issue to be considered is the point at which algorithm is introduced to the design process. The introduction of algorithm (and simulation for that matter) at a very early stage as opposed to at a point when the schematic design has been almost finished would greatly influence the final product; as the former is considered pure form generation governed by optimisation algorithms, while the latter is considered optimisation of a geometry which has already been defined by the architect, and in turn defining the major optimisable variables.
+
+Although the above would suggest that algorithmic form generation is best introduced at the earliest stage possible, this is not practical, as it would mean that endless possibilities can be explored with no regard to user requirements. Therefore, for the sake of simplicity and practicality, it has been assumed that a conceptual form has been designed and used as a basis for further algorithmic optimisation. Form generation in this case is mostly \emph{regeneration} of the modelled geometry representing the building envelope.
+
+\clearpage
+\paragraph{Multi-criterion Optimisation} \mbox{}
+
+Many of the cases presented in chapter 4 have showcased optimisation of envelopes with regard to only one variable; i.e. single-criterion optimisation (albeit with the exceptions of sections such as \ref{sec:KendallPavilion}), which was for the sake of making a clear and simple illustration of one concept or another. However, thermal optimisation in real world will almost always demand optimisation with more than one variable taken into consideration.
+
+New problems will present themselves when shifting from single to multiple criterion optimisation, but by far the most important and influential is the problem of \emph{variable weighting system}, which is essentially the importance of each variable (external shading, fenestration\ldots etc.) in relation to the other variables. This should be studied and planned carefully by the architect, as conflicting variables will often demand very different solutions for each to be at optimum performance, and therefore the effect of each on the overall performance should be studied by the architect, possibly with the support of modelling and environmental simulation programs.
+
+Another solution which in some cases might be practical, is to create reference points within the architectural space from which to measure the overall performance of the building envelope regardless of each variable and be used as the driving force behind the optimisation algorithm.
+
+
 \section{Methodology of Thermal Optimisation and Form Generation}
 
 The information presented so far requires at this point that a clear methodology, properly sequenced, and categorised, formulated out of the concepts and tools illustrated so far in the thesis.
@@ -15,23 +31,10 @@ The proposed procedure to guide such and endeavour, is based on the elements of 
 	\item Selection of suitable form generation and/or optimisation algorithms
 \end{enumerate}
 
-\paragraph{Introduction of Algorithmic Input to Design Process} \mbox{}
-
-An important issue to be considered is the point at which algorithm is introduced to the design process. The introduction of algorithm (and simulation for that matter) at a very early stage as opposed to at a point when the schematic design has been almost finished would greatly influence the final product; as the former is considered pure form generation governed by optimisation algorithms, while the latter is considered optimisation of a geometry which has already been defined by the architect, and in turn defining the major optimisable variables.
-
-Although the above would suggest that algorithmic form generation is best introduced at the earliest stage possible, this is not practical as it would mean that endless possibilities can be explored with no regard to user requirements. Therefore, for the sake of simplicity and practicality, it has been assumed that a conceptual form has been designed and used as a basis for further algorithmic optimisation. Form generation in this case is mostly \emph{regeneration} of the modelled geometry representing the building envelope.
-
-\paragraph{Multi-criterion Optimisation} \mbox{}
-
-Many of the cases presented in chapter 4 have showcased optimisation of envelopes with regard to only one variable; i.e. single-criterion optimisation (albeit with the exceptions of sections such as \ref{sec:KendallPavilion}), which was for the sake of making a clear and simple illustration of one concept or another. However, thermal optimisation in real world will almost always demand optimisation with more than one variable taken into consideration.
-
-New problems will present themselves when shifting from single to multiple criterion optimisation, but by far the most important and influential is the problem of \emph{variable weighting system}, which is essentially the importance of each variable (external shading, fenestration\ldots etc.) in relation to the other variables. This should be studied and planned carefully by the architect, as conflicting variables will often demand very different solutions for each to be at optimum performance, and therefore the effect of each on the overall performance should be studied by the architect, possibly with the support of modelling and environmental simulation programs.
-
-Another solution which in some cases might be practical, is to create reference points within the architectural space from which to measure the overall performance of the building envelope regardless of each variable and be used as the driving force behind the optimisation algorithm.
 
 \subsection{Analysis and Categorisation of Envelope Form}
 
-As described earlier (see page \pageref{BuildEnvDef}), any building envelope is composed of the architectural physical elements that separate the inside from the outside, creating an \emph{envelope} or \emph{enclosure} for the building.
+As described earlier, any building envelope is composed of the architectural physical elements that separate the inside from the outside, creating an \emph{envelope} or \emph{enclosure} for the building (see page \pageref{BuildEnvDef}).
 
 Although this definition applies to almost all building envelopes, they would vary greatly from one building to another, making the task at hand; which is the utilisation of algorithmic design and thermal simulation to achieve thermally efficient buildings, inefficient or even practically meaningless, unless proper categorisation of building envelope design is made.
 
@@ -42,6 +45,61 @@ This is due to the fact that with differences between building enclosure designs
 One interesting way of categorising building enclosures, is the endeavour undertaken by the \emph{Foreign Office Architects} to categorise their own work in a book named \emph{Phylogenesis: FOA's Ark} \cite{foa04}. The categorisation system resembles a biological evolutionary tree, that starts from one point and branches into different species through several evolutionary stages (figures \ref{fig:Phylogenesis} and \ref{fig:FOAEnvelopes}).
 
 Regardless of the concept, the categorisation of building envelopes used by the Foreign Office Architects (FOA), makes an excellent working ground for analysis of different envelope forms, and defining the the thermal variables and their level of importance.
+
+According to the previously mentioned evolutionary tree of building forms, the building envelopes were categorised in the following manner:
+
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
+\begin{enumerate}
+	\item \textbf{Function}
+		\begin{enumerate}
+		\item Ground
+		\item Envelope
+		\end{enumerate}
+	\item \textbf{Facility}
+		\begin{enumerate}
+			\item Single Face
+			\item Multiple Face
+		\end{enumerate}
+	\item \textbf{Balance}
+		\begin{enumerate}
+			\item Constant
+				\begin{enumerate}
+					\item Perpendicular
+					\item Parallel
+				\end{enumerate}
+			\item Shifting
+		\end{enumerate}
+	\item \textbf{Discontinuity}
+		\begin{enumerate}
+			\item Planar
+			\item Rippled
+			\item Pinched
+			\item Perforated
+			\item Bifurcated
+		\end{enumerate}
+	\item \textbf{Orientation}
+		\begin{enumerate}
+			\item Oriented
+				\begin{enumerate}
+					\item Striated
+					\item Polar
+				\end{enumerate}
+			\item Non-oriented
+		\end{enumerate}
+	\item \textbf{Geometry}
+		\begin{enumerate}
+			\item Continuous
+			\item Discontinuous
+		\end{enumerate}
+	\item \textbf{Diversification}
+		\begin{enumerate}
+			\item Patterned
+			\item Contingent
+		\end{enumerate}
+\end{enumerate}
+\end{multicols}
+
 
 \begin{sidewaysfigure}[htbp]
 	\centering
@@ -57,7 +115,7 @@ Regardless of the concept, the categorisation of building envelopes used by the 
 	\label{fig:FOAEnvelopes}
 \end{figure}
 
-
+\clearpage
 \subsection{Determination of Thermal Criteria}
 
 Having created a system of categorisation in which any envelope form can mostly fit under a category; the thermal design through algorithm and simulation should be guided by the variables that affect the particular envelope form the most.
@@ -245,13 +303,6 @@ While \emph{Tabu Search} could be considered more efficient at locating optimum 
 
 At this point, the information provided so far in this chapter should be sufficient as a guide on how to design a thermally efficient building envelope using algorithm. The procedure has also been summarised for convinience in the following flowchart (figure \ref{fig:Ch5Flowchart}).
 
-\begin{sidewaysfigure}[h]
-	\centering
-	\includegraphics[width=21cm]{./Images/9-Flowchart}
-	\caption[Thermal Algorithmic Design Flowchart]{Flowchart of procedure for thermal design using simulation programs and algorithms}
-	\label{fig:Ch5Flowchart}
-\end{sidewaysfigure}
-
 Using the flowchart, a number of examples will be presented to show the different outcomes depending on the different envelope forms.
 
 For each buidling envelope form ---which should be developed at the conceptual design phase of the chart--- the following have been listed:
@@ -262,7 +313,6 @@ For each buidling envelope form ---which should be developed at the conceptual d
 	\item The most suitable simulation programme based on the criteria given earlier in this chapter
 	\item The most suitable generative algorithm capable of generating the form, if applicable or needed
 	\item The most efficient or effective performative (optimisation) algorithm for the envelope form
-	\item The buidling envelope species as categorised by FOA \cite{foa04}.
 \end{enumerate}
 
 \paragraph{Important Notes}\mbox{}
@@ -273,238 +323,22 @@ For each buidling envelope form ---which should be developed at the conceptual d
 	\item The examples presented and the selected variables, programmes and algorithms are not undisputable. Experimentation is necessary for the succes of unique case of building envelope.
 \end{enumerate}
 
-\clearpage
 
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}1} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/10-Envelope1}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface Material Properties | Fenestration SPO\footnote{Size, Position and Orientation} | Glazing Material | Closing Mechanism\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Planorstripat} &  Tabu Search | Simulated Annaeling\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
+\clearpage
+\begin{sidewaysfigure}[h]
+	\centering
+	\includegraphics[width=18cm]{./Images/9a-Flowchart}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\centering
+	\includegraphics[width=18cm]{./Images/9b-Flowchart}
+	\caption[Thermal Algorithmic Design Flowchart]{Flowchart of procedure for thermal design using simulation programs and algorithms}
+	\label{fig:Ch5Flowchart}
+\end{sidewaysfigure}
 
 \clearpage
 
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}2} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/11-Envelope2}} & \textbf{Thermal Variables} \\[1cm]
-	& Orientation | Shading | Glazing Material | Closing Mechanism\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Planorstricon Oculus} &  Tabu Search\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}3} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/12-Envelope3}} & \textbf{Thermal Variables} \\[1cm]
-		& Surface-to-Volume Ratio | Orientation | Shading\vspace{0.5cm}\\ \cline{2-2}
-	 	& \textbf{Simulation Programme} \\[1cm]
-	 	& \emph{solar gain:} energyplus | \emph{economic evaluation}: doe-2.1e | \emph{zone loads:} ecotect | \emph{hvac:} transys \vspace{0.5cm}\\ \cline{2-2}
-	 	& \textbf{Generative Algorithm} \\[1cm]
-	 	& L-System\vspace{0.5cm}\\ \cline{2-2}
-	 	& \textbf{Performative Algorithm} \\[1cm]
-	 	\emph{Ensifacopa Planorstricon Socio} &  Genetic Algorithm\vspace{0.5cm}\\
-\bottomrule
-\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}4} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/13-Envelope4}} & \textbf{Thermal Variables} \\[1cm]
-	& Orientation | Surface Material Properties | External Shading\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} Energyplus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifashi Perfo} &  Genetic Algorithm\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}5} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.4cm]{./Images/14-Envelope5}} & \textbf{Thermal Variables} \\[1cm]
-	& Shading | Surface Material Properties | Glazing Material\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & L-System | Shape Grammars\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Enmulfa Plana} &  Genetic Algorithm\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}6} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/15-Envelope6}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio | Surface Material Properties \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & Fractals | Shape Grammars\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacoper Pernonor} &  Simulated Annaeling\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}7} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.3cm]{./Images/16-Envelope7}} & \textbf{Thermal Variables} \\[1cm]
-	& Orientation | Shading | Surface Material Properties\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & \emph{Not Applicable}\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Enmulfa Bifur} &  Genetic Algorithm\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}8} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.2cm]{./Images/17-Envelope8}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio | Orientation | Shading\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & Cellular Automata\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Pernonor Zonafranca} & Genetic Algorithm | Tabu Search \vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}9} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[height=5.5cm]{./Images/18-Envelope9}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface Material Properties | Glazing Material \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & Veronoi Diagram\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Perordis} &  Tabu Search\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}10} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[height=5.5cm]{./Images/19-Envelope10}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface Material Properties | Shading | Glazing Material\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & L-System\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Peroricon} &  Genetic Algorithm\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}11} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5cm]{./Images/20-Envelope11}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio | Surface Material Properties | Glazing Material\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & Veronoi Diagram\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Planorpol} &  Genetic Algorithm | Simulated Annaeling\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}12} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/21-Envelope12}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio | Shading | Glazing Material | Closing Mechanism\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & Shape Grammars | Fractals\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacopa Planonor} &  Tabu Search\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
-
-\begin{sidewaystable}[h]
-	\begin{tabular}{ | m{6cm} | m{14cm} |}
-	\toprule
-	\multicolumn{2}{c}{Envelope \#{}13} \\[1cm] \hline
-	\multirow{7}{*}{\includegraphics[width=5.5cm]{./Images/22-Envelope13}} & \textbf{Thermal Variables} \\[1cm]
-	& Surface-to-Volume Ratio | Surface Material Properties | Shading\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Simulation Programme} \\[1cm]
-		 & \emph{Solar Gain:} EnergyPlus | \emph{Economic Evaluation}: DOE-2.1E | \emph{Zone Loads:} ECOTECT | \emph{HVAC:} TRANSYS \vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Generative Algorithm} \\[1cm]
-		 & Shape Grammars\vspace{0.5cm}\\ \cline{2-2}
-		 & \textbf{Performative Algorithm} \\[1cm]
-		 \emph{Ensifacoper Placon} &  Simulated Annaeling | Genetic Algorithm\vspace{0.5cm}\\
-	\bottomrule
-	\end{tabular}
-\end{sidewaystable}
-
-\clearpage
+\subsection{Envelope A}
 
 
