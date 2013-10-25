@@ -162,28 +162,27 @@ L-Systems are very similar to Shape Grammars, with the exception of being repres
 
 Having discussed the different generative algorithms and other processes (including those in chapter 1), the following exerpted study \cite{khaldi04} (Table \ref{tab:GenerativeRecap}) forms a recapitulation as a comparaison in accordance with and under the taxonomy illustrated earlier in chapter 1 (Section \ref{GenSysTax}).
 
-\begin{sidewaystable}
+\begin{landscape}
 \centering
-\small
-\begin{tabular}{|p{0.121\textwidth}|p{0.121\textwidth}p{0.121\textwidth}p{0.121\textwidth}p{0.121\textwidth}p{0.121\textwidth}p{0.121\textwidth}|}
-\hline 
- &\textbf{Algorithms}&\textbf{Prametric}&\textbf{L-Systems}&\textbf{Cellular Automata}&\textbf{Fractals}&\textbf{Shape Grammars}\\\hline
-Context in Computing&Varies&Regeneration&Botanic Growth&Reproduciton&Mathematical Monsters&Visual Calculation\\\hline
-Computation&Varies&Varies&Parallel&Sequential&Varies&Varies\\\hline
-Design Components&Generators/ Interpretors/ Evaluators&Generators/ Interpretors/ Evaluators&Generators/ Interpretors/ Evaluators&Generators/ Interpretors/ Evaluators&Initiators/ Constructors/ Evaluators&Initiators/ Constructors/ Evaluators\\\hline
-System Behaviour&Varies&Possible Inheritance&Deterministic or Non-Context-Sensitive or None&Periodic, Aperiodic, Chaotic, Random&Recurssive&Determisitc or None\\\hline
-Rule Types&Varies&Varies&Replacement&Replacement&Replacement&Replacement\\\hline
-Unit Types&Vaires&Varies&Symbols&Symbols&Symbols, Numbers&Shapes\\\hline
-Smallest Units&Varies&Varies&Alphabet&Cell&Zero or oints&Basic elements\\\hline
-Means of Recognition&Varies&Varies&Counting&Counting&Counting&Seeing\\\hline
-Basic System Components&Tasks and units&Algorithms and associations&Algorithms and replacement rules&Algorithms and replacement rules&Algorithms and replacement rules&Algorithms and replacement rules\\\hline
-Inheritance&Continous&Continous&Discrete&Discrete&Discrete&Continous\\\hline
-Constraints&Relationships&Relationships&Adjacent Letters&States, Neighbour, Location&Location, Stoping Conditions&Colours, Labels, Axis\\\hline
-Solution Space&Units, Tasks, Relationships&Parameters, Variables, Relationships&Rules, Generations, Replacing Alphabets&Rules, Time Steps, Cells, Neighbourhood Size&Rules, Stopping Conditions&Rules, Recognized Shapes, Replacing Shapes\\\hline
-\end{tabular}
+\begin{longtable}{*{7}{p{0.121\linewidth}}}
+ &\textbf{Algorithms}&\textbf{Prametric}&\textbf{L-Systems}&\textbf{Cellular Automata}&\textbf{Fractals}&\textbf{Shape Grammars}\\\midrule
+\textbf{Context in Computing}&Varies&Regeneration&Botanic Growth&Reproduciton&Mathematical Monsters&Visual Calculation\\\midrule
+\textbf{Computation}&Varies&Varies&Parallel&Sequential&Varies&Varies\\\midrule
+\textbf{Design Components}&Generators/ Interpretors/ Evaluators&Generators/ Interpretors/ Evaluators&Generators/ Interpretors/ Evaluators&Generators/ Interpretors/ Evaluators&Initiators/ Constructors/ Evaluators&Initiators/ Constructors/ Evaluators\\\midrule
+\textbf{System Behaviour}&Varies&Possible Inheritance&Deterministic or Non-Context-Sensitive or None&Periodic, Aperiodic, Chaotic, Random&Recurssive&Determisitc or None\\\midrule
+\textbf{Rule Types}&Varies&Varies&Replacement&Replacement&Replacement&Replacement\\\midrule
+\textbf{Unit Types}&Vaires&Varies&Symbols&Symbols&Symbols, Numbers&Shapes\\\midrule
+\textbf{Smallest Units}&Varies&Varies&Alphabet&Cell&Zero or oints&Basic elements\\\midrule
+\textbf{Means of Recognition}&Varies&Varies&Counting&Counting&Counting&Seeing\\\midrule
+\textbf{Basic System Components}&Tasks and units&Algorithms and associations&Algorithms and replacement rules&Algorithms and replacement rules&Algorithms and replacement rules&Algorithms and replacement rules\\\midrule
+\textbf{Inheritance}&Continous&Continous&Discrete&Discrete&Discrete&Continous\\\midrule
+\textbf{Constraints}&Relationships&Relationships&Adjacent Letters&States, Neighbour, Location&Location, Stoping Conditions&Colours, Labels, Axis\\\midrule
+\textbf{Solution Space}&Units, Tasks, Relationships&Parameters, Variables, Relationships&Rules, Generations, Replacing Alphabets&Rules, Time Steps, Cells, Neighbourhood Size&Rules, Stopping Conditions&Rules, Recognized Shapes, Replacing Shapes\\
+\bottomrule
 \caption[Analytical Comparison of Generative Systems]{Analytical Comparison of Generative Systems \cite{khaldi04}}
 \label{tab:GenerativeRecap}
-\end{sidewaystable}
+\end{longtable}
+\end{landscape}
 
 \clearpage
 \section{Performative Algorithms}
@@ -238,18 +237,18 @@ The values of the functions $f(x)$, $g_j(x)$ and $h_j(x)$ (equations \ref{OptMat
 
 These methods fall under different classes of solving the general problem, which might be analytically or numerically, while numerical methods being more common through different computational algorithms. The method of choosing the more suitable algorithm (also known as mathematical modelling) is depicted in figure (\ref{fig:MathModProc}).
 
-\begin{figure}[htpb]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{./Images/18-MathModProc}
-\caption[Mathematical Modelling]{The Mathematical Modelling Process (refer to fig. \ref{fig:FunctionOpt}) \cite{snyman05}}
-\label{fig:MathModProc}
-\end{figure}
-
-\begin{sidewaysfigure}[htbp]
-\centering
-\includegraphics[width=17cm]{./Images/19-FunctionOpt}
+\includegraphics[width=0.7\textwidth]{./Images/19-FunctionOpt}
 \caption[Function of Single Variable]{Function of single variable with optimum at $x^*$ \cite{snyman05}}
 \label{fig:FunctionOpt}
+\end{figure}
+
+\begin{sidewaysfigure}[htpb]
+\centering
+\includegraphics[width=\textheight]{./Images/18-MathModProc}
+\caption[Mathematical Modelling]{The Mathematical Modelling Process (refer to fig. \ref{fig:FunctionOpt}) \cite{snyman05}}
+\label{fig:MathModProc}
 \end{sidewaysfigure}
 
 The following section will discuss popular optimisation algorithms in architecural design, which are --- on an abstract level --- mathematical optimisation methods. Several subsets of optimisation exist, including \emph{Combinatoral, Linear, Nonlinear, Convex} and \emph{Metaheuristic}. The methods discussed herein will be of the \emph{Heuristic/Metaheuristic} subset.
@@ -329,22 +328,19 @@ As with genetic algorithm, the original source of inspiration heavily influences
 \begin{algorithmic}[1]
 \State Get an initial state with energy $x$
 \State Make the initial state the current state
-\State Select an initial high temperature ``$T$''
-\State While the system is ``not yet frozen''
-	\State begin
-	\While {the system is ``not yet in thermal equilibrium'' do}
-		\State begin
-		\State pick a random ``nearby'' state with energy $x_p$
-		\State let $\Delta x = x_p - x$
+\State Select an initial high temperature $T$
+\While {System is not yet frozen}
+	\While {System is not yet in thermal equilibrium}
+		\State Pick a random nearby state with energy $x_p$
+		\State Let $\Delta x = x_p - x$
 		\If {$\Delta x \leq 0$}
-			\State the new state becomes the current state
+			\State The new state becomes the current state
 		\Else
-			\State reject state
+			\State Reject state
 		\EndIf
-		\State end
 	\EndWhile
-	\State ``Reduce the temperature $T$ by $\Delta T$
-	\State end
+	\State Reduce temperature $T$ by $\Delta T$
+\EndWhile
 \State Output the current state
 \end{algorithmic}
 \caption{Simulated Annealing Method \cite{lam88}}
@@ -380,19 +376,20 @@ The following study (Table \ref{tab:OptCmp}) by L. Caldas \cite{caldas01} illust
 
 \begin{landscape}
 \centering
-\begin{longtable}[h]{|p{1cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
-\hline \\ 
- &\textbf{Memory}&\textbf{Intensification}&\textbf{Diversification}&\textbf{Neigbourhood}\\ \hline
+\begin{longtable}[h]{p{1cm}*{4}{p{4.5cm}}}
+\toprule\\ 
+ &\textbf{Memory}&\textbf{Intensification}&\textbf{Diversification}&\textbf{Neigbourhood}\\ \midrule
 \textbf{GA}&Some use of memory&Non-systematic&Crossover: New points in the solution space are created by combining existing solutions&No definition of neighbourhood\\
  &Explicit --- Elitism&Mutations: Introduces a small change to an existing solution, meaning it is searching in its vicinity&MicroGA's have high diversification by often starting new random populations&New solutions are found by the process of crossover between two existing solutions\\
- &Implicit --- Keeps track of high performance building blocks; sequence of generations propagates useful genetic information& & & \\\hline
+ &Implicit --- Keeps track of high performance building blocks; sequence of generations propagates useful genetic information& & & \\\midrule
 \textbf{SA}&Almost no use of memory&Search moves less freely as it progresses, with lower probability of accepting very different solutions from the current one&At early stages of the search, probability of accepting solutions that significantly decrease performance is higher, meaning that new regions of the search space are explored.&Requires a definition of a neighbourhood\\
- &Only if the best soution found so far is used to restart search after each temperature reduction&Neighbourhood radius can also decrease& &Size of neighbourhood is not too important, as not all of the neighbourhood is explored (at each step, a single solution is picked for evaluation)\\\hline
+ &Only if the best soution found so far is used to restart search after each temperature reduction&Neighbourhood radius can also decrease& &Size of neighbourhood is not too important, as not all of the neighbourhood is explored (at each step, a single solution is picked for evaluation)\\\midrule
 \textbf{TS}&Extensive use of memory&Systematic&Systematic&Requires a definition of neighbourhoods\\
  &Recency-based: keeps track of recent moves to prevent reverse ones&Stores good configurations and then explores their neighbourhoods more thoroughly&Temporary change of rules can penalise solutions similar to the current one&Neighbourhood size is more critical, since it is a greedy algorithm that explores all of a single neighbourhood for best path\\
  &Frequency-based: keeps track of frequency of certian features in solutions already visited. Used for diversification&Path relinking: building blocks from elite solutions stored in memory can by used to produce new attractive solutions&Can be implemented by removing some features of the current solution that temporarily become tabu-active, thus forcing the search to visit previously unexplored regions&May include some method to explore only more attractive areas of the neighbourhood, like first randomly sampling neighbourhood and then exploring only the best solution areas\\
  &Quality memory: stores which building blocks to high quality solutions. Used for path relinking& & & \\
- &Influence memory: records impact of certain moves and makes bad moves tabu-active for some period of time& & & \\\hline
+ &Influence memory: records impact of certain moves and makes bad moves tabu-active for some period of time& & & \\
+\bottomrule
 \caption[Optimisation Search Method Characteristics]{A comparison of optimisation search methods \cite{caldas01}}
 \label{tab:OptCmp}
 \end{longtable}

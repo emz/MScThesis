@@ -1,36 +1,40 @@
-\chapter{Building Envelope Form Generation and Thermal Optimisation}
+\chapter{Building Envelope Thermal Optimisation using Computer Algorithm}
 
-\paragraph{Introduction on Algorithmic Input to Design Process} \mbox{}
+\paragraph{Introduction on Algorithmic Input to Design Process}\mbox{}
 
 An important issue to be considered is the point at which algorithm is introduced to the design process. The introduction of algorithm (and simulation for that matter) at a very early stage as opposed to at a point when the schematic design has been almost finished would greatly influence the final product; as the former is considered pure form generation governed by optimisation algorithms, while the latter is considered optimisation of a geometry which has already been defined by the architect, and in turn defining the major optimisable variables.
 
 Although the above would suggest that algorithmic form generation is best introduced at the earliest stage possible, this is not practical, as it would mean that endless possibilities can be explored with no regard to user requirements. Therefore, for the sake of simplicity and practicality, it has been assumed that a conceptual form has been designed and used as a basis for further algorithmic optimisation. Form generation in this case is mostly \emph{regeneration} of the modelled geometry representing the building envelope.
 
-\clearpage
-\paragraph{Multi-criterion Optimisation} \mbox{}
-
-Many of the cases presented in chapter 4 have showcased optimisation of envelopes with regard to only one variable; i.e. single-criterion optimisation (albeit with the exceptions of sections such as \ref{sec:KendallPavilion}), which was for the sake of making a clear and simple illustration of one concept or another. However, thermal optimisation in real world will almost always demand optimisation with more than one variable taken into consideration.
-
-New problems will present themselves when shifting from single to multiple criterion optimisation, but by far the most important and influential is the problem of \emph{variable weighting system}, which is essentially the importance of each variable (external shading, fenestration\ldots etc.) in relation to the other variables. This should be studied and planned carefully by the architect, as conflicting variables will often demand very different solutions for each to be at optimum performance, and therefore the effect of each on the overall performance should be studied by the architect, possibly with the support of modelling and environmental simulation programs.
-
-Another solution which in some cases might be practical, is to create reference points within the architectural space from which to measure the overall performance of the building envelope regardless of each variable and be used as the driving force behind the optimisation algorithm.
-
-
-\section{Methodology of Thermal Optimisation and Form Generation}
+\section{Stages of Building Envelope Thermal Optimisation}
 
 The information presented so far requires at this point that a clear methodology, properly sequenced, and categorised, formulated out of the concepts and tools illustrated so far in the thesis.
 
 To recapitulate the purpose of the thesis; the aim is to provide a practical method, sufficiently supported by previous experimentation, of designing a building envelope which meets the thermal performance criteria of the designer, through iterative environmental simulation and algorithmic optimisation, algorithmic form generation and regeneration.
 
-The proposed procedure to guide such and endeavour, is based on the elements of the process described in the previous chapters, but differs in sequence to suite the natural order of the design process, and it is as follows:
+The proposed procedure to guide such and endeavour, is based on the elements of the process described in the previous chapters, but differs in sequence to suite the natural order of the design process, and is as follows:
 
 \begin{enumerate}
-	\item Analysis of envelope form
-	\item Determination of thermal criteria
-	\item Selection of suitable digital simulation and modelling environment
-	\item Selection of suitable form generation and/or optimisation algorithms
+	\item Analysis of Envelope Form
+	\item Design Intent: Thermal Criteria and Target Performance
+	\item Virtual Modelling and Simulation
+	\item Optimisation of Building Envelope
 \end{enumerate}
 
+After the above steps have been presented; consisting of general guidlines and important notes for the architect to consider, and acting as key for the reader to all relevant sections of the thesis; a more detailed case-by-case description of the procedure will be provided (see section \ref{sec:DetailedProcedure}).
+
+\clearpage
+
+\colorbox{90Gray}{
+	\begin{minipage}{0.9\textwidth}
+	
+	\end{minipage}
+}
+
+\clearpage
+
+\section{Detailed Procedure of Thermal Optimisation}
+\label{sec:DetailedProcedure}
 
 \subsection{Analysis and Categorisation of Envelope Form}
 
@@ -56,7 +60,7 @@ According to the previously mentioned evolutionary tree of building forms, the b
 		\item Ground
 		\item Envelope
 		\end{enumerate}
-	\item \textbf{Facility}
+	\item \textbf{Faciality}
 		\begin{enumerate}
 			\item Single Face
 			\item Multiple Face
@@ -297,6 +301,14 @@ Finding the optimum solutions is a prime concern, and therefore, the ability to 
 
 While \emph{Tabu Search} could be considered more efficient at locating optimum solutions, \emph{Genetic Algorithm} is almost equally as capable.
 
+\paragraph{Multi-criterion Optimisation} \mbox{}
+
+Many of the cases presented in chapter 4 have showcased optimisation of envelopes with regard to only one variable; i.e. single-criterion optimisation (albeit with the exceptions of sections such as \ref{sec:KendallPavilion}), which was for the sake of making a clear and simple illustration of one concept or another. However, thermal optimisation in real world will almost always demand optimisation with more than one variable taken into consideration.
+
+New problems will present themselves when shifting from single to multiple criterion optimisation, but by far the most important and influential is the problem of \emph{variable weighting system}, which is essentially the importance of each variable (external shading, fenestration\ldots etc.) in relation to the other variables. This should be studied and planned carefully by the architect, as conflicting variables will often demand very different solutions for each to be at optimum performance, and therefore the effect of each on the overall performance should be studied by the architect, possibly with the support of modelling and environmental simulation programs.
+
+Another solution which in some cases might be practical, is to create reference points within the architectural space from which to measure the overall performance of the building envelope regardless of each variable and be used as the driving force behind the optimisation algorithm.
+
 
 \clearpage
 \section{Examples by Envelope Type}
@@ -309,10 +321,11 @@ For each buidling envelope form ---which should be developed at the conceptual d
 
 \vspace{-0.4cm}
 \begin{enumerate}
-	\item The most dominant thermal variables over building thermal performance for this particular envelope form
-	\item The most suitable simulation programme based on the criteria given earlier in this chapter
-	\item The most suitable generative algorithm capable of generating the form, if applicable or needed
-	\item The most efficient or effective performative (optimisation) algorithm for the envelope form
+	\item Building envelope category	
+	\item Dominant thermal variables over building thermal performance for this particular envelope form
+	\item Suitable simulation programme based on the criteria given earlier in this chapter
+	\item Suitable generative algorithm capable of generating the form, if applicable or needed
+	\item Efficient or effective performative (optimisation) algorithm for the envelope form
 \end{enumerate}
 
 \paragraph{Important Notes}\mbox{}
@@ -341,4 +354,66 @@ For each buidling envelope form ---which should be developed at the conceptual d
 
 \subsection{Envelope A}
 
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+	\paragraph{Building Envelope Category}\mbox{}\\
+	\vspace {1cm}	
+	\small \textsc{\textbf{Function:} Envelope\\
+	\vspace {0.3cm}
+	\textbf{Faciality:} Single Face\\
+	\vspace {0.3cm}
+	\textbf{Balance:} Constant $\rightarrow$ Parallel\\
+	\vspace {0.3cm}
+	\textbf{Discontinuity:} Planar\\
+	\vspace {0.3cm}
+	\textbf{Orientation:} Striated\\
+	\vspace {0.3cm}
+	\textbf{Geometry:} \emph{Not Applicable}\\
+	\vspace {0.3cm}
+	\textbf{Diversification:} Patterned\\}
+	\normalsize
+	\columnbreak
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.35\textwidth]{./Images/10-Envelope1}
+		\caption[Envelope A]{Envelope A (\emph{Ensifacopa Planorstripat})\cite{foa04}}
+	\end{figure}
+\end{multicols}
 
+
+\paragraph{Dominant Thermal Variables}\mbox{}\\
+
+Due to the regular, planar and cuboid-like geometry, no architectural features exist that would affect the thermal performance greatly.
+
+The dominant thermal variable(s):
+\vspace{-0.3cm}
+\begin{enumerate}
+	\item \textsc{Surface Material Properties}
+	\item \textsc{Glazing Material}
+\end{enumerate}
+
+\paragraph{Suitable Simulation Programme}\mbox{}\\
+
+Given the fact that the optimisation of this envelope form requires a optimisation of a single critieron or two at best; a simulation programme that is highly efficient in material properites should be selected.
+
+Most Suitable Simulation Programme(s):
+\vspace{-0.3cm}
+\begin{enumerate}
+	\item \textsc{EnergyPlus}
+\end{enumerate}
+
+EnergyPlus is a powerful simulation programme which allows 3\textsuperscript{rd} party interfaces to be built on it and is open-source. EnergyPlus is coded with FORTRAN, but does not have a scripting language. A 3\textsuperscript{rd} party tool is needed to effectively utilise EnergyPlus and to programme the algorithms.
+
+\paragraph{Suitable Form Generation Algorithm}\mbox{}\\
+
+\emph{Not Applicable}. A building model is to be manually created for this envelope form.
+
+\paragraph{Suitable Optimisation Algorithm}\mbox{}\\
+
+Given the straightforward single-criterion optimisation required for this envelope form, a highly efficient, but not necessarily fast algorithm can be used in this case.
+
+Most Suitable Optimisation Algorithm(s):
+\vspace{-0.3cm}
+\begin{enumerate}
+	\item \textsc{Tabu Search}
+\end{enumerate}

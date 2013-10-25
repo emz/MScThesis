@@ -4,28 +4,31 @@
 
 %\usepackage[bindingoffset=5mm]{geometry} %try memoir's built in commands
 
-\usepackage[T1]{fontenc}
-\usepackage{import}
-\usepackage{color}
+\usepackage[T1]{fontenc}	% 8-bit font encoding (256 glyphs)
+\usepackage{import}		% enable import command 
+\usepackage{color}		% enable colour fonts
+\definecolor{90Gray}{gray}{0.9}
 
+% Use the following three packages together
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 
-\usepackage{amsfonts}
+\usepackage{amsfonts}		% additional characters in math mode
+\usepackage{amsmath} 		%to use \text{} in math mode
 
 \usepackage{caption}
 \captionsetup{font=small,labelfont=bf}
 \usepackage{subfig}
 \usepackage{rotating}	%to use sidwaysfigure/table
 \usepackage{longtable}	%to extend tables over several pages
-\usepackage{lscape}
-\usepackage{multirow}
+\usepackage{lscape}	%rotates content of a page without changing header/footer orientation
+\usepackage{multirow}	%multi-row formatting of tables
 \usepackage{multicol}
 \usepackage{tabularx}
-\usepackage{booktabs}
+\usepackage{booktabs}	%for professional looking tables
 
-\usepackage{array}
+\usepackage{array}	%for mathematical matrices
 
 \usepackage{arabtex} %Always load after caption package
 \usepackage{utf8}
@@ -37,11 +40,11 @@
 	
 %\usepackage{fancyhdr}	%not quite useful when you use memoir
 
-\usepackage{graphicx}
-\usepackage{float} %enables \figure[H] or [h!]
-\setcounter{secnumdepth}{3} %enable numbering of subsubsections (level 3)
-\usepackage{fixltx2e} %adds \textsubscript functionality
-\usepackage{paralist} %adds inparaenum
+\usepackage{graphicx}		%enables insertion of images
+\usepackage{float} 		%enables \figure[H] or [h!]
+\setcounter{secnumdepth}{3}	%enable numbering of subsubsections (level 3)
+\usepackage{fixltx2e}		%adds \textsubscript functionality
+\usepackage{paralist}		%adds inparaenum
 \usepackage{hyperref}
 \hypersetup{pdftex,
 	linktocpage=true,
@@ -53,11 +56,8 @@
 	urlcolor=black,
 	pdfauthor={Ayman Elmasry},
 	pdftitle={Algorithmic Form Generation: A Thermal Building Envelope Design Approach}}
-\usepackage[all]{hypcap}
-\usepackage{floatflt}
-\usepackage{wrapfig}
-
-\usepackage{amsmath} %to use \text{} in math mode
+\usepackage[all]{hypcap}	% points hyperlinks to the top of the image instead of caption text
+\usepackage[rflt]{floatflt}	% to activate use \begin{floatingfigure}[option]{width}
 
 \usepackage{calc}
 
@@ -65,6 +65,8 @@
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
+
+\usepackage{lipsum}
 
 %\renewcommand{\bibname}{References}
 
