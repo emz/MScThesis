@@ -5,6 +5,7 @@ As the previous chapters have shed light on the process of algorithmic and therm
 \section{Algorithm and Value Entry}
 
 \subsection{End-user Programming}
+\label{sec:EndUserProgramming}
 
 The term ``End-user'' is used to refer to the final user of the computer application. The programming input method for the end-user is called \emph{scripting}, which allows end-user to participate in the development of the programme to add unique functionality; therefore, transferring some of tasks traditionally assigned to the software developer to the end-user.
 
@@ -249,14 +250,14 @@ The author chose Genetic Algorithm---abbreviated: GA---(see sec. \ref{subsec:GA}
 \label{fig:GSfitFun}
 \end{figure}
 
-\subsection{The Simulation Module: DOE2.1E -- Capabilities and Limitations.}
+\subsection{The Simulation Module}
 DOE2.1E was chosen as the simulation module for its capability to perform thermal calculations, namely: thermal loads, HVAC loads, extensive material modelling capabilities, library of HVAC systems, and also for its accuracy and reasonable computation times. However, DOE2.1E is incapable of other thermal design related calculations such as Computational Fluid Dynamics [CFD] which simulates air movement and its thermal effects. Another missing feature in DOE is the capability to calculate and predict thermal comfort. 
 
 The author performing the experiment had recommended Energy Plus (see sec. \ref{par:EnergyPlus}) as a replacement of DOE for the above mentioned reasons---in addition to others--- which was not used as it was not available at the time when the experiment was performed.
 
 In the context of this thesis however, the aspects of air movement and ventilation have been disregarded for the sake of simplicity of illustration of generative systems and thermal design integration, and therefore, the simulation of static thermal properties of buildings will suffice in this example.
 
-\subsection{The Search Module: Genetic Algorithm -- description, advantages and shortfalls}
+\subsection{The Search Module}
 
 \label{subsec:GA2}
 Genetic Algorithm had been chosen by the author as the search and optimisation module due to that GA provides a final `population' of solutions, not a single solution. As stated by the author: ``\emph{A system that would provide a single `optimised' solution might have poor acceptance among architects, who might prefer to have a range of choices between different solutions, all having a high standard of performance according the objective functions included in the search, and from where the architect could exert further choice, according to other criteria like personal preference, initial design intention \ldots etc}.'' (refer to sec. \ref{subsec:OptimComp} for comparison between GA and other search and optimisation methods by Caldas \cite{caldas01}).
@@ -598,7 +599,7 @@ The dimensions of the tested space and windows size are illustrated in figure \r
 
 
 \clearpage
-\section{Responsive Systems using Grasshopper}
+\section{Responsive Systems using Node-based Editors}
 
 The following experiments were done as part of the research by Huei Shenh Yi \cite{yi09}. The research utilised a prominent and new program called Grasshopper.
 

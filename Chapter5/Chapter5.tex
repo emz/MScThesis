@@ -1,6 +1,6 @@
 \chapter{Building Envelope Thermal Optimisation using Computer Algorithm}
 
-\paragraph{Introduction on Algorithmic Input to Design Process}\mbox{}
+\paragraph{Introduction of Algorithmic Input to the Design Process}\mbox{}
 
 An important issue to be considered is the point at which algorithm is introduced to the design process. The introduction of algorithm (and simulation for that matter) at a very early stage as opposed to at a point when the schematic design has been almost finished would greatly influence the final product; as the former is considered pure form generation governed by optimisation algorithms, while the latter is considered optimisation of a geometry which has already been defined by the architect, and in turn defining the major optimisable variables.
 
@@ -21,22 +21,127 @@ The proposed procedure to guide such and endeavour, is based on the elements of 
 	\item Optimisation of Building Envelope
 \end{enumerate}
 
-After the above steps have been presented; consisting of general guidlines and important notes for the architect to consider, and acting as key for the reader to all relevant sections of the thesis; a more detailed case-by-case description of the procedure will be provided (see section \ref{sec:DetailedProcedure}).
+The above stated stages will be presented in the form of general guidlines and important notes for the architect to consider, and will also act as key for the reader to all relevant sections of the thesis. Afterwards, a more detailed case-by-case description of the procedure will be provided with examples of worked out envelopes (see section \ref{sec:DetailedProcedure}).
 
 \clearpage
-
-\colorbox{90Gray}{
-	\begin{minipage}{0.9\textwidth}
-	
-	\end{minipage}
+\colorbox{95Gray}{%
+	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
+		\subsection{Stage 1: Analysis of Envelope Form}
+		\vspace{0.5cm}
+		\begin{enumerate}
+			\item \textbf{Develop an initial schematic/conceptual design}\footnote{Additional information on development of architectural form can be found in publications such as \emph{Architecture: Design Notebook} \cite{fawcett03}.}
+				\begin{itemize}
+					\item Analysing the context and responsiveness to building site and conditions
+					\item Developing the initial building image and type
+					\item Choosing the appropriate technologies (structural)
+					\item Finalising the conceptual envelope form to include opening, architectural features in elevations, roof form\ldots etc.
+				\end{itemize}
+			\vspace{0.2cm}
+			\item \textbf{Assign the developed building form under a predefined category of envelopes}\\[3mm]
+				The category of building envelope will have implications in the determination of thermal control mechanisms. The process of envelope categorisation has been discussed at length in section \ref{sec:AnalyseEnvelope}.
+		\end{enumerate}
+		\includegraphics[width=\textwidth]{./Images/23-StageA}
+		\begin{center}
+		\small A number of relatively common building envelope forms
+		\end{center}
+	}%
+\end{minipage}%
 }
 
 \clearpage
+\colorbox{95Gray}{%
+	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
+		\subsection{Stage 2: Design Intent - Thermal Criteria and Target Performance}
+		\vspace{0.5cm}
+		\begin{enumerate}
+			\item \textbf{Assign thermal performance targets at different reference points/internal spaces}\\[3mm]
+				Based on the requirements of the building and the internal space functions, the architect should assign the target temperature levels. These values will act as an important input to the optimisation algorithm (for a reference on thermal comfort, refer to section \ref{sec:ThermalComfort}).\\[3mm]
+				\textbf{Note:} The target temperature levels referenced herein are controlled by passive solar control techniques. Any additional concerns such as HVAC loads are to be considered after the optimisation.
+			\item \textbf{Determining the Thermal Control Mechanism}\\[3mm]
+				Depending on the category of building envelope, the most effective control mechanism will be chosen for optimisation. The scope of this thesis is focused on passive solar control mechanisms which include:
+				\begin{enumerate}
+					\item Shape
+						\begin{enumerate}
+							\item Surface-to-volume Ratio
+							\item Orientation
+						\end{enumerate}
+					\item Fabric
+						\begin{enumerate}
+							\item Shading
+							\item Surface Material Properties
+						\end{enumerate}
+					\item Fenestration
+						\begin{enumerate}
+							\item Size, Position and Orientation
+							\item Glazing Material
+							\item Closing Mechanism
+							\item External Shading
+						\end{enumerate}
+				\end{enumerate}
+				These control mechanisms are discussed at length in sections \ref{sec:ThermalDesignVariables} and \ref{sec:DesignIntent:Thermal}.
+		\end{enumerate}
+	}%
+\end{minipage}%
+}
 
-\section{Detailed Procedure of Thermal Optimisation}
+
+\clearpage
+\colorbox{95Gray}{%
+	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
+		\subsection{Stage 3: Virtual Modelling and Simulation}
+		\vspace{0.5cm}
+		\begin{enumerate} \item \textbf{Creating the 3D Parametric Model}\\[3mm] It is of the utmost importance that the building 3D model be parametric. If the building is modelled in a CAD programme that does not recognize the objects as smart objects with predefined parameters, the optimisation of the building envelope cannot be performed (refer to section \ref{sec:GeoModel} for reference on building geometry breakdown into procedures and parameters).\\
+
+				Examples of programmes capable of parametric modelling:
+				\begin{enumerate}
+					\item Parametric modelling environments such as \textsc{catia} or Rhinoceros/Grasshopper (see Chapter 4).
+					\item Direct modelling into simulation environemnts with GUI's and visualisation capabilities such as \textsc{ecotect} (refer to section \ref{sec:SimulationPrograms}). This is the most preferred as it would allow scripting (see Stage 4, point no. 1).
+					\item Creating the building model in a BIM [Building Information Modelling] environment.
+				\end{enumerate}
+				\vspace{0.2cm}
+			\item \textbf{Simulation of the Building Model}\\[3mm]
+				Selecting the simulation programme is based on the control mechanism of thermal performance as decided earlier in stage 2. A large number of simulation programmes have been discused at length in section \ref{sec:SimulationPrograms}. Other factors are also explained in section \ref{sec:SimulationModel}.\\
+				Popular simulation environments include:
+				\begin{enumerate}
+					\item \textsc{ecotect} (see page \pageref{par:ECOTECT})
+					\item \textsc{EnergyPlus} (see page \pageref{par:EnergyPlus})
+					\item \textsc{doe-2.1e} (see page \pageref{par:DOE})
+					\item e\textsc{Quest} (see page \pageref{par:eQUEST})
+					\item \textsc{transys} (see page \pageref{par:TRANSYS})\\
+						\ldots among others
+				\end{enumerate}
+		\end{enumerate}
+	}%
+\end{minipage}%
+}
+
+\clearpage
+\colorbox{95Gray}{%
+	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
+		\subsection{Stage 4: Programming and Optimisation}
+		\vspace{0.5cm}
+		\begin{enumerate}
+			\item \textbf{Determine the Programming Method}\\[3mm]
+				The architect must determine at this stage the method of programming the algorithm to optimise the building performance. \textbf{Note:} the process of optimisation can be very frustrating to the architect if this stage is not planned well. There are two main possibilities for the programming method:
+				\begin{enumerate}
+					\item \textbf{The simulation programme supports scripting} (refer to section \ref{sec:EndUserProgramming} for End-User Programming or \emph{Scripting}), in this case the algorithm can be programmed directly into the simulation programme.
+					\item \textbf{The simulation programme does not support scripting}
+						\begin{enumerate}
+							\item Programme the algorihm in a language such as \textsc{Java} or C$++$ (not recommended ).
+							\item Exchange of temperature values between the algorithm, simulation environment, and parametric modelling programme.
+						\end{enumerate}
+				\end{enumerate}
+
+		\end{enumerate}
+	}%
+\end{minipage}%
+}
+
+\section{Detailed Procedure for Thermal Optimisation}
 \label{sec:DetailedProcedure}
 
-\subsection{Analysis and Categorisation of Envelope Form}
+\subsection{Analysis of Envelope Form}
+\label{sec:AnalyseEnvelope}
 
 As described earlier, any building envelope is composed of the architectural physical elements that separate the inside from the outside, creating an \emph{envelope} or \emph{enclosure} for the building (see page \pageref{BuildEnvDef}).
 
@@ -120,7 +225,8 @@ According to the previously mentioned evolutionary tree of building forms, the b
 \end{figure}
 
 \clearpage
-\subsection{Determination of Thermal Criteria}
+\subsection{Design Intent: Thermal Criteria and Target Performance}
+\label{sec:DesignIntent:Thermal}
 
 Having created a system of categorisation in which any envelope form can mostly fit under a category; the thermal design through algorithm and simulation should be guided by the variables that affect the particular envelope form the most.
 
@@ -236,6 +342,7 @@ This allows for options such as louvers to be introduced into the design to incr
 This form of shading is designed to protect internal spaces from unwanted solar rays entering through openings (i.e. fenestration). The different forms of external shading have been explained in Chapter 3 (refer to page \pageref{Shading}).
 
 \subsection{Selection of Simulation and Modelling Environment}
+\label{sec:SimulationModel}
 
 Different simulation programs have been discussed relatively at length in Chapter 3 (section \ref{sec:SimulationPrograms}). The points to be considered when choosing a simulation program are as follows:
 
