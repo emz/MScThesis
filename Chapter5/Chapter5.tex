@@ -1,6 +1,6 @@
 \chapter{Building Envelope Thermal Optimisation using Computer Algorithm}
 
-\paragraph{Introduction of Algorithmic Input to the Design Process}\mbox{}
+\paragraph{Introduction of Algorithmic Input to the Design Proces\mbox{}\vspace{-0.3cm}s}\mbox{}
 
 An important issue to be considered is the point at which algorithm is introduced to the design process. The introduction of algorithm (and simulation for that matter) at a very early stage as opposed to at a point when the schematic design has been almost finished would greatly influence the final product; as the former is considered pure form generation governed by optimisation algorithms, while the latter is considered optimisation of a geometry which has already been defined by the architect, and in turn defining the major optimisable variables.
 
@@ -18,15 +18,16 @@ The proposed procedure to guide such and endeavour, is based on the elements of 
 	\item Analysis of Envelope Form
 	\item Design Intent: Thermal Criteria and Target Performance
 	\item Virtual Modelling and Simulation
-	\item Optimisation of Building Envelope
+	\item Programming and Optimisation
 \end{enumerate}
 
-The above stated stages will be presented in the form of general guidlines and important notes for the architect to consider, and will also act as key for the reader to all relevant sections of the thesis. Afterwards, a more detailed case-by-case description of the procedure will be provided with examples of worked out envelopes (see section \ref{sec:DetailedProcedure}).
+The above stated stages will be presented in the form of general guidlines and important notes for the architect to consider, and will also act as key for the reader to all relevant sections of the thesis. Afterwards, a more detailed case-by-case description of the procedure and the underlying concepts will be provided, with examples of worked out envelopes (see section \ref{sec:DetailedProcedure}).
 
 \clearpage
 \colorbox{95Gray}{%
 	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
 		\subsection{Stage 1: Analysis of Envelope Form}
+		\label{sec:Stage1}
 		\vspace{0.5cm}
 		\begin{enumerate}
 			\item \textbf{Develop an initial schematic/conceptual design}\footnote{Additional information on development of architectural form can be found in publications such as \emph{Architecture: Design Notebook} \cite{fawcett03}.}
@@ -52,6 +53,7 @@ The above stated stages will be presented in the form of general guidlines and i
 \colorbox{95Gray}{%
 	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
 		\subsection{Stage 2: Design Intent - Thermal Criteria and Target Performance}
+		\label{sec:Stage2}
 		\vspace{0.5cm}
 		\begin{enumerate}
 			\item \textbf{Assign thermal performance targets at different reference points/internal spaces}\\[3mm]
@@ -89,6 +91,7 @@ The above stated stages will be presented in the form of general guidlines and i
 \colorbox{95Gray}{%
 	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
 		\subsection{Stage 3: Virtual Modelling and Simulation}
+		\label{sec:Stage3}
 		\vspace{0.5cm}
 		\begin{enumerate} \item \textbf{Creating the 3D Parametric Model}\\[3mm] It is of the utmost importance that the building 3D model be parametric. If the building is modelled in a CAD programme that does not recognize the objects as smart objects with predefined parameters, the optimisation of the building envelope cannot be performed (refer to section \ref{sec:GeoModel} for reference on building geometry breakdown into procedures and parameters).\\
 
@@ -119,25 +122,35 @@ The above stated stages will be presented in the form of general guidlines and i
 \colorbox{95Gray}{%
 	\begin{minipage}[c][20.5cm][t]{\textwidth}{%
 		\subsection{Stage 4: Programming and Optimisation}
+		\label{sec:Stage4}
 		\vspace{0.5cm}
 		\begin{enumerate}
 			\item \textbf{Determine the Programming Method}\\[3mm]
 				The architect must determine at this stage the method of programming the algorithm to optimise the building performance. \textbf{Note:} the process of optimisation can be very frustrating to the architect if this stage is not planned well. There are two main possibilities for the programming method:
 				\begin{enumerate}
-					\item \textbf{The simulation programme supports scripting} (refer to section \ref{sec:EndUserProgramming} for End-User Programming or \emph{Scripting}), in this case the algorithm can be programmed directly into the simulation programme.
+					\item \textbf{The simulation programme supports scripting} (refer to section \ref{sec:EndUserProgramming} for End-User Programming or \emph{Scripting}). In this case the algorithm can be programmed directly into the simulation programme.
 					\item \textbf{The simulation programme does not support scripting}
 						\begin{enumerate}
-							\item Programme the algorihm in a language such as \textsc{Java} or C$++$ (not recommended ).
-							\item Exchange of temperature values between the algorithm, simulation environment, and parametric modelling programme.
+							\item Programme the algorihm in a language such as \textsc{Java} or C$++$ 
+							\item Exchange of temperature values, and building parameter values between the algorithm, simulation environment, and parametric modelling programme.
 						\end{enumerate}
 				\end{enumerate}
-
+			\item \textbf{Choose the Optimisation Algorithm}
+				\begin{enumerate}
+					\item \textbf{Genetic Algorithm:} Creates a \emph{set} of final solutions, giving the architect the advantage of choice.
+					\item \textbf{Simmulated Annealing:} Focuses on findng the global optimum.
+					\item \textbf{Tabu Search:} Can handle very large solution spaces or complex problems.
+				\end{enumerate}
+			\item \textbf{Initiate Optimisation and Simulation}\\[3mm]
+				The optimisation algorithm is now programmed, and the virtual model parameters are optimised through the algorithm and each individual solution is assessed by simulation.
+			\item \textbf{Termination Conditions Met}\\[3mm]
+				At this point the target values of the design intent have been met and the optimisation algorithm can terminate and present the final results.
 		\end{enumerate}
 	}%
 \end{minipage}%
 }
 
-\section{Detailed Procedure for Thermal Optimisation}
+\section{Context, Underlying Concepts and Detailed Procedure}
 \label{sec:DetailedProcedure}
 
 \subsection{Analysis of Envelope Form}
@@ -147,7 +160,7 @@ As described earlier, any building envelope is composed of the architectural phy
 
 Although this definition applies to almost all building envelopes, they would vary greatly from one building to another, making the task at hand; which is the utilisation of algorithmic design and thermal simulation to achieve thermally efficient buildings, inefficient or even practically meaningless, unless proper categorisation of building envelope design is made.
 
-This is due to the fact that with differences between building enclosure designs, the variables that affect the thermal performance of the envelope will have varying degrees of impact, sometimes even reaching almost zero impact in some cases; having mentioned above the importance of weighting in multi-criterion optimisation, this would especially important to determine which variable should be given the priority over others.
+This is due to the fact that with differences between building enclosure designs, the variables that affect the thermal performance of the envelope will have varying degrees of impact, sometimes even reaching almost zero impact in some cases; therfore, it essential that the architect determines which variable should be given the priority over others.
 
 \paragraph{\emph{Phylogenesis} and the Categorisation of Building Envelopes}\mbox{}
 
@@ -341,9 +354,15 @@ This allows for options such as louvers to be introduced into the design to incr
 
 This form of shading is designed to protect internal spaces from unwanted solar rays entering through openings (i.e. fenestration). The different forms of external shading have been explained in Chapter 3 (refer to page \pageref{Shading}).
 
-\subsection{Selection of Simulation and Modelling Environment}
+\clearpage
+\subsection{Virtual Modelling and Simulation}
 \label{sec:SimulationModel}
 
+\subsubsection{Building Model}
+
+As stated in section \ref{sec:Stage3}, the building enelope model must be parametric. The parameters and their values must be exportable to a file format recognizable by the simulation programme (\emph{e.g.} gbXML) in case the modelling is done outside the simulation programme, which will require exchange of information between two separate programmes.
+
+\subsubsection{Simulation Programme}
 Different simulation programs have been discussed relatively at length in Chapter 3 (section \ref{sec:SimulationPrograms}). The points to be considered when choosing a simulation program are as follows:
 
 \begin{enumerate}
@@ -354,7 +373,8 @@ Different simulation programs have been discussed relatively at length in Chapte
 	\item The ability to directly input programming code or script into the simulation programme. This was evident in Chapter 4, where the ability to use scripts and programming languages such as Lua or to input optimisation algorithms into the simulation programme is essential.
 \end{enumerate}
 
-\subsection{Selection of Form Generation and Optimisation Algorithms}
+\clearpage
+\subsection{Programming and Optimisation}
 
 The main focus of this thesis is the utilisation of algorithm in architectural design, particularly in thermal design of building envelopes; and the subject has been discussed in several parts of the thesis from different points of view.
 
@@ -362,13 +382,35 @@ Another aspect of most importance at this point is knowing which algorithms are 
 
 However, having reached this point, where different building envelopes have different priorities in terms of thermal design criteria, and preferences with regards to simulation and environmental modelling programmes, it is necessary to choose the most efficient algorithm for the job. Below are some of the main points to be considered.
 
-\subsubsection{Generative or Performative Algorithms}
+\subsubsection{Performative Algorithms}
 
-Although as mentioned earlier in this chapter, that starting a model from scratch would be troublesome and inefficient; it is also possible to define some basic parameters as a start, which would guide the form generating algorithm. One example would be Cellular Automata, which can create a building from scratch and therefore a building envelope form with the simple cell adjacency rules of Cellular Automata. In this case most generative algorithms would be useful.
+Many optimisation algorithms exist other than those discussed so far, but the heuristic optimisation algorithms are usually the fastest and are fairly efficient, at least as far architectural design is concerned, and in most cases of thermal design these are the primary concerns.
 
-Another case would be that a simple form exists, as designed by the architect, and requires optimisation and therefore requires adjustments to the existing envelope. This puts more control in the hand of the architect of the building envelope shape, but at the cost of less effectiveness of the optimisation algorithms, unless the algorithm has no or very few constraints which would allow it to perform extreme adjustments to the envelope form, to achieve the target performance. In this case optimisation or performative algorithms are useful.
+Upon studying the comparative analysis of performative algorithms (refer to table \ref{tab:OptCmp}), the main elements affecting the choice of algorithm would be as follows.
 
-\paragraph{Generative Algorithms}\mbox{}
+\paragraph{Speed at Finding the Global Optimum}\mbox{}\vspace{-0.4cm}
+
+As mentioned earlier in the thesis, search methods such as \emph{Brute Force}\footnote{A search method which examines \emph{all} individual solutions in a solution space (discrete values).} would theoratically have a 100\% chance of locating the global optimum; however, this comes at the price of speed. Complex problems could take days or weeks to find the global optimum since it would need to try out all possible solutions within a solution space, which could be millions or virtually infinite.
+
+Therefore, an algorithm that can find highly elite solutions within the solution space within a short time are always preferred. Generally speaking, of the three algorithms, \emph{Simulated Annaeling} is fast enough if the solution space is not exceptionally large, and focuses on finding the single global optimum of the solution space.
+
+\paragraph{Architectural Alternatives}\mbox{}\vspace{-0.4cm}
+
+When a purely engineering problem is being solved using a search method, the global optimum is usually the only concern. However, when the aesthetic aspect of the solution is of concern, such as in architectural solutions, the possibility of providing alternatives in the form of elite solutions is of very high importance.
+
+Of the three algorithms, \emph{Genetic Algorithms} is the one that satisfies this need to the greatest extent.
+
+\paragraph{Search Efficiency in Large Solution Spaces}\mbox{}\vspace{-0.4cm}
+
+Finding the optimum solutions is the main aim of the optimisation, and therefore, the ability to locate as many of them and as close to the global optimum as possible is a major element to be considered in the choice of algorithm. If the solution space is very large, the possibility of finding those solution will be weaker.
+
+\emph{Tabu Search} uses a memory-based technique of search that is very efficient in analysing a large solution space, and ensures that the final solutions either contain the global optimum, or are very close to it.
+
+
+
+\subsubsection{Generative Algorithms}
+
+As an addtional option, if the building model had been created using a Generative Algorithm, the generating elements could be optimised instead of the architecture features. The following elements are the possible parameters to be optimised in that case:
 
 \subparagraph{Control Constraints}
 
@@ -384,31 +426,7 @@ The building blocks of different algorithms are the smallest units used by the a
 
 It should be noted, that combinations of generative algorithms are possible, an example is shown as in figure \ref{3dCAArch}, where an algorithm similar to shape grammars is responsible for modifying the final result of cellular automata generations.
 
-\paragraph{Performative Algorithms}\mbox{}
-
-Many optimisation algorithms exist other than those discussed so far, but the heuristic optimisation algorithms are usually the fastest and are fairly efficient, at least as far architectural design is concerned, and in most cases of thermal design these are the primary concerns.
-
-Upon studying the comparative analysis of performative algorithms (refer to table \ref{tab:OptCmp}), the main elements affecting the choice of algorithm would be as follows.
-
-\subparagraph{Speed}
-
-As mentioned earlier in the thesis, search methods such as \emph{Brute Force} would theoratically have a 100\% chance of locating the global optimum; however, this comes at the price of speed. Complex problems could take days or weeks to find the global optimum since it would need to try out all possible solutions within a solution space, which could be millions or virtually infinite.
-
-Therefore, an algorithm that can find highly elite solutions within the solution space within a short time are always preferred. Generally speaking, of the three algorithms, \emph{Simulated Annaeling} is the fastest, followed by \emph{Genetic Algorithm} and then \emph{Tabu Search}.
-
-\subparagraph{Architectural Alternatives}
-
-When a purely engineering problem is being solved using a search method, the global optimum is usually the only concern. However, when the aesthetic aspect of the solution is of concern, such as in architectural solutions, the possibility of providing alternatives in the form of elite solutions is of very high importance.
-
-Of the three algorithms, \emph{Genetic Algorithms} is the one that satisfies this need to the greatest extent.
-
-\subparagraph{Search Efficiency}
-
-Finding the optimum solutions is a prime concern, and therefore, the ability to locate as many of them and as close to the global optimum as possible is a major element to be considered in the choice of algorithm.
-
-While \emph{Tabu Search} could be considered more efficient at locating optimum solutions, \emph{Genetic Algorithm} is almost equally as capable.
-
-\paragraph{Multi-criterion Optimisation} \mbox{}
+\subsubsection{Multi-criterion Optimisation}
 
 Many of the cases presented in chapter 4 have showcased optimisation of envelopes with regard to only one variable; i.e. single-criterion optimisation (albeit with the exceptions of sections such as \ref{sec:KendallPavilion}), which was for the sake of making a clear and simple illustration of one concept or another. However, thermal optimisation in real world will almost always demand optimisation with more than one variable taken into consideration.
 
@@ -420,29 +438,9 @@ Another solution which in some cases might be practical, is to create reference 
 \clearpage
 \section{Examples by Envelope Type}
 
-At this point, the information provided so far in this chapter should be sufficient as a guide on how to design a thermally efficient building envelope using algorithm. The procedure has also been summarised for convinience in the following flowchart (figure \ref{fig:Ch5Flowchart}).
+At this point, the information provided so far in this chapter should be sufficient as a guide on how to design a thermally efficient building envelope using algorithm. The procedure has also been summarised for convinience in the following flowchart.
 
 Using the flowchart, a number of examples will be presented to show the different outcomes depending on the different envelope forms.
-
-For each buidling envelope form ---which should be developed at the conceptual design phase of the chart--- the following have been listed:
-
-\vspace{-0.4cm}
-\begin{enumerate}
-	\item Building envelope category	
-	\item Dominant thermal variables over building thermal performance for this particular envelope form
-	\item Suitable simulation programme based on the criteria given earlier in this chapter
-	\item Suitable generative algorithm capable of generating the form, if applicable or needed
-	\item Efficient or effective performative (optimisation) algorithm for the envelope form
-\end{enumerate}
-
-\paragraph{Important Notes}\mbox{}
-
-\vspace{-0.4cm}
-\begin{enumerate}
-	\item In some cases where the selection of generative algorithm is stated as ``\emph{Not Applicable}'', this does not necessarily mean that no generative algorithm is capable of generating the particular envelope, only that the algorithms presented in this thesis are probably not suitable.
-	\item The examples presented and the selected variables, programmes and algorithms are not undisputable. Experimentation is necessary for the succes of unique case of building envelope.
-\end{enumerate}
-
 
 \clearpage
 \begin{sidewaysfigure}[h]
@@ -453,18 +451,33 @@ For each buidling envelope form ---which should be developed at the conceptual d
 \begin{sidewaysfigure}[h]
 	\centering
 	\includegraphics[width=18cm]{./Images/9b-Flowchart}
-	\caption[Thermal Algorithmic Design Flowchart]{Flowchart of procedure for thermal design using simulation programs and algorithms}
-	\label{fig:Ch5Flowchart}
 \end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\centering
+	\includegraphics[width=18cm]{./Images/9c-Flowchart}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h]
+	\centering
+	\includegraphics[width=18cm]{./Images/9d-Flowchart}
+\end{sidewaysfigure}
+
 
 \clearpage
 
 \subsection{Envelope A}
 
+\paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
+
+Two main objectives are achieved in this stage; \begin{inparaenum}[a)] \item development of the bulding envelope schematic design and its categorisation, and \item determining the internal space functions.\end{inparaenum}
+
+Assuming that at this point the Schematic Design of the building envelope had been developed; proceed to the next step of categorising the envelope.
+
 \setlength{\columnseprule}{0pt}
 \begin{multicols}{2}
 	\paragraph{Building Envelope Category}\mbox{}\\
-	\vspace {1cm}	
+	\vspace {0.5cm}	
 	\small \textsc{\textbf{Function:} Envelope\\
 	\vspace {0.3cm}
 	\textbf{Faciality:} Single Face\\
@@ -483,44 +496,47 @@ For each buidling envelope form ---which should be developed at the conceptual d
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.35\textwidth]{./Images/10-Envelope1}
-		\caption[Envelope A]{Envelope A (\emph{Ensifacopa Planorstripat})\cite{foa04}}
 	\end{figure}
 \end{multicols}
+\vspace{-5mm}
 
+Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
 
-\paragraph{Dominant Thermal Variables}\mbox{}\\
+\paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
 
-Due to the regular, planar and cuboid-like geometry, no architectural features exist that would affect the thermal performance greatly.
+Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
 
-The dominant thermal variable(s):
-\vspace{-0.3cm}
-\begin{enumerate}
+According to the building category and envelope form as described in stage 1, the envelope is very planar and unifrom with no possibilites of external shading devices or different closing mechanisms, and due to the cuboid form, the surface-to-volume ratio would not have the greatest effect if envelope proportions were changed.
+
+Therefore, the control mechanisms which would significantly affect the internal space temperatures are:
+\begin{compactenum}
 	\item \textsc{Surface Material Properties}
-	\item \textsc{Glazing Material}
-\end{enumerate}
+	\item \textsc{Glazing Properties}
+\end{compactenum}
 
-\paragraph{Suitable Simulation Programme}\mbox{}\\
+\paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
 
-Given the fact that the optimisation of this envelope form requires a optimisation of a single critieron or two at best; a simulation programme that is highly efficient in material properites should be selected.
+With the relative simplicity of the building envelope, and the possibility to effectively optimise the building envelope thermal performance through optimising surafce or glazin material properties, the parametric model is very easy to define even without a sofisticated GUI (\emph{i.e.} by defining coordinates in a text file) and can thereofore be defined directly in the simulation programme.
 
-Most Suitable Simulation Programme(s):
-\vspace{-0.3cm}
-\begin{enumerate}
-	\item \textsc{EnergyPlus}
-\end{enumerate}
+The control mechanism chosen (Surface Material Properties) will require the variables of the equation given in section \ref{sec:ThermalBehaviour}:\emph{Thermal Behaviour of Buildings} to be defined as the parameters to be optimised.
 
-EnergyPlus is a powerful simulation programme which allows 3\textsuperscript{rd} party interfaces to be built on it and is open-source. EnergyPlus is coded with FORTRAN, but does not have a scripting language. A 3\textsuperscript{rd} party tool is needed to effectively utilise EnergyPlus and to programme the algorithms.
+Given the simple geometry of the building, the GUI, modelling and  visualisation capabilities of the simmulation programme are not important. However, the most accurate energy and physics simmulator would be the best option. In this case the best simmulation programme would be:
 
-\paragraph{Suitable Form Generation Algorithm}\mbox{}\\
+\begin{compactenum}
+	\item \textsc{Energy Plus} (A shell application can be programmed on top of \textsc{EnergyPlus} using \textsc{fortran}. Requires intermediate programming experience).
+	\item \textsc{doe} (Scripting language available).
+\end{compactenum}
 
-\emph{Not Applicable}. A building model is to be manually created for this envelope form.
+\paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
 
-\paragraph{Suitable Optimisation Algorithm}\mbox{}\\
+The programming method in the case of \textsc{EnergyPlus} is to create a shell application on top of it which would utilise the direct optimisation of the physical parameters of the building envelope materials.
 
-Given the straightforward single-criterion optimisation required for this envelope form, a highly efficient, but not necessarily fast algorithm can be used in this case.
+In case of using \textsc{DOE}, the GUI can be used to model the building envelope and the scripting language would be used to define the parameters and the chosen algorithm.
 
-Most Suitable Optimisation Algorithm(s):
-\vspace{-0.3cm}
-\begin{enumerate}
-	\item \textsc{Tabu Search}
-\end{enumerate}
+Given that the problem of optimising the surface material properties would not require many alternatives but rather finding the optimum solution for the problem (minimisation of heat gain), hence, the best algorithm for this problem would be:
+
+\begin{compactenum}
+\item \textsc{Simmulated Annealing}
+\end{compactenum}
+
+The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
