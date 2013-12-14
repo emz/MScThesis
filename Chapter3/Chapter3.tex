@@ -1,15 +1,16 @@
 \chapter{Generative and Performative Algorithms}
 
-\section{Introduction}
-
-Today, two main paradigms of algorithmic design are clearly dominant; generative design and performative design \cite{fasoulaki08}. Generative design is the essential \emph{rule-based\footnote{Consisting of a solid set of consecutive instructions that govern an action to produce a desired outcome}} algorithmic form of algorithmic architecture. It is governed by repetitive patterns, equations and shape transformations.  Performative design on the other hand, is optimisational; modifying and reshaping to adapt to a certain simulated environment.
+Two main paradigms of algorithmic architectural design are clearly dominant; generative design and performative design \cite{fasoulaki08}. Generative design is the essential \emph{rule-based\footnote{Consisting of a solid set of consecutive instructions that govern an action to produce a desired outcome}} algorithmic form of algorithmic architecture. It is governed by repetitive patterns, equations and shape transformations.  Performative design on the other hand, is optimisational; modifying and reshaping to adapt to a certain simulated environment, or to achieve a specific level of performance for specfific building functions.
 
 \section{Generative Algorithm}
 
 Generative architecture can be defined as a design process involving generative systems in the form of a computer program that can be fully automated or step-by-step controlled. It would have an algorithm (rule) governing the transformations of initial shapes through variables or parameters; `generating' results, and selecting the best variant according to the given criteria. \cite{arida04}
 
-The tools and key components of generative design are the systems which define the method of form exploration. They can be defined as scripts or sets of geometrical transformations \cite{arida04}. These systems ---as mentioned earlier--- are rule based, essentially formal or visual and are often based on systems borrowed from biology and mathematics. Some popular systems widely used today include Cellular Automata, L-Systems, Voronoi Diagrams, Fractals and Shape Grammars.
+Generative algorithms are visual in nature; they are systems which define, manipulate and --- most imprtantly --- react to and are driven by shapes and geometries. This is in contrast with performative algorithms, which are driven by building performance, which is of a more numerical nature. 
 
+The key components of generative design are the systems which define the method of form exploration. They can be defined as scripts or sets of geometrical transformations \cite{arida04}. These systems --- as mentioned earlier --- are rule based, essentially formal or visual, and are often emulations of natural processes or systems; such as biologcal evolution and mathematical patterns. Some of the more popular systems --- as far as architectural design is concerned --- widely used today include Cellular Automata, L-Systems, Voronoi Diagrams, Fractals and Shape Grammars.
+
+\clearpage
 \subsection{Cellular Automata}
 
 ``Cellular Automata is a computational method which can simulate the process of growth by describing a complex system by simple individuals following simple rules. The concept of simulating growth was introduced by John von Neumann (1951) and further developed by Ulam (1962) in the are of simulating multi-state machines. The concept gained great popularity when Martin Gardner (1970) John Conway's ``Life'', a game that generated two dimensional patterns''\cite{krawczyk02}. Later on, Stephen Wolfram would begin research on the subject in 1984, to write a book on the subject called \emph{A New Kind of Science} \cite{wolfram02}. The book would discuss the patterns created by cellular automata as simple rules capable of generating extremely complex patterns that mimic patterns of growth occurring in nature, among other things; describing his findings as a new paradigm of scientific research touching on numerous fields of science.
@@ -51,7 +52,7 @@ The utilisation of basic rules of cellular automata however does not suffice to 
 
 Multiple interpretations of the manipulated generations (Fig \ref{CA ArchForm}) were created with structural support. The architectural forms shown appear more developed, nevertheless; it was subject to several modifications of the original cellular automata model which required user intervention at early stages of the process, which would prove CA to be a rather raw method of architectural form generation.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./Images/5-3dCASpaces}
 \caption[Architectural Interpretation of CA Generations]{Architectural Interpretation of CA Generations \cite{krawczyk02}}
@@ -187,7 +188,7 @@ Having discussed the different generative algorithms and other processes (includ
 \clearpage
 \section{Performative Algorithms}
 
-Having observed some of the prominent methods of generative design, one could define performative design by saying that unlike generative methods, performative design deals with how the building performs; not how the building looks. In order to measure a specific aspect of any given building's performance; one has to define the variables, constraints and performance criteria. But although the aim of such practice would be to measure how the building performs, the feedback would certainly change how the building looks.
+Having observed some of the prominent methods of generative design, one could define performative design by saying that unlike generative methods, performative design deals with how the building performs; not how the building looks. Performative algorithms examines a specific aspect of any given building's performance and improves it. 
 
 When speaking of green and sustainable design, performative design always comes to mind. However; it does not deal with the environmental impact of buildings, which rules out the capability of producing green design. Nevertheless; in recent years it has become the quintessential method of production of sustainable design. This owes to the fact that performative design, through simulation and selection can produce designs that are highly efficient at lowering energy consumption and waste production, in some cases to the point of reaching \emph{zero footprint}\footnote{Theoretical absolute self-sufficiency and zero impact (waste production, energy consumption\ldots etc.}.
 
@@ -369,10 +370,11 @@ The memory used in tabu search is both \emph{explicit} and \emph{attributive}. E
 
 \paragraph{Intensification and Diversification.} Intensification is linked with short term memory and explicit memory; it evaluates recently visited solutions and chooses to intensify search in a particular zone of the solution space when it detects that a large number of elite solutions, this zone could be called a neighbourhood, but with a different definition than usual; this neighbourhood consists of all solutions within this area regardless of their attributes. Diversification --- on the other hand --- encourages the search process to investigate unvisited regions, and generate solutions that are significantly different from previous solutions.
 
+\clearpage
 \subsection{Optimisation Search Method Comparison}
 \label{subsec:OptimComp}
 
-The following study (Table \ref{tab:OptCmp}) by L. Caldas \cite{caldas01} illustrates the characteristics of Genetic Algorith, Simulated Annealing and Tabu Search; comparing them in terms of memory usage, intensification, diversification and neighbourhoods:
+The following study (Table \ref{tab:OptCmp}) by L. Caldas \cite{caldas01} illustrates the characteristics of Genetic Algorithm, Simulated Annealing and Tabu Search; comparing them in terms of memory usage, intensification, diversification and neighbourhoods:
 
 \begin{landscape}
 \centering

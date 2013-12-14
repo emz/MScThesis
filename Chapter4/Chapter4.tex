@@ -1,24 +1,33 @@
-\chapter{Applications and Case Studies}
+\chapter{Application and Case Studies}
 
-As the previous chapters have shed light on the process of algorithmic and thermal design; mainly in theory, illustrating the basic concepts; this chapter will delve into the practical tools used in the process, which will facilitate input of algorithms into the modelling process. Afterwards, a showcase of previous experiments with algorithmic design by either performative or generative tools
+As the previous chapters have shed light on the process of algorithmic and thermal design; mainly in theory, illustrating the basic concepts; this chapter will delve into the practical tools used in the process, which will facilitate input of algorithms into the modelling process; and afterwards, a showcase of previous experiments with algorithmic design by either performative or generative tools to achieve environmentally reactive or adaptiv designs. This chapter will serve as a platform of concepts to be summarised in chapter 5.
 
-\section{Algorithm and Value Entry}
+\section{Introduction to Modelling and Programming Methods}
 
 \subsection{End-user Programming}
 \label{sec:EndUserProgramming}
 
-The term ``End-user'' is used to refer to the final user of the computer application. The programming input method for the end-user is called \emph{scripting}, which allows end-user to participate in the development of the programme to add unique functionality; therefore, transferring some of tasks traditionally assigned to the software developer to the end-user.
+The term ``End-user'' is used to refer to the final user of the computer application. End-user programming  allows the end-user to add unique functionality not provided originally in the application. There are several approaches to facilitating end-user programming, the most relevant of which to this thesis subject is called \emph{scripting}.
 
-Although scripting allows end-users to introduce new functionality, it does not mean that users would be creating new software. Scripting allows end-users to access the underlying structure of existing software and embed new functionality in it. This type of input allows for extended expressive control and higher productivity in the design process. \cite{kashyap01}
+Scripting is a tool provided by the application programmers to the end-users --- people who are not professional programmers --- to enable creation or modification of software \emph{artifacts} (automated behaviour or control sequence).
+
+Although scripting allows end-users to introduce new functionality, it does not require significant knowledge of programming. Scripting allows end-users to access the underlying structure of existing software and embed new functionality in it. This type of input allows for extended expressive control and higher productivity in the design process. \cite{kashyap01}
 
 Scripting is very similar to traditional programming procedure; entering a series of instructions written in computer code, and executed within the software environment. Some popular scripting languages and their corresponding model oriented software environments include: 
 
+\vspace{-0.5cm}
 \begin{enumerate}
 \item AutoLisp for AutoCAD
 \item RhinoScript for Rhinoceros
 \item MEL for Maya
 \item MAXSCRIPT for 3DsMax
 \end{enumerate}
+
+\subsection{Syntax and Semantics}
+
+Computer programming langauges are often compared to natural languages in terms of \emph{sytax} and \emph{semantics}. The syntax of any language is the set of rules (grammar) which must be followed for any sentence to be syntactically correct. On the other hand, semantics is the study of whether the syntactically correct sentence is meaningful or not.
+
+Due to the fact that each programming language (including scripts) has unique syntax; it has been seen as much more practical to study the semantics of programmes created for the purpose of optimising thermal performance, as a universal description of the algorithm that can later be implemented in any programming or scripting language. Based on this decision, the algorithms presented herein are explained in natural language; no programming language specific code is included in the following chapter.
 
 \subsection{Parametric Modelling}
 
@@ -29,11 +38,11 @@ Another form of parametric modelling is generative parametric graphical modules,
 Parametric models are of great value to performative oriented design processes, which is sometimes fused with scripting, benefiting from both in speeding the process and achieving better results.
 
 \clearpage
-\section{Adaptable Responsive Architecture}
+\section{Adaptable Responsive Design using Scripting and Generative Algorithms}
 
 The following will showcase a number of experiments by Alejandro Zulas \cite{zulas04}, utilising scripting to create adaptable responsive enclosure systems with emphasis on sunlight incidence.
 
-\subsection{The Mutable Curtain}
+\subsection{Basic Responsive Algorithm: The Mutable Curtain}
 
 The author attempted the design of a box capable of modulating light going through it (fig. \ref{fig:AZulasEncl}), which was done using Rhinoceros modelling program and its scripting language; \emph{Rhinoscript}. The experiment was an attempt to create an adaptive, responsive enclosure system which responded to solar incidence angles. 
 
@@ -54,13 +63,13 @@ The main variable in the experiment was the ratio of enclosure wall solid and vo
 \label{fig:TransSeq}
 \end{figure}
 
-\subsection{Responsive Louvres System}
+\subsection{Interactive Parametric Modelling: Responsive Louvres System}
 
 Another experiment by the same author \cite{zulas04} was done using a parametric design driven program called CATIA (Computer Aided Three-Dimensional Interactive Application). The objective of this exercise was also to modulate light at the enclosure level, but through shading. The researcher used a number of vertical and horizontal louvres which responded to two factors; the location of the sun throughout days of different seasons which would affect the arrangement of the louvres, in addition to the angle of incidence which affected the orientation of each louvre as to reflect the light in a direction away from the building. 
 
-The parametric CAD program, CATIA; had some advantages over Rhinoscript as it displayed the effect of any amendments to the script interactively in the form of graphical feedback, which was beneficial to the process. 
+The parametric CAD program, CATIA; had some advantages over Rhino as it displayed the effect of any amendments to the script interactively in the form of graphical feedback, which was beneficial to the process. 
 
-\subsection{Adaptable Pavilion}
+\subsection{Context Responsive Parametric Model: Adaptable Pavilion}
 \label{sec:AdptPav}
 
 Another experiment using CATIA; an attempt to design a temporary exhibition pavilion \cite{zulas04}. The exercise focuses on the conception of a contextual responsive building addressing different variations on the overall building form and envelope in relation to sunlight. 
@@ -117,7 +126,7 @@ The end result was quite similar to the initial design intentions (fig. \ref{fig
 \end{figure}
 
 \newpage
-\subsection{The Kendall Pavilion}
+\subsection{Advanced Interrelations Mapping and Model Control Techniques: The Kendall Pavilion}
 \label{sec:KendallPavilion}
 
 The following is a comprehensive exercise to create an adaptable responsive system, with an approach combining the following concepts and control mechanisms:
@@ -236,7 +245,7 @@ The ``stretchable surfaces'' concept was further incorporated into the system by
 \end{figure}
 
 \clearpage
-\section{The Generative System Method}
+\section{Optimisation using Genetic Algorithm and Environmental Simulation: The Generative System Method}
 \label{sec:GSM}
 
 The following experiment is part of the research done by Luisa Gama Caldas \cite{caldas01}, in the efforts to create what was called a ``Generative System'', consisting of two main components: \begin{inparaenum} \item a search and optimisation module, and \item a simulation module \end{inparaenum}.
@@ -441,10 +450,10 @@ The experiment was done five times, each running for 100 generations. The initia
 
 \clearpage
 
-\section{Responsive Fa\c{c}ade Design System}
+\section{Optimisation Exclusively using Simulation Applications: Responsive Fa\c{c}ade Design System}
 \label{sec:RFDS}
 
-This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. The optimum solutions are found and selected using Genetic Algorithm, while the simulation of the solutions is done in \textsc{ecotect}.
+This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. Simulation of the model, and optimum solution search are executed within \textsc{ecotect}. The search algorithm chosen was Genetic Algorithm.
 
 \subsection{Description of RFDS}
 

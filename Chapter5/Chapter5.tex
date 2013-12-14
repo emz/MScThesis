@@ -162,57 +162,63 @@ Although this definition applies to almost all building envelopes, they would va
 
 This is due to the fact that with differences between building enclosure designs, the variables that affect the thermal performance of the envelope will have varying degrees of impact, sometimes even reaching almost zero impact in some cases; therfore, it essential that the architect determines which variable should be given the priority over others.
 
-\paragraph{\emph{Phylogenesis} and the Categorisation of Building Envelopes}\mbox{}
+\paragraph{Categorisation of Building Envelopes}\mbox{}
 
 One interesting way of categorising building enclosures, is the endeavour undertaken by the \emph{Foreign Office Architects} to categorise their own work in a book named \emph{Phylogenesis: FOA's Ark} \cite{foa04}. The categorisation system resembles a biological evolutionary tree, that starts from one point and branches into different species through several evolutionary stages (figures \ref{fig:Phylogenesis} and \ref{fig:FOAEnvelopes}).
 
-Regardless of the concept, the categorisation of building envelopes used by the Foreign Office Architects (FOA), makes an excellent working ground for analysis of different envelope forms, and defining the the thermal variables and their level of importance.
+The categorisation of building envelopes used by the Foreign Office Architects provides a good example for analysis of different envelope forms and assigning them under a building category. This categorisation method is used as a basis for the examples given at the end of the chapter; however, the particular method of categorisation presented in Phylogenesis does not correspond directly to thermal design variables of building envelopes, and further analysis of each species or category is needed to determine the significance of each aspect of the form from a thermal point of view.
 
 According to the previously mentioned evolutionary tree of building forms, the building envelopes were categorised in the following manner:
 
 \setlength{\columnseprule}{1pt}
 \begin{multicols}{2}
 \begin{enumerate}
-	\item \textbf{Function}
+	\item \textbf{Function}\\
+		The predominant function of the surface.
 		\begin{enumerate}
 		\item Ground
 		\item Envelope
 		\end{enumerate}
-	\item \textbf{Faciality}
+	\item \textbf{Faciality}\\
+		How many faces/layers the surface divides space into.	
 		\begin{enumerate}
-			\item Single Face
-			\item Multiple Face
+			\item Single Face (the ground)
+			\item Multiple Face (a slab with flooring and ceiling on each side)
 		\end{enumerate}
-	\item \textbf{Balance}
+	\item \textbf{Balance}\\
+		The relationship between the surface and gravity.
 		\begin{enumerate}
 			\item Constant
 				\begin{enumerate}
-					\item Perpendicular
-					\item Parallel
+					\item Perpendicular (roof or ground)
+					\item Parallel (wall)
 				\end{enumerate}
-			\item Shifting
+			\item Shifting (blob or shed; i.e. continuously moving from perpendicular to parallel)
 		\end{enumerate}
-	\item \textbf{Discontinuity}
+	\item \textbf{Discontinuity}\\
+		The amount of interruptions/alteration to the continuous surface.
 		\begin{enumerate}
-			\item Planar
-			\item Rippled
-			\item Pinched
-			\item Perforated
-			\item Bifurcated
+			\item Planar (no interruptions)
+			\item Rippled (small interruptions)
+			\item Pinched (highly accentuated interruptions)
+			\item Perforated (local interruptions)
+			\item Bifurcated (interruptions extending to other layers of space)
 		\end{enumerate}
-	\item \textbf{Orientation}
+	\item \textbf{Orientation}\\
+		Spacial ordering of singularities, i.e. pattern
 		\begin{enumerate}
 			\item Oriented
 				\begin{enumerate}
-					\item Striated
-					\item Polar
+					\item Striated (parallel order)
+					\item Polar (respond to poles/centres)
 				\end{enumerate}
-			\item Non-oriented
+			\item Non-oriented (no detectable pattern)
 		\end{enumerate}
-	\item \textbf{Geometry}
+	\item \textbf{Geometry}\\
+		Continuouity of surfaces.
 		\begin{enumerate}
-			\item Continuous
-			\item Discontinuous
+			\item Continuous (smooth)
+			\item Discontinuous (broken with edges)
 		\end{enumerate}
 	\item \textbf{Diversification}
 		\begin{enumerate}
@@ -221,7 +227,6 @@ According to the previously mentioned evolutionary tree of building forms, the b
 		\end{enumerate}
 \end{enumerate}
 \end{multicols}
-
 
 \begin{sidewaysfigure}[htbp]
 	\centering
@@ -465,7 +470,6 @@ Using the flowchart, a number of examples will be presented to show the differen
 
 
 \clearpage
-
 \subsection{Envelope A}
 
 \paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
@@ -496,6 +500,83 @@ Assuming that at this point the Schematic Design of the building envelope had be
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.35\textwidth]{./Images/10-Envelope1}
+	\end{figure}
+\end{multicols}
+\vspace{-5mm}
+
+Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
+
+\paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
+
+Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
+
+According to the building category and envelope form as described in stage 1, the envelope is very planar and unifrom with no possibilites of external shading devices or different closing mechanisms, and due to the cuboid form, the surface-to-volume ratio would not have the greatest effect if envelope proportions were changed.
+
+Therefore, the control mechanisms which would significantly affect the internal space temperatures are:
+\begin{compactenum}
+	\item \textsc{Surface Material Properties}
+	\item \textsc{Glazing Properties}
+\end{compactenum}
+
+\paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
+
+With the relative simplicity of the building envelope, and the possibility to effectively optimise the building envelope thermal performance through optimising surafce or glazin material properties, the parametric model is very easy to define even without a sofisticated GUI (\emph{i.e.} by defining coordinates in a text file) and can thereofore be defined directly in the simulation programme.
+
+The control mechanism chosen (Surface Material Properties) will require the variables of the equation given in section \ref{sec:ThermalBehaviour}:\emph{Thermal Behaviour of Buildings} to be defined as the parameters to be optimised.
+
+Given the simple geometry of the building, the GUI, modelling and  visualisation capabilities of the simmulation programme are not important. However, the most accurate energy and physics simmulator would be the best option. In this case the best simmulation programme would be:
+
+\begin{compactenum}
+	\item \textsc{Energy Plus} (A shell application can be programmed on top of \textsc{EnergyPlus} using \textsc{fortran}. Requires intermediate programming experience).
+	\item \textsc{doe} (Scripting language available).
+\end{compactenum}
+
+\paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
+
+The programming method in the case of \textsc{EnergyPlus} is to create a shell application on top of it which would utilise the direct optimisation of the physical parameters of the building envelope materials.
+
+In case of using \textsc{DOE}, the GUI can be used to model the building envelope and the scripting language would be used to define the parameters and the chosen algorithm.
+
+Given that the problem of optimising the surface material properties would not require many alternatives but rather finding the optimum solution for the problem (minimisation of heat gain), hence, the best algorithm for this problem would be:
+
+\begin{compactenum}
+\item \textsc{Simmulated Annealing}
+\end{compactenum}
+
+The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
+
+\clearpage
+\subsection{Envelope B}
+
+\paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
+
+Two main objectives are achieved in this stage; \begin{inparaenum}[a)] \item development of the bulding envelope schematic design and its categorisation, and \item determining the internal space functions.\end{inparaenum}
+
+Assuming that at this point the Schematic Design of the building envelope had been developed; proceed to the next step of categorising the envelope.
+
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+	\paragraph{Building Envelope Category}\mbox{}\\
+	\vspace {0.5cm}	
+	\small \textsc{\textbf{Function:} Envelope\\
+	\vspace {0.3cm}
+	\textbf{Faciality:} Single Face\\
+	\vspace {0.3cm}
+	\textbf{Balance:} Shifting\\
+	\vspace {0.3cm}
+	\textbf{Discontinuity:} Perforated\\
+	\vspace {0.3cm}
+	\textbf{Orientation:} \emph{Not Applicable}\\
+	\vspace {0.3cm}
+	\textbf{Geometry:} \emph{Not Applicable}\\
+	\vspace {0.3cm}
+	\textbf{Diversification:} \emph{Not Applicable}\\}
+	\normalsize
+	\columnbreak
+	\vspace{3.5cm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./Images/13-Envelope4}
 	\end{figure}
 \end{multicols}
 \vspace{-5mm}

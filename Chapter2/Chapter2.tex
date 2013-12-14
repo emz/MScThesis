@@ -4,18 +4,20 @@
 
 Today, in almost all engineering and architectural fields, computers are used heavily and almost exclusively for any type of work. Some of the utilisation of computers in architecture such as 3D NURBS or Mesh modelling programs, or any mouse manipulated 3D forms programmes, are often thought to be computational. Although they essentially use numerical computation to display or `translate' \cite{terzidis06} different forms, ultimately it is the user who willingly manipulates the models.  This is a confusion between computation and computerisation. 
 
-\paragraph{Computerisation}could be defined as using the computer as a tool instead of traditional tools or media. One could use ink and paper to write a letter, or use a word processor instead. The presentation is probably better, the work is done faster, but the content would not change on account of this tool swap. The same notion basically applies to CAD programmes, which are merely tools to draw shapes in a manner which essentially replaces pencil and paper; in both cases the user is in complete control of the outcome.
+\paragraph{Computerisation}could be defined as using the computer as a tool instead of traditional tools or media. One could use ink and paper to write a letter, or use a word processor instead. Using a word processor, the presentation of the document is improved, and the work is done faster, but the content would not change on account of this tool swap. The same notion basically applies to CAD programmes, which are merely tools to draw shapes in a manner which essentially replaces pencil and paper; in both cases the user is in complete control of the outcome.
 
-\paragraph{Computation}on the other hand produces that which was not entirely planned out by the user, it creates unpredicted results. The input in this case is not the final product. This input constraints the process towards a roughly imagined product; but does not completely define it. This is due to the fact that computation is used in areas where humans are very limited; such as calculation and processing of large numbers. The same applies to architectural modelling; one could use computation to enter a formula that would render a cube, but that is never the case. Computation is utilised in producing objects of high complexity, or in large numbers with a wide spectrum of variation that would make it impossible for the user to manually model.
+\paragraph{Computation}on the other hand produces that which is not under the complete control of the user, and is to some extent unpredictable. The input in this case is not the final product. This input constraints the process towards a roughly imagined product; but does not completely define it. This is due to the fact that computation is used in areas where humans are very limited; such as calculation and processing of large numbers. Computation is utilised in producing objects of high complexity, or in large numbers with a wide spectrum of variation that would make it impossible for the user to manually model.
 
 To reiterate the above stated; the product of computation --- even though the algorithms that govern it and the input it needs are a product of the human mind --- is not solely a product of the human mind, but a product of a parallel logic.
 
 \section{Parallel Logic}
 
 \label{ParallelLogic}
-Algorithms solve problems in a finite number of steps; either deterministically, or stochastically\footnote{Stochastic: Involving a random variable \cite{merriam03}}. The problems it solves can be a specific problem or an exploration of the unknown. The logic it uses, was designed by people, which might imply that algorithm is a subset of human logic. The fact is: it is not.
+Computers solve problems in a finite number of steps; either deterministically, or stochastically\footnote{Stochastic: Involving a random variable \cite{merriam03}}. The problems it solves can be a specific problem or an exploration of the unknown. The logic it uses, was designed by people, which might imply that computer logic is a subset of human logic; the fact is: it is not.
 
-The way computers rationalise is different from how people think; it is in fact inconceivable by humans, the same way a human's rationalisation is virtually impossible for a computer to emulate.  This is due to the fact that computers can process enormous amounts of abstract data and numbers, such as the `Brute force' technique which processes `all' possibilities of a solution, which could be thousands or millions of solutions. On the other hand, it cannot perceive `intuition', personal preference; things that are unique to a human's mind and require emotion and subconscious reactions.
+The way computers rationalise is different from how people think; it is in fact inconceivable by humans, the same way a human's rationalisation is virtually impossible for a computer to emulate.  This is due to the fact that computers can process enormous amounts of abstract data and numbers--- a good example is the `Brute force' solution search technique which processes `all' possible solutions of a problem, which could be thousands or millions of solutions. On the other hand, it cannot perceive intuition, or personal preference; things that are unique to the human's mind and require emotion and subconscious reactions.
+
+In order to programme a computer to solve a problem, the user must create was is called an \emph{algorithm}.
 
 \paragraph{Algorithms,}or procedures, are a description of steps to accomplish a specific task, which ``\emph{allow abstraction and encapsulation of complexity and re-usability}''\cite{hernandez06}. In abstraction; procedures have three parts:
 \begin{enumerate}
@@ -26,9 +28,9 @@ The way computers rationalise is different from how people think; it is in fact 
 
 \section{Geometric Modelling and Design as Algorithms}
 \label{sec:GeoModel}
-The question is whether a paradigm of logic such as algorithms is capable of producing architectural design. This can be answered by starting at the fact that architectural design is ultimately composed of interrelated geometrical objects.
+The question of whether a paradigm of logic such as algorithms is capable of producing architectural design can be answered by starting at the fact that architectural design is ultimately composed of interrelated geometrical objects.
 
-The way geometry is defined is very specific to the different types of geometry being defined. A point is defined by three variables of space, a line is defined by two points each holding three values in space\ldots etc, with the addition of more complex modelling techniques such as Boolean operations. This nature of geometrical definitions requires specific procedures, each having a different set of encapsulated parameters. Therefore, geometric modelling is a parametric procedure. \cite{hernandez06}
+The way geometry is defined is very specific to the different types of geometry being defined. A point is defined by three variables of space, a line is defined by two points each holding three values in space\ldots etc, with the addition of more complex modelling techniques such as Boolean operations, more complex geometries can be created. This nature of geometrical definitions can be translated into procedures, each having a different set of encapsulated parameters. Therefore, geometric modelling is a parametric procedure. \cite{hernandez06}
 
 \begin{figure}[htbp]
 \flushleft
@@ -57,11 +59,17 @@ The way geometry is defined is very specific to the different types of geometry 
 \label{SqrAnalysis}
 \end{figure}
 
-In some cases, design can be also be defined by procedures, when it is possible to break down into a step-by-step repetitive process, which also contain arguments (Parameters) that alter the design with variable values. \label{SequentialAlgorithms}
+In terms of pure geometry; a cube for example can be defined by extruding a square along it's perpendicular axe, which makes the square in this case a parameter of the extrusion procedure (Figure \ref{SqrAnalysis}).
 
-When design is treated as a procedure; with parameters defining different designs with different values; numbers, relations, shapes and operations are also treated as parameters. A cube for example can be defined by extruding a square along it's perpendicular axe, which makes the square in this case a parameter of the extrusion procedure (Figure \ref{SqrAnalysis}).
+Architectural design can also be defined by procedures, when it is broken down into a step-by-step process, which would contain arguments (parameters) that alter the design with variable values. \label{SequentialAlgorithms}
 
 Algorithmic design can be summarised as: ``\emph{A procedure carrying instructions in a systematic order where all geometrical components that represent a design are parameterised}''\cite{hernandez06}. Algorithmic design can also be defined as \emph{rule-based} design; consisting of a solid set of consequetive instructions that govern an action to produce a desired outcome, while noting that in this particular case; the outcome does not necessarily match the intent.
+
+\subsection{Building Elements as Smart Objects}
+
+The geometrical example shown above may imply that buildings as \emph{abstract} geometrical objects only can be defined and programmed into a computer; however, this serves only as a basis to a much more complex system of definition of buildings to the computer. 
+
+The modelling of building and its architectural elements has reached a much higher level of complexity, where the elements are defined by detailed parameters that correspond to their function, construction method, unique geometry\ldots{}etc. An example of these complex modelling systems is \emph{Building Information Modelling}, which would take building elements and break them down into categories (stuructural, architectural, mechanical\ldots{}etc.) and then into specific groups of similar attributes (windows, doors, walls, floors\ldot{}etc.) which would serve as parameters that can easily be programmed into an algorithm, and therefore serve as a much more sophisticated platform for algorithmic design.
 
 \clearpage
 \section{Generative Systems Taxonomy}
