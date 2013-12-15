@@ -43,7 +43,7 @@ The above stated stages will be presented in the form of general guidlines and i
 		\end{enumerate}
 		\includegraphics[width=\textwidth]{./Images/23-StageA}
 		\begin{center}
-		\small A number of relatively common building envelope forms
+		\small A number of different building envelope forms
 		\end{center}
 	}%
 \end{minipage}%
@@ -587,37 +587,30 @@ Along with the schematic design and categorisation of the building envelope, the
 
 Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
 
-According to the building category and envelope form as described in stage 1, the envelope is very planar and unifrom with no possibilites of external shading devices or different closing mechanisms, and due to the cuboid form, the surface-to-volume ratio would not have the greatest effect if envelope proportions were changed.
+According to the building category and envelope form as described in stage 1, the envelope has many potential effective thermal control mechanisms, including orientation of building, shading, external shading, and possibly glazing material.
 
-Therefore, the control mechanisms which would significantly affect the internal space temperatures are:
+However, the control mechanisms which would significantly affect the internal space temperatures the most are:
 \begin{compactenum}
-	\item \textsc{Surface Material Properties}
-	\item \textsc{Glazing Properties}
+	\item \textsc{Orientation}
+	\item \textsc{External Shading}
 \end{compactenum}
 
 \paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
 
-With the relative simplicity of the building envelope, and the possibility to effectively optimise the building envelope thermal performance through optimising surafce or glazin material properties, the parametric model is very easy to define even without a sofisticated GUI (\emph{i.e.} by defining coordinates in a text file) and can thereofore be defined directly in the simulation programme.
+The building envelope can be considered conventional and has simple geometry. However, it would be much easier to model the envelope in a GUI capable and user friendly programme. In this case, the simulation programme \textsc{ecotect} would serve as a very good choice, with the advantage of having a scripting language (\textsc{Lua}) that can facilitate programming the optimisation algorithm directly into the modeling and simulation programme.
 
-The control mechanism chosen (Surface Material Properties) will require the variables of the equation given in section \ref{sec:ThermalBehaviour}:\emph{Thermal Behaviour of Buildings} to be defined as the parameters to be optimised.
+The environmental simulation of \textsc{ecotect} is very intuitive, interactive and overall user friendly; it includes a module for simulating the sun's position at any given date and time according to the predefined latitude and longitude of the building site. This will serve as a basis for the analysis of amount of incident solar rays using different building orientation configurations.
 
-Given the simple geometry of the building, the GUI, modelling and  visualisation capabilities of the simmulation programme are not important. However, the most accurate energy and physics simmulator would be the best option. In this case the best simmulation programme would be:
-
-\begin{compactenum}
-	\item \textsc{Energy Plus} (A shell application can be programmed on top of \textsc{EnergyPlus} using \textsc{fortran}. Requires intermediate programming experience).
-	\item \textsc{doe} (Scripting language available).
-\end{compactenum}
+The optimisation problem can be of multi-criterion, since the optimised paramters are fairly simple, where after the orientation is chosen, external shading configuration can be decided.
 
 \paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
 
-The programming method in the case of \textsc{EnergyPlus} is to create a shell application on top of it which would utilise the direct optimisation of the physical parameters of the building envelope materials.
+The scripting language is capable of handling the internal programming of the optimisation algorithm into the simulation programme.
 
-In case of using \textsc{DOE}, the GUI can be used to model the building envelope and the scripting language would be used to define the parameters and the chosen algorithm.
-
-Given that the problem of optimising the surface material properties would not require many alternatives but rather finding the optimum solution for the problem (minimisation of heat gain), hence, the best algorithm for this problem would be:
+Optimisation of building orientation and external shading do not require heavy calculations or memory based optimisation, but the external shading configuration can benefit from the possibility of having several architectural solutions. The most suitable optimisation algorithm in this case would be 
 
 \begin{compactenum}
-\item \textsc{Simmulated Annealing}
+\item \textsc{Genetic Algorithm}
 \end{compactenum}
 
 The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
