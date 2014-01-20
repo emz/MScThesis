@@ -1,43 +1,6 @@
 \chapter{Application and Case Studies}
 
-As the previous chapters have shed light on the process of algorithmic and thermal design; mainly in theory, illustrating the basic concepts; this chapter will delve into the practical tools used in the process, which will facilitate input of algorithms into the modelling process; and afterwards, a showcase of previous experiments with algorithmic design by either performative or generative tools to achieve environmentally reactive or adaptiv designs. This chapter will serve as a platform of concepts to be summarised in chapter 5.
 
-\section{Introduction to Modelling and Programming Methods}
-
-\subsection{End-user Programming}
-\label{sec:EndUserProgramming}
-
-The term ``End-user'' is used to refer to the final user of the computer application. End-user programming  allows the end-user to add unique functionality not provided originally in the application. There are several approaches to facilitating end-user programming, the most relevant of which to this thesis subject is called \emph{scripting}.
-
-Scripting is a tool provided by the application programmers to the end-users --- people who are not professional programmers --- to enable creation or modification of software \emph{artifacts} (automated behaviour or control sequence).
-
-Although scripting allows end-users to introduce new functionality, it does not require significant knowledge of programming. Scripting allows end-users to access the underlying structure of existing software and embed new functionality in it. This type of input allows for extended expressive control and higher productivity in the design process. \cite{kashyap01}
-
-Scripting is very similar to traditional programming procedure; entering a series of instructions written in computer code, and executed within the software environment. Some popular scripting languages and their corresponding model oriented software environments include: 
-
-\vspace{-0.5cm}
-\begin{enumerate}
-\item AutoLisp for AutoCAD
-\item RhinoScript for Rhinoceros
-\item MEL for Maya
-\item MAXSCRIPT for 3DsMax
-\end{enumerate}
-
-\subsection{Syntax and Semantics}
-
-Computer programming langauges are often compared to natural languages in terms of \emph{sytax} and \emph{semantics}. The syntax of any language is the set of rules (grammar) which must be followed for any sentence to be syntactically correct. On the other hand, semantics is the study of whether the syntactically correct sentence is meaningful or not.
-
-Due to the fact that each programming language (including scripts) has unique syntax; it has been seen as much more practical to study the semantics of programmes created for the purpose of optimising thermal performance, as a universal description of the algorithm that can later be implemented in any programming or scripting language. Based on this decision, the algorithms presented herein are explained in natural language; no programming language specific code is included in the following chapter.
-
-\subsection{Parametric Modelling}
-
-Parametric Modelling is a system where a 3D geometric model has parametric attributes subject to variation, modification is usually done through numerical input of the variable value (refer to section \ref{sec:GeoModel} on parametric modelling). The model is also built with constraints that ensure that some aspects of the model are not altered, or that some are automatically changed when others are in the process of parameter or variable value change. Parametric modelling offers flexibility of change to the design; the model in this case could be called a \emph{smart} CAD model \cite{kashyap01}.
-
-Another form of parametric modelling is generative parametric graphical modules, which analyse and decompose geometry into elements which can be controlled as input and output data into processes which ultimately affect the model. A prominent example is Grasshopper plugin for Rhinoceros.
-
-Parametric models are of great value to performative oriented design processes, which is sometimes fused with scripting, benefiting from both in speeding the process and achieving better results.
-
-\clearpage
 \section{Adaptable Design using Scripting and Generative Algorithms}
 
 The following will showcase a number of experiments by Alejandro Zulas \cite{zulas04}, utilising scripting to create adaptable responsive enclosure systems with emphasis on sunlight incidence.
