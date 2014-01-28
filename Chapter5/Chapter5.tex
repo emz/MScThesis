@@ -504,6 +504,8 @@ Assuming that at this point the Schematic Design of the building envelope had be
 \end{multicols}
 \vspace{-5mm}
 
+The building geometry can be categrised as the fundemental or basic envelope form that corresponds to the most basic building structure. It is planar and unifrom, with no particularly significant geometrical features that could affect the thermal performance of the envelope.
+
 Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
 
 \paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
@@ -573,13 +575,15 @@ Assuming that at this point the Schematic Design of the building envelope had be
 	\textbf{Diversification:} \emph{Not Applicable}\\}
 	\normalsize
 	\columnbreak
-	\vspace{3.5cm}
+	\vspace{4cm}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{./Images/13-Envelope4}
 	\end{figure}
 \end{multicols}
 \vspace{-5mm}
+
+This envelope form represents a fairly complex shape, with uniaxial symmetry, possibility of several material selections, shading devices and is significantly affected by building orientation. However, the building envelope is a mixture of planar and shifting surfaces (such as the vault structure), which can give mixed results on change of orientation.
 
 Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
 
@@ -614,3 +618,281 @@ Optimisation of building orientation and external shading do not require heavy c
 \end{compactenum}
 
 The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
+
+\clearpage
+\subsection{Envelope C}
+
+\paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
+
+Two main objectives are achieved in this stage; \begin{inparaenum}[a)] \item development of the bulding envelope schematic design and its categorisation, and \item determining the internal space functions.\end{inparaenum}
+
+Assuming that at this point the Schematic Design of the building envelope had been developed; proceed to the next step of categorising the envelope.
+
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+	\paragraph{Building Envelope Category}\mbox{}\\
+	\vspace {0.5cm}	
+	\small \textsc{\textbf{Function:} Envelope\\
+	\vspace {0.3cm}
+	\textbf{Faciality:} Single Face\\
+	\vspace {0.3cm}
+	\textbf{Balance:} Constant $\rightarrow$ Parallel\\
+	\vspace {0.3cm}
+	\textbf{Discontinuity:} Planar\\
+	\vspace {0.3cm}
+	\textbf{Orientation:} Oriented\\
+	\vspace {0.3cm}
+	\textbf{Geometry:} Discontinuous\\
+	\vspace {0.3cm}
+	\textbf{Diversification:} \emph{Not Applicable}\\}
+	\normalsize
+	\columnbreak
+	\vspace{3.5cm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.18\textwidth]{./Images/18-Envelope9}
+	\end{figure}
+\end{multicols}
+\vspace{-5mm}
+
+This envelope form represents the typical high rise towers of the late 20\textsuperscript{th} century, which lacks any shading devices and rarely has controllable fenestration. This envelope's thermal performance depends mainly on the curtain wall materials.
+
+Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
+
+\paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
+
+Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
+
+According to the building category and envelope form as described in stage 1, and assuming that as with most similar high rise buildings that prominent material of the shell would be Glazing, then the most effective control mechanism is: 
+
+\begin{compactenum}
+	\item \textsc{Glazing Material}
+\end{compactenum}
+
+\paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
+
+The modelling programme is of no particular significance, therefore, a parametric CAD programme would be sufficient. The simmulation programme which is most capable and efficient in the calculation and simulation of building envelope heat gain is \textsc{EnergyPlus}.
+
+\paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
+
+The calculation of heat gain of multi-layered transparent elements can be consuming of processing and calculation power if done with acceptable precision, therefore it is a fairly complex problem. The most efficient search algorithm for this case would be:
+
+\begin{compactenum}
+\item \textsc{Tabu Search}
+\end{compactenum}
+
+The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
+
+
+\clearpage
+\subsection{Envelope D}
+
+\paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
+
+Two main objectives are achieved in this stage; \begin{inparaenum}[a)] \item development of the bulding envelope schematic design and its categorisation, and \item determining the internal space functions.\end{inparaenum}
+
+Assuming that at this point the Schematic Design of the building envelope had been developed; proceed to the next step of categorising the envelope.
+
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+	\paragraph{Building Envelope Category}\mbox{}\\
+	\vspace {0.5cm}	
+	\small \textsc{\textbf{Function:} Envelope\\
+	\vspace {0.3cm}
+	\textbf{Faciality:} Single Face\\
+	\vspace {0.3cm}
+	\textbf{Balance:} Constant $\rightarrow$ Parallel\\
+	\vspace {0.3cm}
+	\textbf{Discontinuity:} Planar\\
+	\vspace {0.3cm}
+	\textbf{Orientation:} Oriented\\
+	\vspace {0.3cm}
+	\textbf{Geometry:} \emph{Not Applicable}\\
+	\vspace {0.3cm}
+	\textbf{Diversification:} Contingent\\}
+	\normalsize
+	\columnbreak
+	\vspace{3.5cm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\textwidth]{./Images/11-Envelope2}
+	\end{figure}
+\end{multicols}
+\vspace{-5mm}
+
+This envelope form represents a typical multi-story building with modular fenestration, mid-height roofs, and is of oblong proportions.
+
+Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
+
+\paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
+
+Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
+
+According to the building category and envelope form as described in stage 1, the envelope has high potential of developing external shading devices for the modular and continuous fenestration. With the proporions of the buidling and the opennings configuration, the most suitable control mechanism is:
+
+\begin{compactenum}
+	\item \textsc{External Shading}
+\end{compactenum}
+
+\paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
+
+The intuitive and graphical interface of \textsc{ecotect} is the best modelling and simulation interface for the optimisation of external shading devices. The programme also has built-in algorithms that calculate the optimum shape and size of external shading devices.
+
+\paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
+
+Given the relative simplicity of the problem, while having direct impact on the aesthetics of the building, the most suitable search algorithm is the one that provides several alternatives for the from, which is:
+
+\begin{compactenum}
+\item \textsc{Genetic Algorithm}
+\end{compactenum}
+
+The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
+
+
+\clearpage	
+\subsection{Envelope E}
+
+\paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
+
+Two main objectives are achieved in this stage; \begin{inparaenum}[a)] \item development of the bulding envelope schematic design and its categorisation, and \item determining the internal space functions.\end{inparaenum}
+
+Assuming that at this point the Schematic Design of the building envelope had been developed; proceed to the next step of categorising the envelope.
+
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+	\paragraph{Building Envelope Category}\mbox{}\\
+	\vspace {0.5cm}	
+	\small \textsc{\textbf{Function:} Envelope\\
+	\vspace {0.3cm}
+	\textbf{Faciality:} Single Face\\
+	\vspace {0.3cm}
+	\textbf{Balance:} Constant $\rightarrow$ Perpindicular\\
+	\vspace {0.3cm}
+	\textbf{Discontinuity:} Planar\\
+	\vspace {0.3cm}
+	\textbf{Orientation:} \emph{Not Applicable}\\
+	\vspace {0.3cm}
+	\textbf{Geometry:} Continuous\\
+	\vspace {0.3cm}
+	\textbf{Diversification:} \emph{Not Applicable}\\}
+	\normalsize
+	\columnbreak
+	\vspace{5.5cm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./Images/22-Envelope13}
+	\end{figure}
+\end{multicols}
+\vspace{-5mm}
+
+This is the typical tent structure envelope form. The envelope has no opennings, it has one dominent suface material, and its thermal conductivity is usually irrelevant as the heat does not transfer by convection within the large internal spaces.
+
+Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
+
+\paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
+
+Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
+
+According to the building category and envelope form as described in stage 1, the envelope does not depend on fenestration for thermal control, it is not affected by orientation, with no effective method of control self shading or creating effective external shading devices, and the surface material properties are not relevant. The only remaining control mechanism which could be of great significiance is: 
+
+\begin{compactenum}
+	\item \textsc{Surface-to-Volume Ratio}
+\end{compactenum}
+
+\paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
+
+The envelope form is complex and requires high-end nurbs modelling capabilities. therefore, the use of parametric modeling cad or building information modelling software would be needed. bim is usually preferred due to its ability to export data to gbxml format which can later on be exported to programmes such as \textsc{ecotect}.
+
+The recommended simulation programme in this case is \textsc{ecotect}, which can receive the gbxml data from the bim model, and has a capable scripting language based on \textsc{lua}.
+
+\paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
+
+The scripting language is capable of handling the internal programming of the optimisation algorithm into the simulation programme.
+
+Optimisation of Surface-to-Volume Ratio will have direct and easily noticable impact on building form; therefore, the use of an algorithm which allows for alternatives is preferred:
+
+\begin{compactenum}
+\item \textsc{Genetic Algorithm}
+\end{compactenum}
+
+The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
+
+
+\clearpage
+\subsection{Envelope F}
+
+\paragraph{Stage 1: Analysis of Envelope Form}\mbox{}\\[2mm]
+
+Two main objectives are achieved in this stage; \begin{inparaenum}[a)] \item development of the bulding envelope schematic design and its categorisation, and \item determining the internal space functions.\end{inparaenum}
+
+Assuming that at this point the Schematic Design of the building envelope had been developed; proceed to the next step of categorising the envelope.
+
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+	\paragraph{Building Envelope Category}\mbox{}\\
+	\vspace {0.5cm}	
+	\small \textsc{\textbf{Function:} Envelope\\
+	\vspace {0.3cm}
+	\textbf{Faciality:} Single Face\\
+	\vspace {0.3cm}
+	\textbf{Balance:} Parallel\\
+	\vspace {0.3cm}
+	\textbf{Discontinuity:} Planar\\
+	\vspace {0.3cm}
+	\textbf{Orientation:} Non-Oriented\\
+	\vspace {0.3cm}
+	\textbf{Geometry:} \emph{Not Applicable}\\
+	\vspace {0.3cm}
+	\textbf{Diversification:} \emph{Not Applicable}\\}
+	\normalsize
+	\columnbreak
+	\vspace{3.5cm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./Images/21-Envelope12}
+	\end{figure}
+\end{multicols}
+\vspace{-5mm}
+
+This envelope form represents building that have organic, curveous form, with continuous surfaces. The architectural style is sometimes referred to as \emph{Blob Architecture}.
+
+Along with the schematic design and categorisation of the building envelope, the internal space functions according to project requirements should determined and documented.
+
+\paragraph{Stage 2: Design Intent - Thermal Criteria and Target Performance}\mbox{}\\
+
+Referring to the documented project requirements and internal space functions completed in the previous stage; the architect should assign target space temperatures in the form of reference points which would be later used by the simulation programme as loctions for measurement, and by the optimisation algorithm to determine if the terminal critieria have been met or not.
+
+According to the building category and envelope form as described in stage 1, the envelope does not respond to fenestration control mechanisms, and is highly influenced by the surface material properties, with possibility of control through Surface-to-Volume ratio of the envelope.
+
+The most effective control mechanisms are:
+
+\begin{compactenum}
+	\item \textsc{Surface Material Properties}
+	\item \textsc{Surface-to-Volume Ratio}
+\end{compactenum}
+
+\paragraph{Stage 3: Virtual Modelling and Simulation}\mbox{}\\
+
+The envelope form is complex and requires high-end nurbs modelling capabilities. therefore, the use of parametric modeling cad or building information modelling software would be needed. bim is usually preferred due to its ability to export data to gbxml format which can later on be exported to programmes such as \textsc{ecotect}.
+
+Although \textsc{ecotect} can receive the gbxml data from the BIM model, the calculation could need the precision of EnergyPlus instead.
+
+\paragraph{Stage 4: Programming and Optimisation}\mbox{}\\
+
+The scripting language is capable of handling the internal programming of the optimisation algorithm into the simulation programme.
+
+The optimisational search problems requires heavy calculations of the effect of surface material on thermal gain considering the irregular shape and possibilities of the building reflecting on itself. The most efficient search algorithm would be:
+
+\begin{compactenum}
+\item \textsc{Tabu Search}
+\end{compactenum}
+
+The model is then simmulated and the paramters are optimised iteratively until either \begin{inparaenum}[a)]\item the global optimum/minimum is found, or \item the terminal conditions are met\end{inparaenum}.
+
+
+\begin{sidewaysfigure}[htbp]
+	\centering
+	\includegraphics[width=19cm]{./Images/24-DecisionChart}
+	\caption[Decision Flowchart]{Flowchart of decisions for each envelope example}
+	\label{fig:DecisionChart}
+\end{sidewaysfigure}
