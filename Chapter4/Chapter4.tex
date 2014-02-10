@@ -1,7 +1,11 @@
 \chapter{Application and Case Studies}
 
+In this section, four examples are given from previous research for thermal design using algorithmic design. The main distiction to be made between the former and latter two examples, is the methodology of design.
 
-\section{Adaptable Design using Scripting and Generative Algorithms}
+The first two examples illsutrate parametric methods which utilise generative systems using parametric models. The other two examples utilise performative algorithms and simulation programmes.
+
+
+\section{Thermal Responsive Design Generative Systems and Parametric Mapping}
 
 The following will showcase a number of experiments by Alejandro Zulas \cite{zulas04}, utilising scripting to create adaptable responsive enclosure systems with emphasis on sunlight incidence.
 
@@ -206,9 +210,63 @@ The ``stretchable surfaces'' concept was further incorporated into the system by
 \caption[Emergence Rule Script]{A screen capture of the script used in CATIA to apply the emergence rule \cite{zulas04}}
 \label{fig:EmergRuleScr}
 \end{figure}
+\section{Thermal Responsive Systems using Parametric Node-based Editors}
 
+The following experiments were done as part of the research by Huei Shenh Yi \cite{yi09}. The research utilised the programme: Grasshopper.
+
+\paragraph{Grasshoper}\mbox{}
+
+A program developed in 2009 as a parametric modelling plug-in for Rhino (3D modelling software): ``It is based on explicit history concept that recorded the modelling process, allowing users to manipulate graphic node\footnote{A node based editor passes data from component to component through links. The data is defined either in the plugin itself, or inputted externally} to generate parametric models. An advantage of Grasshopper is that users with little programming experience can manipulate graphic nodes to define relationships for each element to generate a parametric model''\cite{yi09}. Grasshopper also allows users to input scripts in VB.net, C\# and Python programming languages.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{./Images/31-GrassGUI}
+\caption[Grasshopper Node-based Editor]{Grasshopper Node-based Editor \cite{yi09}}
+\label{fig:GrassGUI}
+\end{figure}
+
+\subsection{Responsive Louver System}
+
+The author created a responsive louver system, which respnds to sunlight direction change. The system was developed from previously written algorithm in C\# called PSA, which controls the change of solar direction; and also of an algorithm developed by Ted Ngai (the reference directs the reader to his website: \url{tedngai.net}). The author modified the algorithm to enable 3D models to follow the orientation of the sun, and the colour of each louver blade to change according to its orientation with regards to the sun's position (see fig \ref{fig:RLS1}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{./Images/32-RLS1}
+\caption[Responsive Louver System]{Responsive louver system \cite{yi09}}
+\label{fig:RLS1}
+\end{figure}
+
+The data input interface allows the user to input the time (hour, day and month) and coordinates. The orientatio of the sun is then simulated based on the inputed data (see fig. \ref{fig:RLS2}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{./Images/33-RLS2}
+\caption[RLS Data Input Interface]{RLS Data Input Interface \cite{yi09}}
+\label{fig:RLS2}
+\end{figure}
+
+The algorithm creates the initial population for each louver to transform the direction in order to evaluate and the optimised relationship between sunlight and each louver blade (see fig. \ref{fig:RLS3}).
+
+\begin{sidewaysfigure}[htbp]
+\centering
+\includegraphics[width=20cm]{./Images/34-RLS3}
+\caption[Responsive Louver System Node Editor and Model]{Responsive Louver System Node Editor and Model \cite{yi09}}
+\label{fig:RLS3}
+\end{sidewaysfigure}
+
+\subsection{Responsive Bricks System}
+
+Another system which was created using Grasshopper, which generates a building envelope a with a hollow brick like arrangement, and manipulates the size of the voids in the bricks in accordance with sunlight direction. The input and manipulation method is same as the previous example (see fig. \ref{fig:RBS}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./Images/35-RBS}
+\caption[Responsive Brick System]{Responsive Brick System \cite{yi09}}
+\label{fig:RBS}
+\end{figure}
+ 
 \clearpage
-\section{Optimisation using Genetic Algorithm: The Generative System}
+\section{Optimisation using Performative Algorithm and Simulation of Internal Space Heat Gain}
 \label{sec:GSM}
 
 The following experiment is part of the research done by Luisa Gama Caldas \cite{caldas01}, in the efforts to create what was called a ``Generative System'', consisting of two main components: \begin{inparaenum} \item a search and optimisation module, and \item a simulation module \end{inparaenum}.
@@ -413,7 +471,7 @@ The experiment was done five times, each running for 100 generations. The initia
 
 \clearpage
 
-\section{Optimisation through Simulation Programmes: Responsive Fa\c{c}ade Design System}
+\section{Optimisation using Performative Algorithm, Simulation and Prioritised Reference Points}
 \label{sec:RFDS}
 
 This section illustrates the research and experimentation done by Go Kawakita \cite{kawakita08} to create a ``Responsive Fa\c{c}ade Design System'' or RFDS, which optimises window arrangement with respect to natural daylight level. Simulation of the model, and optimum solution search are executed within \textsc{ecotect}. The search algorithm chosen was Genetic Algorithm.
@@ -569,60 +627,3 @@ The dimensions of the tested space and windows size are illustrated in figure \r
 \label{fig:RFDSdiff}
 \end{figure}
 
-
-\clearpage
-\section{Responsive Systems using Node-based Editors}
-
-The following experiments were done as part of the research by Huei Shenh Yi \cite{yi09}. The research utilised a prominent and new program called Grasshopper.
-
-\paragraph{Grasshoper}\mbox{}
-
-A program developed in 2009 as a parametric modelling plug-in for Rhino (3D modelling software): ``It is based on explicit history concept that recorded the modelling process, allowing users to manipulate graphic node\footnote{A node based editor passes data from component to component through links. The data is defined either in the plugin itself, or inputted externally} to generate parametric models. An advantage of Grasshopper is that users with little programming experience can manipulate graphic nodes to define relationships for each element to generate a parametric model''\cite{yi09}. Grasshopper also allows users to input scripts in VB.net, C\# and Python programming languages.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{./Images/31-GrassGUI}
-\caption[Grasshopper Node-based Editor]{Grasshopper Node-based Editor \cite{yi09}}
-\label{fig:GrassGUI}
-\end{figure}
-
-\subsection{Responsive Louver System}
-
-The author created a responsive louver system, which respnds to sunlight direction change. The system was developed from previously written algorithm in C\# called PSA, which controls the change of solar direction; and also of an algorithm developed by Ted Ngai (the reference directs the reader to his website: \url{tedngai.net}). The author modified the algorithm to enable 3D models to follow the orientation of the sun, and the colour of each louver blade to change according to its orientation with regards to the sun's position (see fig \ref{fig:RLS1}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{./Images/32-RLS1}
-\caption[Responsive Louver System]{Responsive louver system \cite{yi09}}
-\label{fig:RLS1}
-\end{figure}
-
-The data input interface allows the user to input the time (hour, day and month) and coordinates. The orientatio of the sun is then simulated based on the inputed data (see fig. \ref{fig:RLS2}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{./Images/33-RLS2}
-\caption[RLS Data Input Interface]{RLS Data Input Interface \cite{yi09}}
-\label{fig:RLS2}
-\end{figure}
-
-The algorithm creates the initial population for each louver to transform the direction in order to evaluate and the optimised relationship between sunlight and each louver blade (see fig. \ref{fig:RLS3}).
-
-\begin{sidewaysfigure}[htbp]
-\centering
-\includegraphics[width=20cm]{./Images/34-RLS3}
-\caption[Responsive Louver System Node Editor and Model]{Responsive Louver System Node Editor and Model \cite{yi09}}
-\label{fig:RLS3}
-\end{sidewaysfigure}
-
-\subsection{Responsive Bricks System}
-
-Another system which was created using Grasshopper, which generates a building envelope a with a hollow brick like arrangement, and manipulates the size of the voids in the bricks in accordance with sunlight direction. The input and manipulation method is same as the previous example (see fig. \ref{fig:RBS}).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{./Images/35-RBS}
-\caption[Responsive Brick System]{Responsive Brick System \cite{yi09}}
-\label{fig:RBS}
-\end{figure}
- 
