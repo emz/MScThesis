@@ -227,7 +227,7 @@ h_j(x)=0, j=1,2,\cdots,r
 
 Mathematical optimisation is also called \emph{Nonlinear Programming, Mathematical Programming} or \emph{Numerical Optimisation}. As stated earilier; optimisation is a science that determines the best solutions, which in this case is to a mathematically defined problem that can be models of physical reality or otherwise. Mathematical optimisation tends to find the solution corresponding to minimum energy configurations of general structures, from molecules to suspension bridges, making it of great value to scientists and engineers.
 
-The values of the functions $f(x)$, $g_j(x)$ and $h_j(x)$ (equations \ref{OptMathForm} and \ref{OptConstr}) may be obtained at any point $x$ using:
+The values of the functions $f(x)$, $g_j(x)$ and $h_j(x)$ (equations \ref{OptMathForm} and \ref{OptConstr}) may be obtained at any point $x$ using:\label{page:functionvalues}
 \vspace{-0.5cm}
 \begin{enumerate}
 \item analytical formulae (e.g. $f(x)=x_1 ^2+2x_2 ^2+\sin x_3$),
@@ -455,14 +455,14 @@ Another form of parametric modelling is generative parametric graphical modules,
 
 Grasshopper is a node-based environment which allows the parameterisation of geometries, which in turn enables the designer to create Generative Design through the control and mapping of interrelationships of parameters and their values (see section \ref{sec:KendallPavilion} on parameters mapping). Modelling environments such as Grasshopper enable the parameterisation of models into what is called 1-Dimensional and 2-Dimensional parametric space models (figures \ref{fig:1DSpace} and \ref{fig:2DSpace}).
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{./Images/21-1DSpace}
 	\caption[1-Dimensional Parametric Space]{1-Dimensional Parametric Space \cite{khazabi12}}
 	\label{fig:1DSpace}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{./Images/22-2DSpace}
 	\caption[2-Dimensional Parametric Space]{2-Dimensional Parametric Space \cite{khazabi12}}
@@ -471,4 +471,26 @@ Grasshopper is a node-based environment which allows the parameterisation of geo
 
 Parametric models are of great value to performative oriented design processes, which is sometimes fused with scripting, benefiting from both in speeding the process and achieving better results.
 
+\clearpage
+\section{Conclusions}
 
+Having illustrated the main concepts and elements of Algorithm and Algoithmic Architecture, the following can be deducted:
+\vspace{-0.3cm}
+\begin{enumerate}
+	\item Algorithms operate differently, and in the case of architectural applications, although the ultimate goal is to create a new building form, there are two distinct ways in which Algorithms function:
+		\begin{enumerate}
+			\item \emph{Generative}: controling geometries and solids and links them together to produce or generate new forms.
+			\item \emph{Performative}: which are driven by the search for a form that produces the optimum performance of a given building function.
+		\end{enumerate}
+	\item The process of searching for the optimum solution (in case of performative algorithms) is called \emph{optimisation}, and its main elements are:
+		\begin{enumerate}
+			\item Objective function
+			\item Design variables
+			\item Constraints
+		\end{enumerate}
+	\item The integration of Algorithm into the design process is possible through the following:
+		\begin{enumerate}
+			\item Parametric Models, which breakdown the building model into elements that can be controled by the algorithm.
+			\item End-user programming, which enables the architect to create the algorithms that would control the model and its transformations inside the parametric modelling programme.
+		\end{enumerate}
+\end{enumerate}
