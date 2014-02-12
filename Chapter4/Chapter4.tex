@@ -6,7 +6,7 @@ The first two examples illsutrate parametric methods which utilise generative sy
 
 
 \section{Thermal Responsive Design using Generative Systems and Parametric Mapping}
-
+\label{sec:zulas}
 The following will showcase a number of experiments by Alejandro Zulas \cite{zulas04}, utilising scripting to create adaptable responsive enclosure systems with emphasis on sunlight incidence.
 
 \subsection{Basic Responsive Algorithm: The Mutable Curtain}
@@ -20,15 +20,7 @@ The author attempted the design of a box capable of modulating light going throu
 \label{fig:AZulasEncl}
 \end{figure}
 
-The main variable in the experiment was the ratio of enclosure wall solid and void. Using an advanced draughting engine such Rhino and scripting language such as Rhinoscript, the researcher was able to create a responsive system with a generative random function to regulate the amount of light penetrating the enclosure (fig. \ref{fig:TransSeq}).
-
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[height=17cm]{./Images/2-TransfSequ}
-\caption[Transformation Sequence of Enclosure]{Transformation Sequence \cite{zulas04}}
-\label{fig:TransSeq}
-\end{figure}
+The main variable in the experiment was the ratio of enclosure wall solid and void. Using an advanced draughting engine such Rhino and scripting language such as Rhinoscript, the researcher was able to create a responsive system with a generative random function to regulate the amount of light penetrating the enclosure.
 
 \subsection{Interactive Parametric Modelling: Responsive Louvres System}
 
@@ -41,27 +33,13 @@ The parametric CAD program, CATIA; had some advantages over Rhino as it displaye
 
 Another experiment using CATIA; an attempt to design a temporary exhibition pavilion \cite{zulas04}. The exercise focuses on the conception of a contextual responsive building addressing different variations on the overall building form and envelope in relation to sunlight. 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.5\textwidth]{./Images/4-Location}
-\caption[Case Study Location]{Pavilion Location \cite{zulas04}}
-\label{fig:PvlLoc}
-\end{figure}
-
 \subsubsection{Design Intentions:} 
 
 \begin{enumerate}
 \item Generate an appropriate enclosed environment for the sculptures to be exhibited.
 \item Implementation of a responsive louvre system as a filter to redirect light incidence inside the pavilion.
-\item Analysing the behaviour of the building towards conceiving a sun responsive building (fig. \ref{fig:DesignInt}). 
+\item Analysing the behaviour of the building towards conceiving a sun responsive building. 
 \end{enumerate}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{./Images/3-DesignIntent}
-\caption[Pavilion Design Intentions]{Design Intentions \cite{zulas04}}
-\label{fig:DesignInt}
-\end{figure}
 
 The context consisted of the sun, the museum wall and trees defining the yard. The museum wall and the trees were defined as static elements of the context, while the sun was understood as a dynamic element; this was to be taken into consideration as input. The main variables taken into consideration were the pavilions shape, length, height, proportions\ldots etc. 
 
@@ -85,12 +63,12 @@ The interactiveness of CATIA was quite notable when the author attempted to chan
 
 The end result was quite similar to the initial design intentions (fig. \ref{fig:FinalPav}).
 
-\begin{figure}[htbp]
+\begin{sidewaysfigure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{./Images/7-FinalPavilion}
+\includegraphics[width=19cm]{./Images/7-FinalPavilion}
 \caption[Adaptable Pavilion Design Results]{The Adaptable Pavilion \cite{zulas04}}
 \label{fig:FinalPav}
-\end{figure}
+\end{sidewaysfigure}
 
 \newpage
 \subsection{Advanced Interrelations Mapping and Model Control Techniques: The Kendall Pavilion}
@@ -110,13 +88,6 @@ The task is to design an architectural envelope capable of performing responsive
 
 The space designated to locate the pavilion is surrounded by and high and medium sized structures.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{./Images/8-LocUrban}
-\caption[Kendall Pavilion Location and Urban Context]{Location and Urban Context \cite{zulas04}}
-\label{fig:KedLoc}
-\end{figure}
-
 \subsubsection{The Design Intentions} 
 \vspace{-0.3cm}
 \begin{enumerate}
@@ -125,14 +96,6 @@ The space designated to locate the pavilion is surrounded by and high and medium
 \item Embed ``structural intelligence'' into the building skin system, recognising and fixing potential structural instabilities, due to the fact that the building will suffer geometrical reconfiguration while responding to stimulus.
 \end{enumerate}
 \vspace{-0.4cm}
-(See fig. \ref{fig:KenPavDesInt})
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.7\textwidth]{./Images/9-DesInt}
-\caption[Kendall Pavilion Design Intentions]{Kendall Pavilion Design Intentions \cite{zulas04}}
-\label{fig:KenPavDesInt}
-\end{figure}
 
 \subsubsection{The Mapping Process}
 
@@ -210,7 +173,9 @@ The ``stretchable surfaces'' concept was further incorporated into the system by
 \caption[Emergence Rule Script]{A screen capture of the script used in CATIA to apply the emergence rule \cite{zulas04}}
 \label{fig:EmergRuleScr}
 \end{figure}
+
 \section{Thermal Responsive Systems using Parametric Node-based Editors}
+\label{sec:NodeBased}
 
 The following experiments were done as part of the research by Huei Shenh Yi \cite{yi09}. The research utilised the programme: Grasshopper.
 
@@ -441,16 +406,8 @@ The experiment was done five times, each running for 100 generations. The initia
 
 \begin{figure}[htbp]
 \centering
-	\subfloat[Initial Results]{\includegraphics[width=0.7\textwidth]{./Images/21-InitialResults}\label{fig:GSPhoenix:Initial}}
-	\vspace{0cm}
-	\subfloat[Final Results]{\includegraphics[width=0.7\textwidth]{./Images/22-FinalResults}\label{fig:GSPhoenix:Final}}
-\caption[Generative System Initial and Final Results]{Initial and final results of each experiment for all orientations with the corresponding annual energy consumption value on the right \cite{caldas01}}
-\end{figure} 
-
-\begin{figure}[htbp]
-\centering
 \includegraphics[width=\textwidth]{./Images/23-Gen10-80}
-\caption[Generations Evolution]{Evolution of generations from 10 to 80 of one experiment \cite{caldas01}}
+\caption[GA Generations Evolution]{Evolution of generations from 10 to 80 of one experiment \cite{caldas01}}
 \label{fig:GenEvol}
 \end{figure}
 
@@ -630,4 +587,19 @@ The dimensions of the tested space and windows size are illustrated in figure \r
 \clearpage
 \section{Conclusions}
 
+In this chapter, two methodologies of thermal design using algorithm have been illustrated. The first used Generative algorithm (sections \ref{sec:zulas} and \ref{sec:NodeBased}), the second utilised Optimisation / Performative algorithm (section \ref{sec:GSM} and \ref{sec:RFDS}).
 
+In the case of the Generative approach, the following can be deducted:
+\begin{enumerate}
+	\item The use of Generative algorithm relies purely on the parametrisation of the model, and the mapping of relationships between the different parameter that generates or transforms the building geometry.
+	\item This approach is much easier to control; however, it cannot find the best solution, and is very limited in creating new forms that can still be thermally efficient since it is driven by Generative algorithm, not by building performance (\emph{i.e.} building performance is the by-product, not the main driving force).
+\end{enumerate}
+
+In the case of Optimisation approach, the following can be deducted:
+\begin{enumerate}
+	\item This method relies on the loop between optimisation algorithms and simulation programmes, to continually measure the performance and accordingly modify the building envelope form.
+	\item An important part of the process is choosing the right tools; choosing the best algorithm for the specific case, and choosing the right simulation programme. Also, the technicalities of programming and linking the simulation results with the algorithm are crucial.
+	\item This approach is driven by the search for optimum building performance, and therefore it is much more capable of finding a highly thermally efficient design in a minimal duration of time.
+	\item As seen in section \ref{sec:GSM}; it is also helpful to test the algorithm on a small predefined solution space, to see if the algorithm can find the global optimum.
+	\item The methods of measurement varied from analysis of internal space heat gain, to measurement of specific reference points with assigned weights (priorities).
+\end{enumerate}
