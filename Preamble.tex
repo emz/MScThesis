@@ -1,4 +1,4 @@
-\documentclass[a4paper,oneside,12pt,openright,final,oldfontcommands]{memoir} 
+\documentclass[a4paper,twoside,12pt,openright,final,oldfontcommands]{memoir} 
 	%use oldfontcommands to enable arabtex and utf8 in memoir
 
 %\usepackage[bindingoffset=5mm]{geometry} %try memoir's built in commands
@@ -7,6 +7,7 @@
 \usepackage{import}		% enable import command 
 \usepackage{color}		% enable colour fonts
 \definecolor{95Gray}{gray}{0.95}
+
 
 % Use the following three packages together
 \usepackage{algorithm}
@@ -28,16 +29,6 @@
 \usepackage{booktabs}	%for professional looking tables
 
 \usepackage{array}	%for mathematical matrices
-
-\usepackage{arabtex} %Always load after caption package
-\usepackage{utf8}
-	%to use arabic use the following
-	%\begin{arabtext}
-	%\setcode{utf8}
-	%<insert arabic text here>
-	%\end{arabtext}
-	
-%\usepackage{fancyhdr}	%not quite useful when you use memoir
 
 \usepackage{graphicx}		%enables insertion of images
 \usepackage{float} 		%enables \figure[H] or [h!]
@@ -64,8 +55,6 @@
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
-
-\usepackage{lipsum}
 
 %\renewcommand{\bibname}{References}
 

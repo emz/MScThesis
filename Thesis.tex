@@ -1,24 +1,21 @@
 \input{Preamble.tex}
 
 \begin{document}
+\frontmatter
 
 \pagestyle{ruledsmallhd}
+\setlength{\parskip}{0.7cm}
 
-\pagenumbering{roman}
 \maketitle
 
-%\chapter*{Acknowledgements}
-%\addcontentsline{toc}{chapter}{Acknowledgements}
-
-%\begin{abstract}
-
-%\end{abstract}
-
-%\chapter*{Introduction}
-%\addcontentsline{toc}{chapter}{Introduction}
-
 \cleardoublepage
+\begin{abstract}
+
+\end{abstract}
+
+
 \maxtocdepth{subsection}
+\cleardoublepage
 \tableofcontents
 
 \cleardoublepage
@@ -27,7 +24,30 @@
 \cleardoublepage
 \listoftables
 
-\setlength{\parskip}{0.7cm}
+\cleardoublepage
+
+\chapter{Introduction}
+
+With the noticable increase of interest in green architecture and building technologies in the last two decades, architectural designer are taking a more interdisciplinary approach to the conceptual design phase of buildings to consider various systems and services at very early stages of the design process.
+
+This has been greatly beneficial as the early integration of different disciplines allows consideration of building systems and services that highly impact the performance of the building; with energy consumption being the most important element and indicator of building performance.
+
+According to numerous studies in different scientific disciplines that concern housing, building and construction; the heating or cooling of internal building spaces --- resedential buildings in particular --- are the most consuming of all building functions, reaching up to 40\% of total annual energy consumption of buildings.
+
+The sustainable approach to thermal design of buildings dictates that passive design and control mechanisms be considered first before any mechanical or electrical system is considered. In turn, the usual approach of the architect is to do survey, study and analyse the building site, then study the architectural theories applicable to the task of thermal design, do comparative analysis of project conditions and historical cases, which finally leads to his choice of specific thermal control mechanisms to be integrated with the formal design of the building.
+
+The above described process has limitations; of which the most important are:
+\begin{enumerate}
+	\item this traditional process of design is constrained and affected by the architects ability to correctly analyse the data and forecasting the performance of the building under site conditions, making human error a major element of potential failure of the design to meet target performance, 
+	\item the ability to test the design is very limited and is not conclusive until the building has been already erected which is not cost effective, 
+	\item design alternatives in this case are usually very limited in number due to the designers limitations in terms of cognitive abilities and available time.
+\end{enumerate}
+
+This is where the importance of computers comes in, and although computers are heavily used today for the purpose of draughting and virtual modelling, they do not effectively participate in the architectural design thought process. To overcome the limitations described above, the use of computer algorithms and simulation programmes is required; which is the main argument of this thesis.
+
+As an alternative to the conventional design process described above, the use of computers is discussed in this thesis as a tool for generation of architectural solutions for building envelopes, to achieve target thermal performance with passive solar control techniques. The thesis discusses the utilisation of environmental and energy simulation programmes, and computer algorithms; illustrating their current common uses in the architectural design process, and the proposed method of utilisation for the production of thermally efficient designs.
+
+\mainmatter
 
 \subimport{./Chapter2/}{Chapter2.tex}
 \subimport{./Chapter3/}{Chapter3.tex}
