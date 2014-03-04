@@ -314,10 +314,11 @@ The building has four different types of windows, one for each orientation. The 
 
 \begin{table}[h]
 \centering
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{l|rrrrrrrr}
 \textbf{Decoded Numerical Value(m)}&0.3&0.6&0.9&1.2&1.5&1.8&2.1&2.4\\ \hline
 \textbf{Binary Code}&000&001&010&011&100&101&110&111\\
-\end{tabular}
+\end{tabular}}
 \caption{Window Dimension Binary Coding}
 \label{table:WinDimCode}
 \end{table}
@@ -390,6 +391,7 @@ The experiment was done five times, each running for 100 generations. The initia
 
 \begin{table}[h]
 \centering
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{|p{1.5cm}|p{6cm}|p{2cm}|p{2.2cm}|}
 \hline
 \textbf{Exper-\newline iment}&\textbf{Best Solution Found}&\textbf{Objective Function Value (MWh)}&\textbf{Percentage Above Minimum (\%)}\\ \hline
@@ -398,7 +400,7 @@ The experiment was done five times, each running for 100 generations. The initia
 3&2.1/2.1/1.2/1.5/2.1/0.9/1.5/0.9&114.60&0.006\\ \hline
 4&1.8/2.1/1.2/1.8/0.9/1.5/1.2/0.9&114.89&0.03\\ \hline
 5&2.4/2.1/2.1/0.9/1.2/1.5/1.5/0.9&114.65&0.01\\ \hline
-\end{tabular}
+\end{tabular}}
 \label{tab:PhoenixSolutions}
 \caption[Solutions for the Phoenix Climate]{Solutions for the Phoenix Climate \cite{caldas01}}
 \end{table}
@@ -462,7 +464,7 @@ A space is created, which is represented by a cuboidal geometry, and a number of
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[width=\textwidth]{../Chapter3/Images/16-kawakitaGA}
+\includegraphics[width=\linewidth]{../Chapter3/Images/16-kawakitaGA}
 \caption[RFDS GA Process Flow Chart]{RFDS GA Process Flow Chart \cite{kawakita08}}
 \label{kawakitaGA}
 \end{figure}
