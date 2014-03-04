@@ -1,19 +1,20 @@
-\chapter{Thermal Design and Building Envelope}
+\chapter{Thermal Design and Simulation of Building Envelopes}
 
-The building function which has been chosen for study as the optimisation objective function is the thermal function of building envelopes. This chapter breaks down the subject into the basic scientific concepts behind the thermal perforamce of the building envelope and how it is perceived by the users or occupants of internal building spaces. 
+The building function which has been chosen for study as the optimisation objective function is the thermal function of building envelopes. This chapter breaks down the subject into the basic scientific concepts behind the thermal performance of the building envelope and how it is perceived by the users or occupants of internal building spaces. 
 
-\paragraph{The Science of Thermal Design}
+\paragraph{The Science of Thermal Design}\mbox{}
 
 The basis on which thermal design is built is mainly that of simple physics, and physiology. The physics is the science that describes the building, it's components and it reactions to it's external environment, sometimes also includes other elements of the equation of thermal design such as clothing or furniture. As for the physiological part, it's concern is the occupant; the human being. It describes the way our bodies react to our environment, which is in this case the micro-climate created by the building.
 
 The elements of thermal design are the occupant, the building and the environment. An integral part of this chapter is also dedicated to the definition of what is called the building 'envelope', it's thermal behaviour and the projection of thermal design principles on this prominent part of buildings.
 
-\paragraph{Sustainability Aspects of Thermal Design}
+\paragraph{Sustainability Aspects of Thermal Design}\mbox{}
 
 An important question that may come to mind is how thermal design is concerned with green or sustainable architecture. Consider the following: in some countries such as the UK, buildings have a 50\% share of the countries energy consumption, of which 60\% is used only by houses, and half of which is used in space heating alone \cite{edwards96}. In other countries with hotter climates such as Abu Dhabi, cooling energy consumption had risen from 1625 MW to 4750 MW of power from 1990 to 2007 \cite{nauman07}. Many other examples similar to the above would lead to the conclusion; that heating and cooling of spaces are major consumers of energy, demanding more fuel combustion as a means of electricity generation in most cases, which in turn increases CO\textsubscript{2} emissions. So if we were to state how thermal design is vital for sustainable building design, we could say that it allows for CO\textsubscript{2} emission reduction, a better management of resources and a thermally comfortable space for different activities.
 
+\paragraph{The Building Envelope}\mbox{}
 \label{BuildEnvDef}
-\subsection{The Building Envelope}
+
 A building envelope is the components which separate the indoor spaces from the outdoors. These components include all `physical' barriers such as walls, roofs, windows, doors and foundations \cite{HPO}. The main functions of a building envelope -or `enclosure'- are \cite{straube05}:
 \begin{enumerate}[nolistsep]
   \item Structural support and load-bearing.
@@ -259,7 +260,7 @@ This shows that heat flow calculations are an approximation. Here the concept of
 \section{Thermal Design Variables}
 \label{sec:ThermalDesignVariables}
 
-An integral part, and arguably the most important one of this chapter, is where we demonstrate the different design variables affecting the building thermal performance, or it's envelope. This importance comes from the fact that these variables will be the basis on which we will choose our form generation parameters later on.\\ The most influential traits of any given building as argued by Szokolay \cite{szokolay08} are shape, fabric, fenestration and ventilation. We will demonstrate different attributes with the exception of ventilation.\\ \vspace{0.5cm} \label{ThermDesVar}
+An integral part, and arguably the most important one of this chapter, is where we demonstrate the different design variables affecting the building thermal performance, or it's envelope. This importance comes from the fact that these variables will be the basis on which we will choose our form generation parameters, simulation programme and optimisation algorithm.\\ The most influential traits of any given building as argued by Szokolay \cite{szokolay08} are shape, fabric, fenestration and ventilation. We will demonstrate different attributes with the exception of ventilation.\\ \vspace{0.5cm} \label{ThermDesVar}
 \begin{enumerate}
   \item \textbf{Shape}
   	\begin{enumerate}
@@ -282,6 +283,7 @@ An integral part, and arguably the most important one of this chapter, is where 
   	\end{enumerate}
 \end{enumerate}
 
+The above stated variables are the subject of further detailed study and analysis in Chapter 5 of this thesis.
 \clearpage
 \section{Simulation}
 
@@ -319,7 +321,7 @@ This section provides an overview and comparison of 20 major simulation programs
 
 \paragraph{eQUEST version 3.55} eQUEST is an easy to use energy use analysis tool which provides high quality results by combining a building creation wizard, an energy efficiency measure (EEM) wizard and a graphical results display module with an enhanced DOE-2.2-derived building energy use simulation program. \label{par:eQUEST}
 
-\paragraph{ESP-r version 10.1} ESP is a general purpose, multi-domain---building thermal, interzone airflow, inrazone air movement, HVAC systems and electrical power flow---simulation environment which has been under development for more than 25 years. It follows the pattern of `simulation follows description' where additional technical domain solvers are invoked as the building and system description evolves. Users control the complexity of the geometric, environmental control and operations to match the requirements of particular projects. It supports an explicit energy balance in each zone and at each surface.
+\paragraph{ESP-r version 10.1} ESP is a general purpose, multi-domain---building thermal, interzone airflow, intrazone air movement, HVAC systems and electrical power flow---simulation environment which has been under development for more than 25 years. It follows the pattern of `simulation follows description' where additional technical domain solvers are invoked as the building and system description evolves. Users control the complexity of the geometric, environmental control and operations to match the requirements of particular projects. It supports an explicit energy balance in each zone and at each surface.
 
 \paragraph{HAP version 4.20a} Hourly Analysis Program (HAP) provided two tools in one package: sizing commercial HVAC systems and simulating hourly building hourly energy performance to derive annual energy use and energy costs. Input data and results form system design calculations can be used directly in energy studies. HAP is designed for the practical engineer, to facilitate efficient day-to-day work of estimating loads, designing systems and evaluating energy performance. Tabular and graphical output reports provide both summaries of and detailed information about building, system and equipment performance.
 
@@ -343,11 +345,11 @@ This section provides an overview and comparison of 20 major simulation programs
 
 \paragraph{PowerDomus version 1.5} PowerDomus is a whole-building simulation tool for analysis of both thermal comfort and energy use. It has been developed to model coupled heat and moisture transfer in building when subjected to any kind of climate conditions; i.e.; considering both vapour diffusion and capillary migration. Its models predict temperature and moisture content profiles within multi-layer walls for any time step and temperature and relative humidity for each zone.
 
-\paragraph{SUNREL version 1.14} SUNREL is an hourly building energy simulation program that aids in the design of small energy-efficient buildings where the loads are dominated by the dynamic interactions between the building's envelope, it's environment, and it's occupants. SUNREL has a simplified multi-zone nodal airflow algorithm that can be used to calculate infiltration and natural ventilation. Windows can be modeled by one of two methods. Users can enter exact optical interactions of windows with identical layers of clear or tinted glass and no coatings on the layers. Thermal properties are modeled with a fixed U-value and fixed surface coefficients. For the second method, a user imports data from Window 4 or 5. SUNREL only modeles idealised HVAC equipment. The equipment and loads calculations are solved simultaneously, and the equipment capacities can to be set to unlimited. Fans move a schedulable fixed amount of air between zones or from outside.
+\paragraph{SUNREL version 1.14} SUNREL is an hourly building energy simulation program that aids in the design of small energy-efficient buildings where the loads are dominated by the dynamic interactions between the building's envelope, it's environment, and it's occupants. SUNREL has a simplified multi-zone nodal airflow algorithm that can be used to calculate infiltration and natural ventilation. Windows can be modelled by one of two methods. Users can enter exact optical interactions of windows with identical layers of clear or tinted glass and no coatings on the layers. Thermal properties are modelled with a fixed U-value and fixed surface coefficients. For the second method, a user imports data from Window 4 or 5. SUNREL only models idealised HVAC equipment. The equipment and loads calculations are solved simultaneously, and the equipment capacities can to be set to unlimited. Fans move a schedulable fixed amount of air between zones or from outside.
 
 \paragraph{Tas version 9.0.7} Tas is a suite of software products, which simulate the dynamic thermal performance of buildings and their systems. The main module is Tas Building Designer, which performs dynamic building simulation with integrated natural and forced airflow. It has a 3D based geometry input that includes a CAD link. Tas Systems is a HVAC systems/control simulator, which may be directly coupled with the building simulator. It performs automatic airflow and plant sizing and total energy demand. The third module, Tas Ambiens, is a robust and simple to use 2D CFD\footnote{Computational Fluid Dynamics} package which produces a cross-section of micro-climate variations in a space. Tas has 20 years of commercial use in the UK and around the world.
 
-\paragraph{TRACE 700 version 4.1.10} TRACE is divided into four distinct calculation phases: Design, System, Equipment and Economics. During the Design phase the program first calculates building heat gains for conduction through building surfaces as well as heat gains from people, lights, and appliances and impact of ventilation and infiltration. Finally the program sizes all coils and air handlers based on these maximum loads. During the System phase, the dynamic response of the building is simulated for an 8760-hour year by combining room loads profiles with the characteristics of the selected airside system to predict the load imposed on the equipment. The Equipment phase uses the hourly coild loads from the System phase to determine how the cooling, heating and air moving equipment will consume energy. The Economic phase combines economic input supplied by the user with the energy usage from the Equipment phase to calculate each alternative's utility cost, installed cost, maintenance cost and life-cycle cost.
+\paragraph{TRACE 700 version 4.1.10} TRACE is divided into four distinct calculation phases: Design, System, Equipment and Economics. During the Design phase the program first calculates building heat gains for conduction through building surfaces as well as heat gains from people, lights, and appliances and impact of ventilation and infiltration. Finally the program sizes all coils and air handlers based on these maximum loads. During the System phase, the dynamic response of the building is simulated for an 8760-hour year by combining room loads profiles with the characteristics of the selected air-side system to predict the load imposed on the equipment. The Equipment phase uses the hourly cooling loads from the System phase to determine how the cooling, heating and air moving equipment will consume energy. The Economic phase combines economic input supplied by the user with the energy usage from the Equipment phase to calculate each alternative's utility cost, installed cost, maintenance cost and life-cycle cost.
 
 \paragraph{TRANSYS version 16.0.37} TRANSYS is a transient system simulation program with a modular structure that was designed to solve complex energy system problems by breaking the problem into a series of smaller components. TRANSYS components (referred to as ``Types'') may be as simple as a pump or a pipe, or as complicated as a multi-zone building model. The components are configured and assembled using a fully integrated visual interface known as the TRANSYS Simulation Studio, and building input data is entered through a dedicated visual interface (TRNBuild). The simulation engine that solves the system of algebraic and differential equations that represent the whole system. In building simulations, all HVAC-system components are solved simultaneously with the building envelope thermal balance and the air network at each time step. In addition to a detailed multizone building model, the TRANSYS library includes components for solar thermal and photovoltaic systems, low energy buildings and HVAC systems, renewable energy systems, co-generation, fuel cells\ldots etc. The modular nature of TRANSYS facilitates the addition of new mathematical models to the program. In addition to the ability to develop new components in any programming language, the programs allows direct embedding components using other software; e.g.: Matlab/Simuling, Excel/VBA, and EES). TRANSYS can also generate executables that allow non-experts to run parametric studies. \label{par:TRANSYS}
 
@@ -377,10 +379,9 @@ The following tables (Figures \ref{fig:SimProg1} and \ref{fig:SimProg2}) were ex
 \end{sidewaysfigure}
 
 \clearpage
-\section{Conlusions}
+\section{Chapter Conclusions}
 
-\begin{itemize}
-	\item In light of the information presented so far from Chapters 1 and 2, this chapter serves the purpose of defining the scope of the thesis, and presenting the main elements of study of the optimisational equation (as discussed in Chapter 2) which are:
+In light of the information presented so far from Chapters 1 and 2, this chapter serves the purpose of defining the scope of the thesis, and presenting the main elements of study of the optimisation equation (as discussed in Chapter 2) which are:
 
 	\begin{enumerate}
 		\item The Objective Function: Thermal Performance of Building Envelopes:
@@ -398,7 +399,7 @@ The following tables (Figures \ref{fig:SimProg1} and \ref{fig:SimProg2}) were ex
 		\end{enumerate}
 \end{enumerate}
 
-\item \emph{Environmental Simulation} is introduced as the method of obtaining the optimisation equation \emph{function values} (see page \ref{page:functionvalues}), and serving as the measuring tool of building envelope performance.
-\item Several environmental simulation programmes are compared against each other on the basis of different functions and capabilities.
-	\end{itemize}
+\emph{Environmental Simulation} is introduced as the method of obtaining the optimisation equation \emph{function values} (see page \ref{page:functionvalues}), and serving as the measuring tool of building envelope performance.
+
+Several environmental simulation programmes are compared against each other on the basis of different functions and capabilities.
 

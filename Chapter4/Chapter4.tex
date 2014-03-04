@@ -1,8 +1,8 @@
-\chapter{Application and Case Studies}
+\chapter{Analytical Study of Generative and Performative Thermal Design Approaches}
 
-In this section, four examples are given from previous research for thermal design using algorithmic design. The main distiction to be made between the former and latter two examples, is the methodology of design.
+In this section, four examples are given from previous research for thermal design using algorithmic design. The main distinction to be made between the former and latter two examples, is the methodology of design.
 
-The first two examples illsutrate parametric methods which utilise generative systems using parametric models. The other two examples utilise performative algorithms and simulation programmes.
+The first two examples illustrate parametric methods which utilise generative systems using parametric models. The other two examples utilise performative algorithms and simulation programmes.
 
 
 \section{Thermal Responsive Design using Generative Systems and Parametric Mapping}
@@ -43,29 +43,13 @@ Another experiment using CATIA; an attempt to design a temporary exhibition pavi
 
 The context consisted of the sun, the museum wall and trees defining the yard. The museum wall and the trees were defined as static elements of the context, while the sun was understood as a dynamic element; this was to be taken into consideration as input. The main variables taken into consideration were the pavilions shape, length, height, proportions\ldots etc. 
 
-Object relations were programmed using conditional ``\emph{if : then \dots else : that}''. In other words; \emph{if} the location of the sun in relation to its day-path is ``\emph{n}'', \emph{then} the line defining the pavilion's profile gets increased or decreased or rotated or thickened\ldots etc, by a predefined ``\emph{n}'' factor. (Refer to fig. \ref{fig:MpRlt})
+Object relations were programmed using conditional ``\emph{if : then \dots else : that}''. In other words; \emph{if} the location of the sun in relation to its day-path is ``\emph{n}'', \emph{then} the line defining the pavilion's profile gets increased or decreased or rotated or thickened\ldots etc, by a predefined ``\emph{n}'' factor.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{./Images/5-MappingRelations}
-\caption[Mapping Design Relations]{Mapping Relationships \cite{zulas04}}
-\label{fig:MpRlt}
-\end{figure}
-
-The interactiveness of CATIA was quite notable when the author attempted to change the location of the sun by means of a graphical slider and witnessed real-time changes to building shape due to the change in solar location (fig. \ref{fig:IntActCAT})
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{./Images/6-InteractiveCATIA}
-\caption[Interactive Response]{Automated Adaption \cite{zulas04}}
-\label{fig:IntActCAT}
-\end{figure}
-
-The end result was quite similar to the initial design intentions (fig. \ref{fig:FinalPav}).
+The interactiveness of CATIA was quite notable when the author attempted to change the location of the sun by means of a graphical slider and witnessed real-time changes to building shape due to the change in solar location (fig. \ref{fig:FinalPav})
 
 \begin{sidewaysfigure}[htbp]
 \centering
-\includegraphics[width=19cm]{./Images/7-FinalPavilion}
+\includegraphics[width=\textheight]{./Images/7-FinalPavilion}
 \caption[Adaptable Pavilion Design Results]{The Adaptable Pavilion \cite{zulas04}}
 \label{fig:FinalPav}
 \end{sidewaysfigure}
@@ -76,7 +60,7 @@ The end result was quite similar to the initial design intentions (fig. \ref{fig
 
 The following is a comprehensive exercise to create an adaptable responsive system, with an approach combining the following concepts and control mechanisms:
 
-\begin{enumerate}
+\begin{enumerate}[nolistsep]
 \item Programming objects using Shape Grammar.
 \item Conventional programming through coding or scripting.
 \item Modelling a real-world situation corresponding to naturally occurring phenomena.
@@ -165,14 +149,7 @@ The parameterisation of the context was achieved by applying a stretchable two-d
 \paragraph{Delimited Action: Semi-automated Human Intervention.}\mbox{}
 The ``stretchable surfaces'' concept was further incorporated into the system by making adaption of the pavilion respond to any changes in the grid, which would act as a guide to the programmed adaption algorithm, while allowing direct adjustments to the grid by the designer; hence, a ``semi-automated'' human intervention.
 
-\subparagraph{Generative Emergence Rules.} As mentioned earlier in this chapter; draughting and modelling programs usually provide generative modelling through scripting (end-user programming languages). In this case the author \cite{zulas04} utilised the scripting capabilities of CATIA (parametric modelling application). The emergence rule acts as a form of ``structural intelligence'' (a concept described earlier) where the rule identifies the length of two sides of the basic composition of the pavilion's main structure; which if they are exceeded the system will automatically add an emergent structural element to preserve structural integrity. The script used is shown in fig. \ref{fig:EmergRuleScr}.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.7\textwidth]{./Images/14-EmergRuleScr}
-\caption[Emergence Rule Script]{A screen capture of the script used in CATIA to apply the emergence rule \cite{zulas04}}
-\label{fig:EmergRuleScr}
-\end{figure}
+\subparagraph{Generative Emergence Rules.} As mentioned earlier in this chapter; draughting and modelling programs usually provide generative modelling through scripting (end-user programming languages). In this case the author \cite{zulas04} utilised the scripting capabilities of CATIA (parametric modelling application). The emergence rule acts as a form of ``structural intelligence'' (a concept described earlier) where the rule identifies the length of two sides of the basic composition of the pavilion's main structure; which if they are exceeded the system will automatically add an emergent structural element to preserve structural integrity.
 
 \section{Thermal Responsive Systems using Parametric Node-based Editors}
 \label{sec:NodeBased}
@@ -192,7 +169,7 @@ A program developed in 2009 as a parametric modelling plug-in for Rhino (3D mode
 
 \subsection{Responsive Louver System}
 
-The author created a responsive louver system, which respnds to sunlight direction change. The system was developed from previously written algorithm in C\# called PSA, which controls the change of solar direction; and also of an algorithm developed by Ted Ngai (the reference directs the reader to his website: \url{tedngai.net}). The author modified the algorithm to enable 3D models to follow the orientation of the sun, and the colour of each louver blade to change according to its orientation with regards to the sun's position (see fig \ref{fig:RLS1}).
+The author created a responsive louver system, which responds to sunlight direction change. The system was developed from previously written algorithm in C\# called PSA, which controls the change of solar direction; and also of an algorithm developed by Ted Ngai (the reference directs the reader to his website: \url{tedngai.net}). The author modified the algorithm to enable 3D models to follow the orientation of the sun, and the colour of each louver blade to change according to its orientation with regards to the sun's position (see fig \ref{fig:RLS1}).
 
 \begin{figure}[htbp]
 \centering
@@ -201,7 +178,7 @@ The author created a responsive louver system, which respnds to sunlight directi
 \label{fig:RLS1}
 \end{figure}
 
-The data input interface allows the user to input the time (hour, day and month) and coordinates. The orientatio of the sun is then simulated based on the inputed data (see fig. \ref{fig:RLS2}).
+The data input interface allows the user to input the time (hour, day and month) and coordinates. The orientation of the sun is then simulated based on the inputted data (see fig. \ref{fig:RLS2}).
 
 \begin{figure}[htbp]
 \centering
@@ -435,7 +412,7 @@ This section illustrates the research and experimentation done by Go Kawakita \c
 
 \subsection{Description of RFDS}
 
-Responsive Fa\c{c}ade Design System is an automated window generation tool, which considers natural daylight levels at user defined reference points within a given space. As mentioned earlier; the system uses Genetic Algorithm (refer to sections \ref{subsec:GA} and \ref{subsec:GA2} on GA)for optimum solution search, and \textsc{ecotect} for environmental simulation (refer to page \pageref{par:ECOTECT} for more information on \textsc{ecotect}). The system (RFDS) utilises \emph{Lua}, a simple programming language; as the scripting language within \textsc{ecotect}, which is the means by which the Genetic Algorithm is inputed.
+Responsive Fa\c{c}ade Design System is an automated window generation tool, which considers natural daylight levels at user defined reference points within a given space. As mentioned earlier; the system uses Genetic Algorithm (refer to sections \ref{subsec:GA} and \ref{subsec:GA2} on GA)for optimum solution search, and \textsc{ecotect} for environmental simulation (refer to page \pageref{par:ECOTECT} for more information on \textsc{ecotect}). The system (RFDS) utilises \emph{Lua}, a simple programming language; as the scripting language within \textsc{ecotect}, which is the means by which the Genetic Algorithm is inputted.
 
 \subsection{Genetic Algorithm Implementation}
 
@@ -450,7 +427,7 @@ The author explains the sequence within Genetic Algorithm as implemented in his 
 
 \paragraph{Initialisation}\mbox{}
 
-In this step; parameters such as population size, number of generations and chromosome length are inputted. The author explaings that longer chromosomes need larger initial populations, and that smaller populations tend to converge prematurely.
+In this step; parameters such as population size, number of generations and chromosome length are inputted. The author explains that longer chromosomes need larger initial populations, and that smaller populations tend to converge prematurely.
 
 \paragraph{Evaluation}\mbox{}
 
@@ -466,7 +443,7 @@ Crossover is implemented to introduce variation in the population.
 
 \paragraph{Mutation}\mbox{}
 
-Mutation is implemented to introduce diversification and decrease the possibility of premature convergance\footnote{Convergence: The narrowing down of results to those nearest to the optimum solution (refer to page \pageref{sec:GAConvergence})}. The mutation rate used is 1/L, where L is the length of the chromosome.
+Mutation is implemented to introduce diversification and decrease the possibility of premature convergence\footnote{Convergence: The narrowing down of results to those nearest to the optimum solution (refer to page \pageref{sec:GAConvergence})}. The mutation rate used is 1/L, where L is the length of the chromosome.
 
 \paragraph{Terminal Criterion}\mbox{}
 
@@ -474,14 +451,14 @@ Conditions are given and evaluated to determine when the GA is to be terminated.
 
 \begin{enumerate}
 \item If the fittest score in the population satisfies the certain target: \emph{Star Gene}
-\item If the average fittness score in the population satisfies the certain target: \emph{Population Improvement}
+\item If the average fitness score in the population satisfies the certain target: \emph{Population Improvement}
 \item If the increase or decrease of fitness score in the population becomes below a certain value: \emph{Convergence}
 \item If the number of generations becomes over the defined value: \emph{Finite Iteration} 
 \end{enumerate}
 
 \subsection{RFDS Implementation and Testing}
 
-A space is created, which is represented by a cuboidal geometry, and a number of windows are arranged on the envelope, with reference points at which natural daylight levels are measured. The user inputs two parameters at the beginning of the optimisation process; target daylight levels at each reference point, and the priority of each target. The terminal critrion in RFDS is the number of generations. A detailed illustration of the process is shown in figure \ref{kawakitaGA}. The explanation of each element of the system is as follows:
+A space is created, which is represented by a cuboidal geometry, and a number of windows are arranged on the envelope, with reference points at which natural daylight levels are measured. The user inputs two parameters at the beginning of the optimisation process; target daylight levels at each reference point, and the priority of each target. The terminal criterion in RFDS is the number of generations. A detailed illustration of the process is shown in figure \ref{kawakitaGA}. The explanation of each element of the system is as follows:
 
 \begin{figure}[hbtp]
 \centering
@@ -508,7 +485,7 @@ The fitness scores are calculated in terms of target daylight levels determined 
 
 \paragraph{Priority Level of Targets}\mbox{}
 
-Priority levels influence fitness measurements as well as target daylight levels. Priorities are categorized into three levels: high, normal and low. This is considered a weighing system which affects the selection of possible optimum solutions.
+Priority levels influence fitness measurements as well as target daylight levels. Priorities are categorised into three levels: high, normal and low. This is considered a weighing system which affects the selection of possible optimum solutions.
 
 \paragraph{Window Size and Interval}\mbox{}
 
@@ -555,7 +532,7 @@ The GA parameters are:
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./Images/27-RFDSimplement}
-\caption[RFDS Space Dimensions and Window Size]{Space dimensions and windows size \cite{kawakita01}}
+\caption[RFDS Space Dimensions and Window Size]{Space dimensions and windows size \cite{kawakita08}}
 \label{fig:RFDSimplement}
 \end{figure}
 
@@ -564,7 +541,7 @@ The dimensions of the tested space and windows size are illustrated in figure \r
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./Images/28-RFDSpriorities}
-\caption[RFDS Target Light Levels]{Target light levels and weight factors \cite{kawakita01}}
+\caption[RFDS Target Light Levels]{Target light levels and weight factors \cite{kawakita08}}
 \label{fig:RFDSpriorities}
 \end{figure}
 
@@ -572,26 +549,19 @@ The dimensions of the tested space and windows size are illustrated in figure \r
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{./Images/29-RFDSfitnessscores}
-\caption[RFDS Fitness Scores]{Fitness scores across generations \cite{kawakita01}}
-\label{fig:RFDSfitness}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{./Images/30-RFDSdiff}
-\caption[RFDS Target Level Differences]{Differences from target levels from generation 0 to 150 \cite{kawakita01}}
+\includegraphics[height=0.9\textheight]{./Images/30-RFDSdiff}
+\caption[RFDS Target Level Differences]{Differences from target levels from generation 0 to 150 \cite{kawakita08}}
 \label{fig:RFDSdiff}
 \end{figure}
 
 \clearpage
-\section{Conclusions}
+\section{Chapter Conclusions}
 
 In this chapter, two methodologies of thermal design using algorithm have been illustrated. The first used Generative algorithm (sections \ref{sec:zulas} and \ref{sec:NodeBased}), the second utilised Optimisation / Performative algorithm (section \ref{sec:GSM} and \ref{sec:RFDS}).
 
 In the case of the Generative approach, the following can be deducted:
 \begin{enumerate}
-	\item The use of Generative algorithm relies purely on the parametrisation of the model, and the mapping of relationships between the different parameter that generates or transforms the building geometry.
+	\item The use of Generative algorithm relies purely on the parameterisation of the model, and the mapping of relationships between the different parameter that generates or transforms the building geometry.
 	\item This approach is much easier to control; however, it cannot find the best solution, and is very limited in creating new forms that can still be thermally efficient since it is driven by Generative algorithm, not by building performance (\emph{i.e.} building performance is the by-product, not the main driving force).
 \end{enumerate}
 
