@@ -32,7 +32,7 @@
 
 \usepackage{graphicx}		%enables insertion of images
 \usepackage{float} 		%enables \figure[H] or [h!]
-\setcounter{secnumdepth}{3}	%enable numbering of subsubsections (level 3)
+\setcounter{maxsecnumdepth}{2}	%enable numbering of subsubsections (level 3) | use maxsecnumdepth when using \frontmatter, secnumdepth when not.
 \usepackage{fixltx2e}		%adds \textsubscript functionality
 \usepackage{paralist}		%adds inparaenum
 \usepackage{hyperref}
@@ -40,9 +40,9 @@
 	linktocpage=true,
 	bookmarks=true,
 	colorlinks=true,
-	citecolor=blue,
+	citecolor=black,
 	filecolor=black,
-	linkcolor=blue,
+	linkcolor=black,
 	urlcolor=black,
 	pdfauthor={Ayman Elmasry},
 	pdftitle={Algorithmic Form Generation: A Thermal Building Envelope Design Approach}}
